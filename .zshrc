@@ -1,10 +1,3 @@
-#
-# Sets Oh My Zsh options.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
-
 # Set the path to Oh My Zsh.
 export OMZ="$HOME/.oh-my-zsh"
 
@@ -15,7 +8,7 @@ export OMZ="$HOME/.oh-my-zsh"
 # zstyle ':omz:module:editor' dot-expansion 'no'
 
 # Set case-sensitivity for completion, history lookup, etc.
-zstyle ':omz:*:*' case-sensitive 'no'
+zstyle ':omz:*:*' case-sensitive 'yes'
 
 # Color output (auto set to 'no' on dumb terminals).
 zstyle ':omz:*:*' color 'yes'
@@ -43,3 +36,7 @@ source "$OMZ/init.zsh"
 
 # Customize to your needs...
 PATH="$HOME/bin:$PATH"
+
+# Aliases
+alias vim='mvim -v'
+alias vi='mvim -v'
