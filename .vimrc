@@ -9,17 +9,19 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set autoindent
-set showmatch
 set laststatus=2
+set showmatch
+set incsearch
+set hlsearch
 set ignorecase 
 set smartcase
+set cmdheight=2
+
 set ruler
 set title
 set showcmd
 set wildmenu
 set wildmode=longest,list
-set hlsearch
-set incsearch
 set scrolloff=3
 set backup
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
@@ -31,10 +33,24 @@ let mapleader=","
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " KEY MAPPINGS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Allow yank to system clipboard
+map <leader>y "*y
+" Improve scrolling speed
 nnoremap <c-e> 3<c-e>
 nnoremap <c-y> 3<c-y>
+" Easyer switch between files
 nnoremap <leader><leader> <c-^>
+" Clear search bugger by hitting return
+:nnoremap <CR> :nohlsearch<cr>
+" Move around splits with <c-hjkl>
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" OPEN FILES IN DIRECTORY OF CURRENT FILE
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 map <leader>e :edit %%
 map <leader>v :view %%
