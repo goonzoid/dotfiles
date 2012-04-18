@@ -1,7 +1,21 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" BASIC EDITING CONFIGURATION
+" VUNDLE PLUGIN CONFIGURATION
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'tpope/vim-fugitive'
+Bundle 'git://git.wincent.com/command-t.git'
+
+filetype plugin indent on
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" BASIC EDITING CONFIGURATION
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set hidden
 set history=1000
 set expandtab
@@ -27,7 +41,6 @@ set backup
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 syntax on
-filetype plugin indent on
 let mapleader=","
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
