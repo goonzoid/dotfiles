@@ -33,6 +33,7 @@ let mapleader=","
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <c-e> 3<c-e>
 nnoremap <c-y> 3<c-y>
+nnoremap <leader><leader> <c-^>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ARROW KEYS ARE UNACCEPTABLE
@@ -41,6 +42,17 @@ map <Left> :echo "no!"<cr>
 map <Right> :echo "no!"<cr>
 map <Up> :echo "no!"<cr>
 map <Down> :echo "no!"<cr>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" WINDOW SIZING
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" We have to set winheight bigger than winminheight, but if we
+" set winhieght to be huge before setting winminheight, the
+" winminheight will fail.
+set winwidth=80
+set winheight=5
+set winminheight=5
+set winheight=999
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COLOUR
