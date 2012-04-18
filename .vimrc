@@ -35,6 +35,10 @@ nnoremap <c-e> 3<c-e>
 nnoremap <c-y> 3<c-y>
 nnoremap <leader><leader> <c-^>
 
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+map <leader>e :edit %%
+map <leader>v :view %%
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ARROW KEYS ARE UNACCEPTABLE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
