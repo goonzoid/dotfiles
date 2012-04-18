@@ -3,3 +3,29 @@
 	email = wpragnell@gmail.com
 [core]
 	autocrlf = input
+[color]
+  ui = auto
+[merge]
+  tool = vimdiff
+[alias]
+  st = status
+  ci = commit
+  ca = commit -a
+  cm = commit -m
+  cam = commit -a -m
+  co = checkout
+  cb = checkout -b
+  b = branch
+  bd = branch -d
+  bD = branch -D
+  di = diff
+  dc = diff --cached
+  dh1 = diff HEAD~1
+  amend = commit --amend
+  aa = add --all
+  au = add -u
+  puff = pull --ff-only
+  purb = pull --rebase
+  rb = rebase
+  ri = rebase -i
+
