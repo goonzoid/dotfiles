@@ -40,3 +40,4 @@ PATH="$HOME/bin:$PATH"
 # Aliases
 alias vim='mvim -v'
 alias vi='mvim -v'
+alias gi='git'
