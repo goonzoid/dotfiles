@@ -19,6 +19,7 @@ filetype plugin indent on
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set hidden
 set history=1000
+set number
 set expandtab
 set tabstop=2
 set shiftwidth=2
