@@ -84,7 +84,7 @@ map <Down> :echo "no!"<cr>
 " We have to set winheight bigger than winminheight, but if we
 " set winhieght to be huge before setting winminheight, the
 " winminheight will fail.
-set winwidth=80
+set winwidth=90
 set winheight=5
 set winminheight=5
 set winheight=999
