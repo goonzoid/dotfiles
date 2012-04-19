@@ -8,6 +8,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
+Bundle 'eraserhd/vim-ios'
 Bundle 'tpope/vim-fugitive'
 Bundle 'git://git.wincent.com/command-t.git'
 
