@@ -75,6 +75,9 @@ nnoremap <c-l> <c-w>l
 imap <c-l> =><space>
 " Not sure what the diff is between <c-c> and Esc
 imap <c-c> <esc>
+" Use <leader>f and F for Command-T
+map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
+map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MULTIPURPOSE TAB KEY
