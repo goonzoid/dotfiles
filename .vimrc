@@ -11,6 +11,7 @@ Bundle 'gmarik/vundle'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'eraserhd/vim-ios'
 Bundle 'tpope/vim-fugitive'
+Bundle 'suan/vim-instant-markdown'
 Bundle 'git://git.wincent.com/command-t.git'
 
 filetype plugin indent on
@@ -48,10 +49,13 @@ let mapleader=","
 
 augroup vimrcEx
   autocmd!
+  " Jump to last cursor position unless it's invalid or in an event handler
   autocmd BufReadPost *
     \ if line("'\"") > 0 && line("'\"") <= line("$") |
     \   exe "normal g`\"" |
     \ endif
+  " Don't syntax highlight markdown because it's often wrong
+  autocmd! FileType mkd setlocal syn=off
 augroup END
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
