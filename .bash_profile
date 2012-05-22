@@ -1,5 +1,7 @@
 source ~/bin/git-completion.bash
 
+/usr/bin/chflags nohidden ~/Library
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 PATH="$HOME/bin:$PATH"
 
