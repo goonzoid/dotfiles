@@ -31,7 +31,7 @@ set laststatus=2
 set showmatch
 set incsearch
 set hlsearch
-set ignorecase 
+set ignorecase
 set smartcase
 set cmdheight=2
 
@@ -146,3 +146,21 @@ function! RenameFile()
   endif
 endfunction
 command! RenameCurrent :call RenameFile()
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" REMOVE TRAILING WHITESPACE
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! <SID>StripTrailingWhitespace()
+  " Save last search, and cursor position.
+  let _s=@/
+  let l = line(".")
+  let c = col(".")
+  " Do the business:
+  %s/\s\+$//e
+  " Clean up: restore previous search history and cursor position
+  let @/=_s
+  call cursor(l, c)
+endfunction
+command! StripTrailingWhitespace call <SID>StripTrailingWhitespace()
+nmap ,w :StripTrailingWhitespace<cr>
+
