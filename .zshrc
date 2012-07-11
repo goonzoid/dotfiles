@@ -41,3 +41,4 @@ NODE_PATH=/usr/local/lib/node_modules
 # Aliases
 alias vim='mvim -v'
 alias vi='mvim -v'
+alias pod-dev='rvm ruby-1.9.3-p194@cocoapods do $HOME/dev/cocoapods/bin/pod'
