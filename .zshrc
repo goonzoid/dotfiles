@@ -39,6 +39,7 @@ PATH="$HOME/bin:$PATH"
 NODE_PATH=/usr/local/lib/node_modules
 
 # Aliases
-alias vim='mvim -v'
-alias vi='mvim -v'
-alias pod-dev='rvm ruby-1.9.3-p194@cocoapods do $HOME/dev/cocoapods/bin/pod'
+alias vim="mvim -v"
+alias vi="mvim -v"
+alias pod-dev="rvm ruby-1.9.3-p194@cocoapods do $HOME/dev/cocoapods/bin/pod"
+alias tcp4567="sudo tcpdump -s 0 -A -i lo0 'tcp port 4567 and (((ip[2:2] - ((ip[0]&0xf)<<2)) - ((tcp[12]&0xf0)>>2)) != 0)'"
