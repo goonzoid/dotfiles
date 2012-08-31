@@ -34,5 +34,3 @@
   la = !git l --all
   r = !git l -16
   ra = !git r --all
-  h = !git l -1
-  hp = "!source ~/.githelpers && show_git_head"
