@@ -17,6 +17,7 @@
   co = checkout
   cb = checkout -b
   b = branch
+  ba = branch -a
   bd = branch -d
   bdel = branch -D
   rs = reset
