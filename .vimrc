@@ -9,7 +9,6 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'eraserhd/vim-ios'
 Bundle 'tpope/vim-fugitive'
 Bundle 'suan/vim-instant-markdown'
 Bundle 'git://git.wincent.com/command-t.git'
