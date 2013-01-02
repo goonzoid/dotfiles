@@ -45,6 +45,8 @@ set scrolloff=3
 set backup
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+" This makes RVM work inside Vim. I have no idea why.
+set shell=bash
 syntax on
 let mapleader=","
 
