@@ -61,8 +61,9 @@ augroup END
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " KEY MAPPINGS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Allow yank to system clipboard
+" Allow yank and put to/from system clipboard
 map <leader>y "*y
+map <leader>p "*p
 " Improve scrolling speed
 nnoremap <c-e> 3<c-e>
 nnoremap <c-y> 3<c-y>
