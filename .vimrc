@@ -34,7 +34,7 @@ set hlsearch
 set ignorecase
 set smartcase
 set cmdheight=2
-
+set showtabline=2
 set ruler
 set title
 set showcmd
