@@ -36,7 +36,8 @@ source "$OMZ/init.zsh"
 
 # Customize to your needs...
 PATH="$HOME/bin:$PATH"
-NODE_PATH=/usr/local/lib/node_modules
+PATH="/usr/local/share/npm/bin:$PATH"
+NODE_PATH=/usr/local/lib/node
 
 # Aliases
 alias vim="mvim -v"
