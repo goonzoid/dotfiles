@@ -12,6 +12,7 @@ Bundle 'gmarik/vundle'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-commentary'
 Bundle 'suan/vim-instant-markdown'
 Bundle 'git://git.wincent.com/command-t.git'
 
