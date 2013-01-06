@@ -14,6 +14,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-unimpaired'
+Bundle 'tpope/vim-surround'
 Bundle 'suan/vim-instant-markdown'
 Bundle 'git://git.wincent.com/command-t.git'
 
