@@ -15,6 +15,7 @@ Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-repeat'
 Bundle 'suan/vim-instant-markdown'
 Bundle 'git://git.wincent.com/command-t.git'
 
