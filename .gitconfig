@@ -27,6 +27,7 @@
   amend = commit --amend
   aa = add --all
   au = add -u
+  ap = add -p
   puff = pull --ff-only
   purb = pull --rebase
   rb = rebase
