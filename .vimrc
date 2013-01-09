@@ -123,12 +123,12 @@ map <Down> :echo "no!"<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " WINDOW SIZING
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set winwidth=80
 " We have to set winheight bigger than winminheight, but if we
 " set winhieght to be huge before setting winminheight, the
 " winminheight will fail.
-set winwidth=80
-set winheight=8
-set winminheight=8
+set winheight=12
+set winminheight=12
 set winheight=999
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
