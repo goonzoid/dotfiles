@@ -170,7 +170,7 @@ function! <SID>StripTrailingWhitespace()
   call cursor(l, c)
 endfunction
 command! StripTrailingWhitespace call <SID>StripTrailingWhitespace()
-nmap ,w :StripTrailingWhitespace<cr>
+nmap <leader>s :StripTrailingWhitespace<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SWITCH BETWEEN TEST AND PRODUCTION CODE
