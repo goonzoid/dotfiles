@@ -68,6 +68,8 @@ augroup END
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " KEY MAPPINGS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map :W :w
+map :Q :q
 " Allow yank and put to/from system clipboard
 map <leader>y "*y
 map <leader>p "*p
