@@ -36,8 +36,10 @@ set laststatus=2
 set showmatch
 set incsearch
 set hlsearch
-set ignorecase
-set smartcase
+" Make searches case sensitive only if they contain upper-case characters
+set ignorecase smartcase
+" Allow backspacing over everything in insert mode
+set backspace=indent,eol,start
 set cmdheight=2
 set showtabline=2
 set ruler
