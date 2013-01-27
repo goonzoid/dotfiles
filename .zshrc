@@ -35,8 +35,6 @@ zstyle ':omz:module:prompt' theme 'sorin'
 source "$OMZ/init.zsh"
 
 # Customize to your needs...
-PATH="$HOME/bin:$PATH"
-PATH="/usr/local/share/npm/bin:$PATH"
-NODE_PATH=/usr/local/lib/node
-
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 source '.aliases'
+source '.env'
