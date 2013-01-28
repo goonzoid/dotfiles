@@ -1,4 +1,6 @@
+# Editing
 export EDITOR=vi
+bindkey -e
 
 # Completion
 autoload -U compinit
