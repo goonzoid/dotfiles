@@ -267,7 +267,8 @@ highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" .VIMRC EDITING HELPERS
+" DOTFILE EDITING HELPERS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd bufwritepost .vimrc source $MYVIMRC
 nmap <leader>v :e $MYVIMRC<CR>
+nmap <leader>z :e ~/.zshrc<CR>
