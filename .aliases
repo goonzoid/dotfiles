@@ -1,7 +1,7 @@
 alias ls='ls -G'
 alias ll='ls -lhG'
-alias la='ls -ahG'
-alias lal='ls -alhG'
+alias la='ls -AhG'
+alias lal='ls -AlhG'
 
 alias mkdir='mkdir -p'
 
@@ -11,12 +11,12 @@ alias :x='echo You\ lose!'
 alias :q='echo You\ lose!'
 
 # Text editors
-alias vim="mvim -v"
-alias vi="mvim -v"
-alias emacs="/usr/local/Cellar/emacs/24.2/bin/emacs"
+alias vim='mvim -v'
+alias vi='mvim -v'
+alias emacs='/usr/local/Cellar/emacs/24.2/bin/emacs'
 
 # Project specific stuff
-alias pod-dev="rvm ruby-1.9.3-p194@cocoapods do $HOME/dev/cocoapods/bin/pod"
+alias pod-dev='rvm ruby-1.9.3-p194@cocoapods do $HOME/dev/cocoapods/bin/pod'
 
 # TODO: Turn this into a function that takes the port as an arg
 alias tcp4567="sudo tcpdump -s 0 -A -i lo0 'tcp port 4567 and (((ip[2:2] - ((ip[0]&0xf)<<2)) - ((tcp[12]&0xf0)>>2)) != 0)'"
