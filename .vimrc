@@ -11,6 +11,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-unimpaired'
