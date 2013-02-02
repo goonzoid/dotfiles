@@ -3,8 +3,7 @@ export EDITOR=vi
 bindkey -e
 
 # Completion
-autoload -U compinit
-compinit
+autoload -U compinit && compinit
 zstyle ':completion:*' menu select
 setopt completealiases
 
@@ -14,9 +13,13 @@ export GREP_OPTIONS="--color"
 export LSCOLORS="gxfxcxdxbxegedabagacad"
 
 # Prompt
-autoload -U promptinit
-promptinit
-PROMPT="%{$fg[cyan]%}%~ %{$fg[green]%}❯ %{$reset_color%}"
+autoload -U vcs_info
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:git*' formats "%{$fg[red]%}%b%a "
+precmd() { vcs_info }
+setopt prompt_subst
+autoload -U promptinit && promptinit
+PROMPT='%{$fg[cyan]%}%~ ${vcs_info_msg_0_}%{$fg[green]%}❯ %{$reset_color%}'
 
 # Better history
 HISTFILE="$HOME/.zhistory"
@@ -33,3 +36,4 @@ source ".aliases"
 source ".env"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
