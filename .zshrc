@@ -15,11 +15,11 @@ export LSCOLORS="gxfxcxdxbxegedabagacad"
 # Prompt
 autoload -U vcs_info
 zstyle ':vcs_info:*' enable git
-zstyle ':vcs_info:git*' formats "%{$fg[red]%}%b%a "
+zstyle ':vcs_info:git*' formats "%{$fg[green]%}%b%a "
 precmd() { vcs_info }
 setopt prompt_subst
 autoload -U promptinit && promptinit
-PROMPT='%{$fg[cyan]%}%~ ${vcs_info_msg_0_}%{$fg[green]%}❯ %{$reset_color%}'
+PROMPT='%{$fg[cyan]%}%~ ${vcs_info_msg_0_}%{$fg[blue]%}❯ %{$reset_color%}'
 
 # Better history
 HISTFILE="$HOME/.zhistory"
