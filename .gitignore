@@ -26,6 +26,7 @@
 /.ssh/
 /.subversion/
 /.vim/
+/.vim-tmp/
 /.viminfo
 /.zcache/
 /.zcompdump
