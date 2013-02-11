@@ -12,7 +12,7 @@ alias :q='echo You\ lose!'
 
 # Text editors
 alias vim='mvim -v'
-alias vi='mvim -v'
+alias vi='vim'
 alias emacs='/usr/local/Cellar/emacs/24.2/bin/emacs'
 
 # Project specific stuff
