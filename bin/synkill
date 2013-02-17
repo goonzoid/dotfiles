@@ -1,0 +1,10 @@
+#!/bin/sh
+
+set -e
+
+ps x |
+grep synergys |
+grep -v grep |
+cut -d ' ' -f 2 |
+xargs kill
+
