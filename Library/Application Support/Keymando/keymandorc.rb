@@ -9,8 +9,9 @@ disable "Remote Desktop Connection"
 # Basic mapping
 # -----------------------------------------------------------
 only /Chrome/ do
-  map "<Ctrl-t>", "<Cmd-t>"
   map "<Ctrl-w>", "<Cmd-w>"
+  map "<Ctrl-r>", "<Cmd-r>"
+  map "<Ctrl-t>", "<Cmd-t>"
 end
 
 # Commands
