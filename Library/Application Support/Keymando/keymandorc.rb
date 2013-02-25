@@ -9,7 +9,6 @@ disable "Remote Desktop Connection"
 # Basic mapping
 # -----------------------------------------------------------
 only /Chrome/ do
-  map "<Ctrl-w>", "<Cmd-w>"
   map "<Ctrl-r>", "<Cmd-r>"
   map "<Ctrl-t>", "<Cmd-t>"
 end
@@ -33,7 +32,7 @@ command "Volume Down" do
 end
 
 # Repeat last command via Cmd-.
-map "<Cmd-.>", RunLastCommand.instance
+map "<Cmd-,>", RunLastCommand.instance
 
 # -----------------------------------------------------------
 # Visit http://keymando.com to see what else Keymando can do!
