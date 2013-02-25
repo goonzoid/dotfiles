@@ -2,9 +2,7 @@
 
 set -e
 
-ps x |
-grep synergys |
-grep -v grep |
-cut -d ' ' -f 2 |
-xargs kill
+PID=$( ps x | grep synergys | grep -v grep | awk '{print $1}' )
+echo 'Killing '$PID
+kill $PID
 
