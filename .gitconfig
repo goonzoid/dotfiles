@@ -3,7 +3,6 @@
 	email = wpragnell@gmail.com
 [core]
 	autocrlf = input
-	editor = /usr/bin/vim
 [color]
   ui = auto
 [merge]
