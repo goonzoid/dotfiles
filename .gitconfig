@@ -7,6 +7,8 @@
   ui = auto
 [merge]
   tool = opendiff
+[help]
+	autocorrect = 1
 [alias]
   st = status
   ci = commit
