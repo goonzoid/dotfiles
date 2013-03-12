@@ -38,3 +38,5 @@
   la = !git l --all
   r = !git l -16
   ra = !git r --all
+[github]
+	user = willpragnell
