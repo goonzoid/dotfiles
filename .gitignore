@@ -25,6 +25,8 @@
 /.rvm/
 /.ssh/
 /.subversion/
+/.swt/
+/.Trash/
 /.vim/
 /.vim-tmp/
 /.viminfo
