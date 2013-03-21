@@ -17,6 +17,7 @@
 /.muttrc
 /.netExtender.log
 /.netextender
+/.netExtenderCerts/
 /.netrc
 /.node-gyp/
 /.npm/
