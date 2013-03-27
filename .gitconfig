@@ -17,6 +17,7 @@
   cam = commit -a -m
   co = checkout
   cb = checkout -b
+  c- = checkout -
   b = branch
   ba = branch -a
   bd = branch -d
