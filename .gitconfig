@@ -1,14 +1,14 @@
 [user]
-	name = Will Pragnell
-	email = wpragnell@gmail.com
+  name = Will Pragnell
+  email = wpragnell@gmail.com
 [core]
-	autocrlf = input
+  autocrlf = input
 [color]
   ui = auto
 [merge]
   tool = opendiff
 [help]
-	autocorrect = 1
+  autocorrect = 1
 [alias]
   st = status
   ci = commit
@@ -40,4 +40,4 @@
   r = !git l -16
   ra = !git r --all
 [github]
-	user = willpragnell
+  user = willpragnell
