@@ -19,7 +19,8 @@ zstyle ':vcs_info:git*' formats "%{$fg[green]%}[%b]%a "
 precmd() { vcs_info }
 setopt prompt_subst
 autoload -U promptinit && promptinit
-PROMPT='%{$fg[green]%}%m %{$fg[magenta]%}%~ ${vcs_info_msg_0_}%{$fg[blue]%}❯ %{$reset_color%}'
+PROMPT='%{$fg[green]%}%m %{$fg[magenta]%}%~ %{$fg[red]%}[$(rvm-prompt i v g s)]%{$reset_color%} ${vcs_info_msg_0_}
+%{$fg[blue]%}❯ %{$reset_color%}'
 
 # Better history
 HISTFILE="$HOME/.zhistory"
