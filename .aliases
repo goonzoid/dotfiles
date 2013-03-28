@@ -7,6 +7,7 @@ alias mkdir='mkdir -p'
 
 alias rm='rm -i'
 
+alias sysruby='rvm use system'
 alias syn='/Applications/Synergy.app/Contents/MacOS/synergys'
 alias serve='python -m SimpleHTTPServer'
 
