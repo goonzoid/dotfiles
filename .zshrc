@@ -1,5 +1,5 @@
 # Editing
-export EDITOR=vi
+export EDITOR="/usr/local/bin/mvim -v"
 bindkey -e
 
 # Completion
