@@ -19,7 +19,7 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
 Bundle 'suan/vim-instant-markdown'
-Bundle 'willpragnell/vim-processing'
+Bundle 'willpragnell/vim-reprocessed'
 Bundle 'git://git.wincent.com/command-t.git'
 
 filetype plugin indent on
