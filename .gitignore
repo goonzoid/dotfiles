@@ -28,6 +28,7 @@
 /.subversion/
 /.swt/
 /.Trash/
+/.vagrant.d/
 /.vim/
 /.vim-tmp/
 /.viminfo
