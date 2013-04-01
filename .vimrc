@@ -272,12 +272,6 @@ function! RunTests(filename)
 endfunction
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" HIGHTLIGHT CHARACTERS BEYOND THE 80TH COLUMN!
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " DOTFILE EDITING HELPERS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd bufwritepost .vimrc source $MYVIMRC
