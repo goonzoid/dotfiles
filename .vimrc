@@ -137,8 +137,8 @@ set winwidth=80
 " We have to set winheight bigger than winminheight, but if we
 " set winhieght to be huge before setting winminheight, the
 " winminheight will fail.
-set winheight=12
-set winminheight=12
+set winheight=2
+set winminheight=2
 set winheight=999
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
