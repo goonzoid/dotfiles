@@ -24,7 +24,9 @@
   bdel = branch -D
   rs = reset
   di = diff
+  diw = diff -w
   dc = diff --cached
+  dcw = diff --cached -w
   dh1 = diff HEAD~1
   dr = diff -w -U20
   amend = commit --amend
