@@ -5,8 +5,6 @@
   autocrlf = input
 [color]
   ui = auto
-[merge]
-  tool = opendiff
 [help]
   autocorrect = 1
 [alias]
@@ -43,3 +41,16 @@
   ra = !git r --all
 [github]
   user = willpragnell
+[difftool "Kaleidoscope"]
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[mergetool "Kaleidoscope"]
+  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+  trustExitCode = true
+[diff]
+  tool = Kaleidoscope
+[difftool]
+  prompt = false
+[merge]
+  tool = Kaleidoscope
+[mergetool]
+  prompt = false
