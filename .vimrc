@@ -280,3 +280,9 @@ endfunction
 autocmd bufwritepost .vimrc source $MYVIMRC
 nmap <leader>v :e $MYVIMRC<CR>
 nmap <leader>z :e ~/.zshrc<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" SYNTASTIC CONFIG
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['objc'] }
+
