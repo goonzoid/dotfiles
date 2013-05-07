@@ -21,6 +21,7 @@
 /.netrc
 /.node-gyp/
 /.npm/
+/.npmrc
 /.pip/
 /.pow
 /.rvm/
