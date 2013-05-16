@@ -42,6 +42,7 @@ set laststatus=2
 set showmatch
 set incsearch
 set hlsearch
+set list listchars=tab:▸\ ,trail:·
 " Make searches case sensitive only if they contain upper-case characters
 set ignorecase smartcase
 " Allow backspacing over everything in insert mode
@@ -144,15 +145,7 @@ set winheight=2
 set winminheight=2
 set winheight=999
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" HIGHLIGH TRAILING WHITESPACE
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-highlight ExtraWhitespace ctermbg=darkred guibg=#382424
-autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-" the above flashes annoyingly while typing, be calmer in insert mode
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " STATUS LINE
