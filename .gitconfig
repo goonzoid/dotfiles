@@ -37,6 +37,8 @@
   la = !git l --all
   r = !git l -16
   ra = !git r --all
+  sl = stash list
+  sp = stash pop
 [github]
   user = willpragnell
 [difftool "Kaleidoscope"]
