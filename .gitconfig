@@ -5,8 +5,6 @@
   autocrlf = input
 [color]
   ui = auto
-[help]
-  autocorrect = 1
 [alias]
   st = status
   ci = commit
