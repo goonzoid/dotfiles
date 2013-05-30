@@ -85,8 +85,8 @@ map :Q :q
 map <leader>y "*y
 map <leader>p "*p
 " Improve scrolling speed
-nnoremap <c-e> 3<c-e>
-nnoremap <c-y> 3<c-y>
+nnoremap <c-e> 9<c-e>
+nnoremap <c-y> 9<c-y>
 " Easier switch between files
 nnoremap <leader><leader> <c-^>
 " Clear search buffer by hitting return
