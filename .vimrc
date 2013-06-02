@@ -1,10 +1,7 @@
 set nocompatible
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VUNDLE PLUGIN CONFIGURATION
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype off
-
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -26,9 +23,7 @@ Bundle 'git://git.wincent.com/command-t.git'
 
 filetype plugin indent on
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BASIC EDITING CONFIGURATION
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set hidden
 set history=1000
 set number
@@ -76,9 +71,7 @@ augroup vimrcEx
   autocmd! FileType mkd setlocal syn=off
 augroup END
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " KEY MAPPINGS
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map :W :w
 map :Q :q
 " Allow yank and put to/from system clipboard
@@ -105,9 +98,7 @@ map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
 map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
 map <leader>g :Gstatus<cr>
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MULTIPURPOSE TAB KEY
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 function! InsertTabWrapper()
   let col = col('.') - 1
   if !col || getline('.')[col - 1] !~ '\k'
@@ -119,43 +110,30 @@ endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " OPEN FILES IN DIRECTORY OF CURRENT FILE
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 map <leader>e :edit %%
 map <leader>v :view %%
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ARROW KEYS ARE UNACCEPTABLE
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <Left> :echo "no!"<cr>
 map <Right> :echo "no!"<cr>
 map <Up> :echo "no!"<cr>
 map <Down> :echo "no!"<cr>
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " WINDOW SIZING
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set winwidth=80
-" We have to set winheight bigger than winminheight, but if we
-" set winhieght to be huge before setting winminheight, the
-" winminheight will fail.
-set winheight=2
-set winminheight=2
+" We have to set winheight bigger than winminheight, but if we set winheight to
+" be huge before setting winminheight, the winminheight will fail.
+set winheight=5
+set winminheight=5
 set winheight=999
 
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " STATUS LINE
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 :set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " RENAME CURRENT FILE
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-function! RenameFile()
+function! RenameCurrent()
   let old_name = expand('%')
   let new_name = input('New file name: ', expand('%'), 'file')
   if new_name != '' && new_name != old_name
@@ -164,11 +142,9 @@ function! RenameFile()
     redraw!
   endif
 endfunction
-command! RenameCurrent :call RenameFile()
+command! RenameCurrent :call RenameCurrent()
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " REMOVE TRAILING WHITESPACE
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 function! <SID>StripTrailingWhitespace()
   " Save last search, and cursor position.
   let _s=@/
@@ -183,9 +159,7 @@ endfunction
 command! StripTrailingWhitespace call <SID>StripTrailingWhitespace()
 nmap <leader>s :StripTrailingWhitespace<cr>
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SWITCH BETWEEN TEST AND PRODUCTION CODE
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 function! OpenTestAlternate()
   let new_file = AlternateForCurrentFile()
   exec ':e ' . new_file
@@ -213,9 +187,7 @@ function! AlternateForCurrentFile()
 endfunction
 nnoremap <leader>. :call OpenTestAlternate()<cr>
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " RUNNING TESTS
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <leader>t :call RunTestFile()<cr>
 map <leader>T :call RunNearestTest()<cr>
 map <leader>a :call RunTests('')<cr>
@@ -267,15 +239,11 @@ function! RunTests(filename)
     end
 endfunction
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " DOTFILE EDITING HELPERS
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd bufwritepost .vimrc source $MYVIMRC
 nmap <leader>v :e $MYVIMRC<CR>
 nmap <leader>z :e ~/.zshrc<CR>
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SYNTASTIC CONFIG
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['objc'] }
 
