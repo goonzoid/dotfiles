@@ -17,6 +17,11 @@ alias vim='mvim -v'
 alias vi='vim'
 alias emacs='/usr/local/Cellar/emacs/24.2/bin/emacs'
 
+# iTerm tab/window naming
+function name() {
+  echo -e "\033];$1\007";
+}
+
 # Project specific stuff
 alias pod-dev='rvm ruby-1.9.3-p194@cocoapods do $HOME/dev/cocoapods/bin/pod'
 
