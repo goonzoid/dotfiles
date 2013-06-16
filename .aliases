@@ -1,4 +1,5 @@
 alias g='git'
+
 alias ls='ls -G'
 alias ll='ls -lhG'
 alias la='ls -AhG'
@@ -12,10 +13,13 @@ alias sysruby='rvm use system'
 alias syn='/Applications/Synergy.app/Contents/MacOS/synergys'
 alias serve='python -m SimpleHTTPServer'
 
-# Text editors
 alias vim='mvim -v'
 alias vi='vim'
 alias emacs='/usr/local/Cellar/emacs/24.2/bin/emacs'
+
+alias tl='tmux ls'
+alias ta='tmux attach -t $1'
+alias tn='tmux new -s $1'
 
 # iTerm tab/window naming
 function name() {
