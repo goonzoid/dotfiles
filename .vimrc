@@ -6,9 +6,11 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
-Bundle 'vim-ruby/vim-ruby'
+Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'jpalardy/vim-slime'
 Bundle 'pangloss/vim-javascript'
 Bundle 'scrooloose/syntastic'
+Bundle 'suan/vim-instant-markdown'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-markdown'
@@ -17,11 +19,17 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-dispatch'
-Bundle 'suan/vim-instant-markdown'
+Bundle 'vim-ruby/vim-ruby'
 Bundle 'willpragnell/vim-reprocessed'
-Bundle 'git://git.wincent.com/command-t.git'
 
 filetype plugin indent on
+
+" PLUGIN CONFIG
+let g:slime_target = "tmux"
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['objc'] }
+
+" FILETYPE DETECTION
+autocmd BufReadPost *.rkt,*.rktl set filetype=scheme
 
 " BASIC EDITING CONFIGURATION
 set hidden
@@ -74,6 +82,7 @@ augroup END
 " KEY MAPPINGS
 map :W :w
 map :Q :q
+map :X :x
 " Allow yank and put to/from system clipboard
 map <leader>y "*y
 map <leader>p "*p
@@ -245,7 +254,4 @@ autocmd bufwritepost .vimrc source $MYVIMRC
 nmap <leader>z :e ~/.zshrc<CR>
 nmap <leader>x :e ~/.tmux.conf<CR>
 autocmd bufwritepost .tmux.conf silent !tmux source-file ~/.tmux.conf
-
-" SYNTASTIC CONFIG
-let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['objc'] }
 
