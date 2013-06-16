@@ -34,7 +34,9 @@ zle -N edit-command-line
 bindkey '\C-x\C-e' edit-command-line
 
 source ".aliases"
-source ".env"
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH="/usr/local/bin:$HOME/bin:$PATH"
+PATH="/usr/local/share/npm/bin:$PATH"
+PATH="/Applications/Racket v5.3.4/bin:$PATH"
+PATH="$PATH:$HOME/.rvm/bin"
 
