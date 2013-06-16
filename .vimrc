@@ -240,9 +240,11 @@ function! RunTests(filename)
 endfunction
 
 " DOTFILE EDITING HELPERS
-autocmd bufwritepost .vimrc source $MYVIMRC
 nmap <leader>v :e $MYVIMRC<CR>
+autocmd bufwritepost .vimrc source $MYVIMRC
 nmap <leader>z :e ~/.zshrc<CR>
+nmap <leader>x :e ~/.tmux.conf<CR>
+autocmd bufwritepost .tmux.conf silent !tmux source-file ~/.tmux.conf
 
 " SYNTASTIC CONFIG
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['objc'] }
