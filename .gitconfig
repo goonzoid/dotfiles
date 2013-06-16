@@ -54,3 +54,5 @@
   tool = Kaleidoscope
 [mergetool]
   prompt = false
+[push]
+  default = current
