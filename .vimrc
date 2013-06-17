@@ -8,6 +8,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'jpalardy/vim-slime'
+Bundle 'Lokaltog/vim-easymotion'
 Bundle 'pangloss/vim-javascript'
 Bundle 'scrooloose/syntastic'
 Bundle 'suan/vim-instant-markdown'
@@ -25,6 +26,7 @@ Bundle 'willpragnell/vim-reprocessed'
 filetype plugin indent on
 
 " PLUGIN CONFIG
+let g:EasyMotion_leader_key = '<leader><space>'
 let g:slime_target = "tmux"
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['objc'] }
 
