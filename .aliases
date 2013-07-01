@@ -11,6 +11,7 @@ alias rm='rm -i'
 
 alias sysruby='rvm use system'
 alias syn='/Applications/Synergy.app/Contents/MacOS/synergys'
+alias python='python3'
 alias serve='python -m SimpleHTTPServer'
 
 alias vim='mvim -v'
