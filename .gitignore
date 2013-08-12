@@ -3,6 +3,7 @@
 /.bash_history
 /.bower/
 /.cocoapods/
+/.config/
 /.dbshell
 /.dropbox/
 /.elinks/
@@ -11,6 +12,7 @@
 /.irssi/
 /.lesshst
 /.lein/
+/.local/
 /.mailcap
 /.mongorc.js
 /.mplayer/
