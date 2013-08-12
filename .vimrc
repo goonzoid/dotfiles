@@ -88,6 +88,7 @@ map :X :x
 " Allow yank and put to/from system clipboard
 map <leader>y "*y
 map <leader>p "*p
+nnoremap p ]p
 " Improve scrolling speed
 nnoremap <c-e> 9<c-e>
 nnoremap <c-y> 9<c-y>
