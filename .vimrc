@@ -19,6 +19,7 @@ Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-dispatch'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'willpragnell/vim-reprocessed'
@@ -171,27 +172,24 @@ nmap <leader>s :StripTrailingWhitespace<cr>
 
 " SWITCH BETWEEN TEST AND PRODUCTION CODE
 function! OpenTestAlternate()
-  let new_file = AlternateForCurrentFile()
-  exec ':e ' . new_file
+  " if b:rails_root exists we're in a rails app and should defer to rails.vim
+  if exists('b:rails_root')
+    :A
+  else
+    let new_file = AlternateForCurrentFile()
+    exec ':e ' . new_file
+  endif
 endfunction
 function! AlternateForCurrentFile()
   let current_file = expand("%")
   let new_file = current_file
   let in_spec = match(current_file, '^spec/') != -1
-  let going_to_spec = !in_spec
-  let in_app = match(current_file, '\<controllers\>') != -1 || match(current_file, '\<models\>') != -1 || match(current_file, '\<views\>') != -1 || match(current_file, '\<helpers\>') != -1 || match(current_file, '\<services\>') != -1
-  if going_to_spec
-    if in_app
-      let new_file = substitute(new_file, '^app/', '', '')
-    end
-    let new_file = substitute(new_file, '\.rb$', '_spec.rb', '')
-    let new_file = 'spec/' . new_file
-  else
+  if in_spec
     let new_file = substitute(new_file, '_spec\.rb$', '.rb', '')
-    let new_file = substitute(new_file, '^spec/', '', '')
-    if in_app
-      let new_file = 'app/' . new_file
-    end
+    let new_file = substitute(new_file, '^spec/', 'lib/', '')
+  else
+    let new_file = substitute(new_file, '\.rb$', '_spec.rb', '')
+    let new_file = substitute(new_file, '^lib/', 'spec/', '')
   endif
   return new_file
 endfunction
