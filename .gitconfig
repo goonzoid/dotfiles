@@ -9,6 +9,7 @@
   st = status
   ci = commit
   ca = commit -a
+  cm = commit -m
   cam = commit -a -m
   co = checkout
   cb = checkout -b
