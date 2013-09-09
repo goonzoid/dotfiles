@@ -1,4 +1,6 @@
 alias g='git'
+alias gt='git'
+alias gi='git'
 
 alias ls='ls -G'
 alias ll='ls -lhG'
