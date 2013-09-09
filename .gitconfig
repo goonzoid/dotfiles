@@ -27,8 +27,8 @@
   dr = diff -w -U20
   amend = commit --amend
   aa = add --all
+  ap = add --all -p
   au = add -u
-  ap = add -p
   puff = pull --ff-only
   purb = pull --rebase
   rb = rebase
