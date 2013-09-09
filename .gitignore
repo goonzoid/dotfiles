@@ -29,6 +29,7 @@
 /.npmrc
 /.pip/
 /.pow
+/.rbenv/
 /.ssh/
 /.subversion/
 /.swt/
