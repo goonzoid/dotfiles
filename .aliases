@@ -11,7 +11,6 @@ alias mkdir='mkdir -p'
 
 alias rm='rm -i'
 
-alias sysruby='rvm use system'
 alias syn='/Applications/Synergy.app/Contents/MacOS/synergys'
 alias python='python3'
 alias serve='python -m SimpleHTTPServer'
@@ -29,8 +28,6 @@ function name() {
   echo -e "\033];$1\007";
 }
 
-# Project specific stuff
-alias pod-dev='rvm ruby-1.9.3-p194@cocoapods do $HOME/dev/cocoapods/bin/pod'
 alias pgsql='/Applications/Postgres.app/Contents/MacOS/bin/psql'
 
 # TODO: Turn this into a function that takes the port as an arg

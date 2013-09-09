@@ -19,7 +19,7 @@ zstyle ':vcs_info:git*' formats "%{$fg[green]%}[%b]%a "
 precmd() { vcs_info }
 setopt prompt_subst
 autoload -U promptinit && promptinit
-PROMPT='%{$fg[green]%}%m %{$fg[magenta]%}%~ %{$fg[red]%}[$(rvm-prompt i v g s)]%{$reset_color%} ${vcs_info_msg_0_}
+PROMPT='%{$fg[green]%}%m %{$fg[magenta]%}%~ ${vcs_info_msg_0_}
 %{$fg[blue]%}❯ %{$reset_color%}'
 
 # Better history
@@ -38,5 +38,4 @@ source "$HOME/.aliases"
 PATH="/usr/local/bin:$HOME/bin:$PATH"
 PATH="/usr/local/share/npm/bin:$PATH"
 PATH="/Applications/Racket v5.3.4/bin:$PATH"
-PATH="$PATH:$HOME/.rvm/bin"
 
