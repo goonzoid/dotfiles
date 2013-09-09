@@ -2,6 +2,7 @@
 /.CFUserTextEncoding
 /.bash_history
 /.bower/
+/.cache/
 /.cocoapods/
 /.config/
 /.dbshell
