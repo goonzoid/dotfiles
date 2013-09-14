@@ -40,6 +40,8 @@
   ra = !git r --all
   sl = stash list
   sp = stash pop
+  sno = show --name-only
+  sns = show --name-status
 [github]
   user = willpragnell
 [difftool "Kaleidoscope"]
