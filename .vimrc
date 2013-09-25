@@ -21,6 +21,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-dispatch'
+Bundle 'wting/rust.vim'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'willpragnell/vim-reprocessed'
 
