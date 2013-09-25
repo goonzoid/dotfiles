@@ -30,6 +30,7 @@
 /.npmrc
 /.pip/
 /.pow
+/.psql_history
 /.rbenv/
 /.ssh/
 /.subversion/
