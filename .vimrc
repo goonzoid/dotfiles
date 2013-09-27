@@ -72,6 +72,12 @@ set timeout timeoutlen=1000 ttimeoutlen=100
 syntax on
 let mapleader=","
 
+augroup cursorLine
+  au!
+  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+  au WinLeave * setlocal nocursorline
+augroup END
+
 augroup vimrcEx
   autocmd!
   " Jump to last cursor position unless it's invalid or in an event handler
@@ -140,6 +146,10 @@ set winwidth=80
 set winheight=5
 set winminheight=5
 set winheight=999
+
+" COLOR
+:set t_Co=256
+:color grb256
 
 " STATUS LINE
 :set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)

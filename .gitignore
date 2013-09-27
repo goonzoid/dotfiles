@@ -37,7 +37,7 @@
 /.swt/
 /.Trash/
 /.vagrant.d/
-/.vim/
+/.vim/bundle/
 /.vim-tmp/
 /.viminfo
 /.zcache/
