@@ -140,11 +140,11 @@ map <Up> :echo "no!"<cr>
 map <Down> :echo "no!"<cr>
 
 " WINDOW SIZING
-set winwidth=80
+set winwidth=84
 " We have to set winheight bigger than winminheight, but if we set winheight to
 " be huge before setting winminheight, the winminheight will fail.
-set winheight=5
-set winminheight=5
+set winheight=12
+set winminheight=12
 set winheight=999
 
 " COLOR
