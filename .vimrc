@@ -92,6 +92,14 @@ augroup vimrcEx
     \ endif
 augroup END
 
+augroup gitCommitEditMsg
+  autocmd!
+  autocmd BufReadPost *
+    \ if @% == '.git/COMMIT_EDITMSG' |
+    \   exe "normal gg" |
+    \ endif
+augroup END
+
 " KEY MAPPINGS
 map :W :w
 map :Q :q
