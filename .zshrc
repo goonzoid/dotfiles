@@ -47,7 +47,8 @@ eval "$(rbenv init -)"
 source "$HOME/.aliases"
 
 # PATH
-PATH="/usr/local/bin:$HOME/bin:$PATH"
+PATH="/usr/local/bin:$PATH"
 PATH="/usr/local/share/npm/bin:$PATH"
 PATH="/Applications/Racket v5.3.4/bin:$PATH"
-
+PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
+PATH="$HOME/bin:$PATH"
