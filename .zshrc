@@ -1,6 +1,8 @@
 # Editing
 export EDITOR="/usr/local/bin/mvim -v"
 bindkey -e
+bindkey ^f forward-word
+bindkey ^b backward-word
 
 # Completion
 autoload -U compinit && compinit
