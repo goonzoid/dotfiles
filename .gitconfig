@@ -42,6 +42,7 @@
   sp = stash pop
   sno = show --name-only
   sns = show --name-status
+  ctags = !.git/hooks/ctags
 [github]
   user = willpragnell
 [difftool "Kaleidoscope"]
@@ -59,3 +60,5 @@
   prompt = false
 [push]
   default = current
+[init]
+  templatedir = ~/.git_template
