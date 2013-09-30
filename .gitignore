@@ -32,6 +32,7 @@
 /.pow
 /.psql_history
 /.rbenv/
+/.sqlite_history
 /.ssh/
 /.subversion/
 /.swt/
