@@ -232,8 +232,9 @@ function! RunTestFile(...)
         let command_suffix = ""
     endif
 
-    " Run the tests for the previously-marked file.
-    let in_test_file = match(expand("%"), '\(.feature\|_spec.rb\)$') != -1
+    " rust files are always considered to be test files
+    let in_test_file = &filetype =~# 'rust' ||
+        \ match(expand("%"), '\(.feature\|_spec.rb\)$') != -1
     if in_test_file
         call SetTestFile()
     elseif !exists("t:wmp_test_file")
@@ -257,7 +258,9 @@ function! RunTests(filename)
     :w
     :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
     :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
-    if match(a:filename, '\.feature$') != -1
+    if &filetype =~# 'rust'
+        exec ":!rust test ". a:filename
+    elseif match(a:filename, '\.feature$') != -1
         exec ":!script/features " . a:filename
     else
         if filereadable("script/test")
