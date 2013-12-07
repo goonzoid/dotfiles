@@ -8,17 +8,8 @@
 [alias]
   st = status
   ci = commit
-  ca = commit -a
-  cm = commit -m
-  cam = commit -a -m
   co = checkout
-  cb = checkout -b
-  ct = checkout -t
-  c- = checkout -
-  b = branch
-  ba = branch -a
-  bd = branch -d
-  bdel = branch -D
+  br = branch
   rs = reset
   di = diff
   diw = diff -w
@@ -36,8 +27,8 @@
   ri = rebase -i
   l = "!source ~/.githelpers && pretty_git_log"
   la = !git l --all
-  r = !git l -16
-  ra = !git r --all
+  lg = !git l -16
+  lga = !git r --all
   sl = stash list
   sp = stash pop
   sno = show --name-only
