@@ -30,7 +30,6 @@ filetype plugin indent on
 
 " PLUGIN CONFIG
 let g:CommandTAlwaysShowDotFiles = 1
-let g:EasyMotion_leader_key = '<leader><space>'
 let g:slime_target = "tmux"
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['objc'] }
 runtime macros/matchit.vim
