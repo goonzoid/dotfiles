@@ -112,11 +112,6 @@ nnoremap <c-y> 9<c-y>
 nnoremap <leader><leader> <c-^>
 " Clear search buffer by hitting return
 :nnoremap <CR> :nohlsearch<cr>
-" Move around splits with <c-hjkl>
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-h> <c-w>h
-nnoremap <c-l> <c-w>l
 " Insert a hash rocket with <c-l>
 imap <c-l> =><space>
 " Not sure what the diff is between <c-c> and Esc
