@@ -91,6 +91,7 @@ augroup END
 
 augroup gitCommitEditMsg
   autocmd!
+  " Always jump to the start of git commit files
   autocmd BufReadPost *
     \ if @% == '.git/COMMIT_EDITMSG' |
     \   exe "normal gg" |
@@ -98,9 +99,9 @@ augroup gitCommitEditMsg
 augroup END
 
 " KEY MAPPINGS
-map :W :w
-map :Q :q
-map :X :x
+command! W :w
+command! Q :q
+command! X :x
 " Allow yank and put to/from system clipboard
 map <leader>y "*y
 map <leader>p "*p
