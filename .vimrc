@@ -101,7 +101,6 @@ augroup END
 " KEY MAPPINGS
 command! W :w
 command! Q :q
-command! X :x
 " Allow yank and put to/from system clipboard
 map <leader>y "*y
 map <leader>p "*p
