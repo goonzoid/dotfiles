@@ -40,9 +40,6 @@ autoload -U edit-command-line
 zle -N edit-command-line
 bindkey '\C-x\C-e' edit-command-line
 
-# rbenv
-eval "$(rbenv init -)"
-
 # Aliases
 source "$HOME/.aliases"
 
@@ -52,3 +49,7 @@ PATH="/usr/local/share/npm/bin:$PATH"
 PATH="/Applications/Sublime Text 2.app/Contents/SharedSupport/bin:$PATH"
 PATH="/Applications/Racket v5.3.4/bin:$PATH"
 PATH="$HOME/bin:$PATH"
+
+# rbenv
+eval "$(rbenv init -)"
+
