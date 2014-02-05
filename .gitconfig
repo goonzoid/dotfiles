@@ -35,7 +35,7 @@
   sns = show --name-status
   ctags = !.git/hooks/ctags
 [github]
-  user = willpragnell
+  user = goonzoid
 [difftool "Kaleidoscope"]
   cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [mergetool "Kaleidoscope"]
