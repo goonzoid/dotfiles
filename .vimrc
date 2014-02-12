@@ -83,19 +83,13 @@ augroup END
 
 augroup vimrcEx
   autocmd!
-  " Jump to last cursor position unless it's invalid or in an event handler
-  autocmd BufReadPost *
-    \ if line("'\"") > 0 && line("'\"") <= line("$") |
-    \   exe "normal g`\"" |
-    \ endif
-augroup END
-
-augroup gitCommitEditMsg
-  autocmd!
-  " Always jump to the start of git commit files
+  " Jump to last cursor position unless it's invalid or in an event handler,
+  " or the file is a git commit message
   autocmd BufReadPost *
     \ if @% == '.git/COMMIT_EDITMSG' |
-    \   exe "normal gg" |
+    \   exe "normal gg"
+    \ elseif line("'\"") > 0 && line("'\"") <= line("$") |
+    \   exe "normal g`\"" |
     \ endif
 augroup END
 
