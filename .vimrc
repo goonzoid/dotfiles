@@ -106,7 +106,7 @@ nnoremap <c-y> 9<c-y>
 " Easier switch between files
 nnoremap <leader><leader> <c-^>
 " Clear search buffer by hitting return
-:nnoremap <CR> :nohlsearch<cr>
+:nnoremap <space> :nohlsearch<cr>
 " Insert a hash rocket with <c-l>
 imap <c-l> =><space>
 " Not sure what the diff is between <c-c> and Esc
