@@ -222,11 +222,11 @@ function! RunTestFile(...)
     let in_test_file = &filetype =~# 'rust' ||
         \ match(expand("%"), '\(.feature\|_spec.rb\)$') != -1
     if in_test_file
-        call SetTestFile()
-    elseif !exists("t:wmp_test_file")
+        call SetCurrentTestFile()
+    elseif !exists("t:current_test_file")
         return
     end
-    call RunTests(t:wmp_test_file . command_suffix)
+    call RunTests(t:current_test_file . command_suffix)
 endfunction
 
 function! RunNearestTest()
@@ -234,15 +234,14 @@ function! RunNearestTest()
     call RunTestFile(":" . spec_line_number . " -b")
 endfunction
 
-function! SetTestFile()
+function! SetCurrentTestFile()
     " Set the spec file that tests will be run for.
-    let t:wmp_test_file=@%
+    let t:current_test_file=@%
 endfunction
 
 function! RunTests(filename)
     " Write the file and run tests for the given filename
     :w
-    :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
     :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
     if &filetype =~# 'rust'
         exec ":!rust test ". a:filename
