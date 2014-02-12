@@ -9,7 +9,6 @@ alias lal='ls -AlhG'
 
 alias mkdir='mkdir -p'
 
-alias rm='rm -i'
 
 alias syn='/Applications/Synergy.app/Contents/MacOS/synergys'
 alias python='python3'
