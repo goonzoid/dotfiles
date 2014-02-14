@@ -7,6 +7,7 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'Blackrush/vim-gocode'
 Bundle 'jpalardy/vim-slime'
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
