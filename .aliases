@@ -18,10 +18,6 @@ alias vim='mvim -v'
 alias vi='vim'
 alias emacs='/usr/local/Cellar/emacs/24.2/bin/emacs'
 
-alias tl='tmux ls'
-alias ta='tmux attach -t $1'
-alias tn='tmux new -s $1'
-
 # iTerm tab/window naming
 function name() {
   echo -e "\033];$1\007";
