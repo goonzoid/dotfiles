@@ -78,6 +78,7 @@ set timeout timeoutlen=1000 ttimeoutlen=100
 syntax on
 let mapleader=","
 
+" Only show cursorline in active buffer
 augroup cursorLine
   au!
   au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
