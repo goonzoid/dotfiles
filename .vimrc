@@ -39,6 +39,7 @@ runtime macros/matchit.vim
 
 " FILETYPE DETECTION
 autocmd BufReadPost *.rkt,*.rktl set filetype=scheme
+autocmd FileType go setlocal noexpandtab shiftwidth=4 tabstop=4
 
 " BASIC EDITING CONFIGURATION
 set hidden
@@ -47,7 +48,6 @@ set number
 set expandtab
 set tabstop=2
 set shiftwidth=2
-set softtabstop=2
 set textwidth=80
 set autoindent
 set laststatus=2
