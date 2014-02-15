@@ -90,11 +90,11 @@ augroup vimrcEx
   " Jump to last cursor position unless it's invalid or in an event handler,
   " or the file is a git commit message
   autocmd BufReadPost *
-    \ if @% == '.git/COMMIT_EDITMSG' |
-    \   exe "normal gg"
-    \ elseif line("'\"") > 0 && line("'\"") <= line("$") |
-    \   exe "normal g`\"" |
-    \ endif
+        \ if expand('%:t') == 'COMMIT_EDITMSG' |
+        \   exe "normal gg" |
+        \ elseif line("'\"") > 0 && line("'\"") <= line("$") |
+        \   exe "normal g`\"" |
+        \ endif
 augroup END
 
 " KEY MAPPINGS
