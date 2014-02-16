@@ -6,9 +6,10 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
-Bundle 'git://git.wincent.com/command-t.git'
+
 Bundle 'Blackrush/vim-gocode'
 Bundle 'christoomey/vim-tmux-navigator'
+Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'jpalardy/vim-slime'
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
@@ -25,8 +26,8 @@ Bundle 'tpope/vim-rake'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-vinegar'
-Bundle 'wting/rust.vim'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'wting/rust.vim'
 Bundle 'willpragnell/vim-reprocessed'
 
 filetype plugin indent on
