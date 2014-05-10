@@ -18,6 +18,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-fireplace'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-repeat'
@@ -37,6 +38,11 @@ let g:CommandTAlwaysShowDotFiles = 1
 let g:slime_target = "tmux"
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['objc'] }
 runtime macros/matchit.vim
+
+" Mappings for FiREPLace
+map <leader>e :Eval<cr>
+map <leader>er :Eval!<cr>
+map <leader>E :%Eval<cr>
 
 " FILETYPE DETECTION
 autocmd BufReadPost *.rkt,*.rktl set filetype=scheme
@@ -132,11 +138,6 @@ function! InsertTabWrapper()
 endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>
-
-" OPEN FILES IN DIRECTORY OF CURRENT FILE
-cnoremap %% <C-R>=expand('%:h').'/'<cr>
-map <leader>e :edit %%
-map <leader>v :view %%
 
 " ARROW KEYS ARE UNACCEPTABLE
 map <Left> :echo "no!"<cr>
