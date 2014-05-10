@@ -38,9 +38,9 @@ let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['objc'] }
 runtime macros/matchit.vim
 
 " Mappings for FiREPLace
-map <leader>e :Eval<cr>
-map <leader>er :Eval!<cr>
-map <leader>E :%Eval<cr>
+nnoremap <leader>e :Eval<cr>
+nnoremap <leader>er :Eval!<cr>
+nnoremap <leader>E :%Eval<cr>
 
 " FILETYPE DETECTION
 autocmd BufReadPost *.rkt,*.rktl set filetype=scheme
