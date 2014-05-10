@@ -13,20 +13,13 @@ export GREP_OPTIONS="--color"
 export LSCOLORS="gxfxcxdxbxegedabagacad"
 
 # Prompt
-function rbenv_prompt_info() {
-  local ruby_version
-  ruby_version=$(rbenv version 2> /dev/null) || return
-  echo "[$ruby_version" | sed -e "s/ (set.*$/]/"
-}
-alias rvm-prompt=rbenv_prompt_info
-alias rvm_prompt_info=rbenv_prompt_info
 autoload -U vcs_info
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:git*' formats "%{$fg[green]%}[%b]%a "
 precmd() { vcs_info }
 setopt prompt_subst
 autoload -U promptinit && promptinit
-PROMPT='%{$fg[green]%}%m %{$fg[magenta]%}%~ %{$fg[red]%}$(rvm-prompt i v g s)%{$reset_color%} ${vcs_info_msg_0_}
+PROMPT='%{$fg[green]%}%m %{$fg[magenta]%}%~ %{$reset_color%}${vcs_info_msg_0_}
 %{$fg[blue]%}❯ %{$reset_color%}'
 
 # Better history
