@@ -117,7 +117,8 @@ nnoremap <c-e> 9<c-e>
 nnoremap <c-y> 9<c-y>
 " Easier switch between files
 nnoremap <leader><leader> <c-^>
-" Clear search buffer by hitting return
+" Clear search buffer by hitting return or space
+:nnoremap <cr> :nohlsearch<cr>
 :nnoremap <space> :nohlsearch<cr>
 " Insert a hash rocket with <c-l>
 imap <c-l> =><space>
