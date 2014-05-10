@@ -34,7 +34,26 @@ zle -N edit-command-line
 bindkey '\C-x\C-e' edit-command-line
 
 # Aliases
-source "$HOME/.aliases"
+alias ls='ls -G'
+alias ll='ls -lhG'
+alias la='ls -AhG'
+alias lal='ls -AlhG'
+
+alias mkdir='mkdir -p'
+
+alias be='bundle exec'
+
+alias python='python3'
+alias serve='python -m SimpleHTTPServer'
+
+alias vim='mvim -v'
+alias vi='vim'
+alias emacs='/usr/local/Cellar/emacs/24.2/bin/emacs'
+
+# iTerm tab/window naming
+function name() {
+  echo -e "\033];$1\007";
+}
 
 export GOPATH="$HOME/workspace/go"
 
