@@ -37,11 +37,6 @@ let g:slime_target = "tmux"
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['objc'] }
 runtime macros/matchit.vim
 
-" Mappings for FiREPLace
-nnoremap <leader>e :Eval<cr>
-nnoremap <leader>er :Eval!<cr>
-nnoremap <leader>E :%Eval<cr>
-
 " FILETYPE DETECTION
 autocmd BufReadPost *.rkt,*.rktl set filetype=scheme
 autocmd FileType go setlocal noexpandtab shiftwidth=4 tabstop=4
@@ -125,6 +120,11 @@ imap <c-c> <esc>
 " Use <leader>f and F for Command-T
 map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
 map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
+
+" Mappings for FiREPLace
+nnoremap <leader>e :Eval<cr>
+nnoremap <leader>er :Eval!<cr>
+nnoremap <leader>E :%Eval<cr>
 
 " MULTIPURPOSE TAB KEY
 function! InsertTabWrapper()
