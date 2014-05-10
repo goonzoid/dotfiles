@@ -20,6 +20,7 @@
 /.lesshst
 /.lein/
 /.local/
+/.m2/
 /.mailcap
 /.mongorc.js
 /.mplayer/
