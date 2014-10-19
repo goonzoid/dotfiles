@@ -35,6 +35,7 @@
 /.npmrc
 /.pip/
 /.pow
+/.pry_history
 /.psql_history
 /.rbenv/
 /.sqlite_history
