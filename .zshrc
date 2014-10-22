@@ -53,10 +53,6 @@ alias be='bundle exec'
 alias python='python3'
 alias serve='python -m SimpleHTTPServer'
 
-alias vim='mvim -v'
-alias vi='vim'
-alias emacs='/usr/local/Cellar/emacs/24.2/bin/emacs'
-
 # iTerm tab/window naming
 function name() {
   echo -e "\033];$1\007";
