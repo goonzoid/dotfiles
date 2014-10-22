@@ -7,7 +7,6 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
-Bundle 'Blackrush/vim-gocode'
 Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'jpalardy/vim-slime'
@@ -29,7 +28,6 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-vinegar'
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'willpragnell/vim-reprocessed'
 
 filetype plugin indent on
 
