@@ -32,10 +32,18 @@ Bundle 'vim-ruby/vim-ruby'
 filetype plugin indent on
 
 " PLUGIN CONFIG
-let g:CommandTAlwaysShowDotFiles = 1
 let g:slime_target = "tmux"
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['objc'] }
 runtime macros/matchit.vim
+
+" CommandT
+let g:CommandTAlwaysShowDotFiles = 1
+map <c-p> :CommandTFlush<cr>\|:CommandT<cr>
+
+" Mappings for FiREPLace
+nnoremap <leader>e :Eval<cr>
+nnoremap <leader>er :Eval!<cr>
+nnoremap <leader>E :%Eval<cr>
 
 " FILETYPE DETECTION
 autocmd BufReadPost *.rkt,*.rktl set filetype=scheme
@@ -55,6 +63,7 @@ set laststatus=2
 set showmatch
 set incsearch
 set hlsearch
+" Make tabs and trailing whitespace visible
 set list listchars=tab:▸\ ,trail:·
 " Make searches case sensitive only if they contain upper-case characters
 set ignorecase smartcase
@@ -72,8 +81,6 @@ set backup
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set autowrite
-" This makes RVM work inside Vim. I have no idea why.
-set shell=bash
 " Fix delay after pressing ESC then O - http://ksjoberg.com/vim-esckeys.html
 set timeout timeoutlen=1000 ttimeoutlen=100
 syntax on
@@ -86,10 +93,10 @@ augroup cursorLine
   au WinLeave * setlocal nocursorline
 augroup END
 
+" Jump to last cursor position unless it's invalid or in an event handler,
+" or the file is a git commit message
 augroup vimrcEx
   autocmd!
-  " Jump to last cursor position unless it's invalid or in an event handler,
-  " or the file is a git commit message
   autocmd BufReadPost *
         \ if expand('%:t') == 'COMMIT_EDITMSG' |
         \   exe "normal gg" |
@@ -110,21 +117,12 @@ nnoremap <c-e> 9<c-e>
 nnoremap <c-y> 9<c-y>
 " Easier switch between files
 nnoremap <leader><leader> <c-^>
-" Clear search buffer by hitting return or space
-:nnoremap <cr> :nohlsearch<cr>
+" Clear search buffer by hitting space
 :nnoremap <space> :nohlsearch<cr>
 " Insert a hash rocket with <c-l>
 imap <c-l> =><space>
 " Not sure what the diff is between <c-c> and Esc
 imap <c-c> <esc>
-" Use <leader>f and F for Command-T
-map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
-map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
-
-" Mappings for FiREPLace
-nnoremap <leader>e :Eval<cr>
-nnoremap <leader>er :Eval!<cr>
-nnoremap <leader>E :%Eval<cr>
 
 " MULTIPURPOSE TAB KEY
 function! InsertTabWrapper()
