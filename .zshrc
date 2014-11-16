@@ -1,6 +1,7 @@
 # Editing
 export EDITOR="vim"
 bindkey -e
+setopt interactivecomments
 
 # Completion
 autoload -U compinit && compinit
