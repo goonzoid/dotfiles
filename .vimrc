@@ -8,7 +8,6 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle 'christoomey/vim-tmux-navigator'
-Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'jpalardy/vim-slime'
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
@@ -28,6 +27,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-vinegar'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'wincent/command-t'
 
 filetype plugin indent on
 
