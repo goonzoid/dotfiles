@@ -6,6 +6,7 @@
 /.bosh_cache/
 /.bosh_config
 /.cache/
+/.cf/
 /.cocoapods/
 /.config/
 /.dbshell
