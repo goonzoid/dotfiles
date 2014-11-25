@@ -44,6 +44,7 @@ map <c-p> :CommandTFlush<cr>\|:CommandT<cr>
 nnoremap <leader>e :Eval<cr>
 nnoremap <leader>er :Eval!<cr>
 nnoremap <leader>E :%Eval<cr>
+nnoremap <leader>r :w\|:%Eval<cr>\|:Eval (run-tests)<cr>
 
 " FILETYPE DETECTION
 autocmd BufReadPost *.rkt,*.rktl set filetype=scheme
