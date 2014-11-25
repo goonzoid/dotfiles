@@ -8,8 +8,10 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle 'christoomey/vim-tmux-navigator'
+Bundle 'guns/vim-sexp'
 Bundle 'jpalardy/vim-slime'
 Bundle 'kana/vim-textobj-user'
+Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-bundler'
@@ -23,6 +25,7 @@ Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-rake'
+Bundle 'tpope/vim-sexp-mappings-for-regular-people'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-vinegar'
@@ -45,6 +48,12 @@ nnoremap <leader>e :Eval<cr>
 nnoremap <leader>er :Eval!<cr>
 nnoremap <leader>E :%Eval<cr>
 nnoremap <leader>r :w\|:%Eval<cr>\|:Eval (run-tests)<cr>
+
+" I like rainbows
+autocmd VimEnter * RainbowParenthesesToggle
+autocmd Syntax * RainbowParenthesesLoadRound
+autocmd Syntax * RainbowParenthesesLoadSquare
+autocmd Syntax * RainbowParenthesesLoadBraces
 
 " FILETYPE DETECTION
 autocmd BufReadPost *.rkt,*.rktl set filetype=scheme
