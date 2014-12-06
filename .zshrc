@@ -51,7 +51,6 @@ alias mkdir='mkdir -p'
 
 alias be='bundle exec'
 
-alias python='python3'
 alias serve='python -m SimpleHTTPServer'
 
 # iTerm tab/window naming
