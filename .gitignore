@@ -44,7 +44,8 @@
 /.swt/
 /.Trash/
 /.vagrant.d/
-/.vim/bundle/
+/.vim
+!/.vim/colors
 /.vim-tmp/
 /.viminfo
 /.zcache/
