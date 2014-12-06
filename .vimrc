@@ -8,6 +8,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle 'christoomey/vim-tmux-navigator'
+Bundle 'fatih/vim-go'
 Bundle 'guns/vim-sexp'
 Bundle 'jpalardy/vim-slime'
 Bundle 'kana/vim-textobj-user'
