@@ -31,6 +31,7 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-vinegar'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'wincent/command-t'
+Bundle 'wlangstroth/vim-racket'
 
 filetype plugin indent on
 
@@ -56,7 +57,6 @@ autocmd Syntax * RainbowParenthesesLoadSquare
 autocmd Syntax * RainbowParenthesesLoadBraces
 
 " FILETYPE DETECTION
-autocmd BufReadPost *.rkt,*.rktl set filetype=scheme
 autocmd FileType go setlocal noexpandtab shiftwidth=4 tabstop=4
 autocmd FileType python setlocal shiftwidth=4 tabstop=4
 
