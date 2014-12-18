@@ -2,37 +2,37 @@ set nocompatible
 
 " VUNDLE PLUGIN CONFIGURATION
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
-Bundle 'christoomey/vim-tmux-navigator'
-Bundle 'fatih/vim-go'
-Bundle 'guns/vim-sexp'
-Bundle 'jpalardy/vim-slime'
-Bundle 'kana/vim-textobj-user'
-Bundle 'kien/rainbow_parentheses.vim'
-Bundle 'nelstrom/vim-textobj-rubyblock'
-Bundle 'scrooloose/syntastic'
-Bundle 'tpope/vim-bundler'
-Bundle 'tpope/vim-commentary'
-Bundle 'tpope/vim-dispatch'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-fireplace'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-leiningen'
-Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-rake'
-Bundle 'tpope/vim-sexp-mappings-for-regular-people'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'tpope/vim-vinegar'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'wincent/command-t'
-Bundle 'wlangstroth/vim-racket'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'fatih/vim-go'
+Plugin 'guns/vim-sexp'
+Plugin 'jpalardy/vim-slime'
+Plugin 'kana/vim-textobj-user'
+Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'nelstrom/vim-textobj-rubyblock'
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-bundler'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-dispatch'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-fireplace'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-leiningen'
+Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-rake'
+Plugin 'tpope/vim-sexp-mappings-for-regular-people'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-vinegar'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'wincent/command-t'
+Plugin 'wlangstroth/vim-racket'
 
 filetype plugin indent on
 
