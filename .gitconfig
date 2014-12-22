@@ -36,19 +36,6 @@
   ctags = !.git/hooks/ctags
 [github]
   user = goonzoid
-[difftool "Kaleidoscope"]
-  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[mergetool "Kaleidoscope"]
-  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-  trustExitCode = true
-[diff]
-  tool = Kaleidoscope
-[difftool]
-  prompt = false
-[merge]
-  tool = Kaleidoscope
-[mergetool]
-  prompt = false
 [push]
   default = current
 [init]
