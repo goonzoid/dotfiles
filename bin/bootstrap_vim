@@ -1,4 +1,21 @@
-#!/bin/bash
+#!/bin/bash -e
 
+eval "$(rbenv init -)"
+rbenv shell system
+
+brew update
+if brew ls vim
+then
+  brew uninstall vim
+fi
+brew install vim --override-system-vi --with-lua
+
+rm -rf ~/.vim/bundle/Vundle.vim
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim +PluginInstall +qall
+vim +PluginInstall! +qall
+
+pushd ~/.vim/bundle/command-t/ruby/command-t
+  rbenv local system
+  ruby extconf.rb
+  make
+popd
