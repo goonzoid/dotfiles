@@ -3,7 +3,7 @@ set nocompatible
 " VUNDLE PLUGIN CONFIGURATION
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call vundle#rc()
 
 Plugin 'gmarik/Vundle.vim'
 
