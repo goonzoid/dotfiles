@@ -42,10 +42,8 @@ zle -N edit-command-line
 bindkey '\C-x\C-e' edit-command-line
 
 # Aliases
-alias ls='ls -G'
-alias ll='ls -lhG'
-alias la='ls -AhG'
-alias lal='ls -AlhG'
+alias ls='ls -aG'
+alias ll='ls -AlhG'
 
 alias mkdir='mkdir -p'
 
