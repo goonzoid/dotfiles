@@ -12,7 +12,7 @@
 /.dbshell
 /.dropbox/
 /.elinks/
-/.exercism
+/.exercism.json
 /.gem/
 /.heroku/
 /.htoprc
@@ -67,6 +67,7 @@
 /Public/
 /Samples/
 /VirtualBox VMs/
+/exercism/
 /go/
 /lib/
 /tmp/
