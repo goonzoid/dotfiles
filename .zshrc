@@ -56,7 +56,7 @@ function name() {
   echo -e "\033];$1\007";
 }
 
-export GOPATH="$HOME/workspace/go"
+export GOPATH="$HOME/go"
 
 PATH="$HOME/bin:$GOPATH/bin:$PATH"
 
