@@ -40,6 +40,7 @@ filetype plugin indent on
 let g:slime_target = "tmux"
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['objc'] }
 runtime macros/matchit.vim
+let g:go_fmt_command = "goimports"
 
 " CommandT
 let g:CommandTAlwaysShowDotFiles = 1
