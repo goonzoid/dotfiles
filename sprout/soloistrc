@@ -1,0 +1,12 @@
+recipes:
+- sprout-osx-settings::defaults_fast_key_repeat_rate
+- sprout-osx-settings::dock_preferences
+- sprout-osx-settings::keyboard
+- sprout-osx-settings::machine_name
+- sprout-osx-settings::menubar
+
+node_attributes:
+  sprout:
+    dock_preferences:
+      orientation: bottom
+      magnification: false
