@@ -14,6 +14,7 @@ Plugin 'jpalardy/vim-slime'
 Plugin 'kana/vim-textobj-user'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'nelstrom/vim-textobj-rubyblock'
+Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-commentary'
@@ -50,6 +51,10 @@ let g:CommandTAlwaysShowDotFiles = 1
 let g:CommandTTraverseSCM = "pwd"
 nnoremap <c-p> :CommandTFlush<cr>\|:CommandT<cr>
 nnoremap <leader>f :CommandTFlush<cr>\|:CommandT<cr>
+
+" NERDTree
+nnoremap \ :NERDTreeToggle<CR>
+nnoremap \| :NERDTreeFind<CR>
 
 " Mappings for FiREPLace
 nnoremap <leader>e :Eval<cr>
