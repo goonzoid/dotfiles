@@ -45,6 +45,7 @@ let g:go_fmt_command = "goimports"
 
 " CommandT
 let g:CommandTAlwaysShowDotFiles = 1
+let g:CommandTTraverseSCM = "pwd"
 nnoremap <c-p> :CommandTFlush<cr>\|:CommandT<cr>
 nnoremap <leader>f :CommandTFlush<cr>\|:CommandT<cr>
 
