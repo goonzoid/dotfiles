@@ -35,6 +35,7 @@ Plugin 'wincent/command-t'
 Plugin 'wlangstroth/vim-racket'
 
 filetype plugin indent on
+let mapleader=","
 
 " PLUGIN CONFIG
 let g:slime_target = "tmux"
@@ -44,8 +45,8 @@ let g:go_fmt_command = "goimports"
 
 " CommandT
 let g:CommandTAlwaysShowDotFiles = 1
-map <c-p> :CommandTFlush<cr>\|:CommandT<cr>
-map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
+nnoremap <c-p> :CommandTFlush<cr>\|:CommandT<cr>
+nnoremap <leader>f :CommandTFlush<cr>\|:CommandT<cr>
 
 " Mappings for FiREPLace
 nnoremap <leader>e :Eval<cr>
@@ -97,7 +98,6 @@ set autowrite
 " Fix delay after pressing ESC then O - http://ksjoberg.com/vim-esckeys.html
 set timeout timeoutlen=1000 ttimeoutlen=100
 syntax on
-let mapleader=","
 
 " Only show cursorline in active buffer
 augroup cursorLine
@@ -187,7 +187,7 @@ function! <SID>StripTrailingWhitespace()
   call cursor(l, c)
 endfunction
 command! StripTrailingWhitespace call <SID>StripTrailingWhitespace()
-nmap <leader>s :StripTrailingWhitespace<cr>
+nnoremap <leader>s :StripTrailingWhitespace<cr>
 
 " SWITCH BETWEEN TEST AND PRODUCTION CODE
 function! OpenTestAlternate()
@@ -269,9 +269,9 @@ function! RunTests(filename)
 endfunction
 
 " DOTFILE EDITING HELPERS
-nmap <leader>v :e $MYVIMRC<CR>
+nnoremap <leader>v :e $MYVIMRC<CR>
 autocmd bufwritepost .vimrc source $MYVIMRC
-nmap <leader>z :e ~/.zshrc<CR>
-nmap <leader>x :e ~/.tmux.conf<CR>
+nnoremap <leader>z :e ~/.zshrc<CR>
+nnoremap <leader>x :e ~/.tmux.conf<CR>
 autocmd bufwritepost .tmux.conf silent !tmux source-file ~/.tmux.conf
 
