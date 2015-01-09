@@ -36,6 +36,8 @@ Plugin 'wlangstroth/vim-racket'
 
 filetype plugin indent on
 let mapleader=","
+set exrc
+set secure
 
 " PLUGIN CONFIG
 let g:slime_target = "tmux"
