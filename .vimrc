@@ -272,6 +272,7 @@ endfunction
 " DOTFILE EDITING HELPERS
 nnoremap <leader>v :e $MYVIMRC<CR>
 autocmd bufwritepost .vimrc source $MYVIMRC
+nnoremap <leader>g :e ~/.gitconfig<CR>
 nnoremap <leader>z :e ~/.zshrc<CR>
 nnoremap <leader>x :e ~/.tmux.conf<CR>
 autocmd bufwritepost .tmux.conf silent !tmux source-file ~/.tmux.conf
