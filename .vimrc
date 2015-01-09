@@ -45,6 +45,7 @@ let g:go_fmt_command = "goimports"
 " CommandT
 let g:CommandTAlwaysShowDotFiles = 1
 map <c-p> :CommandTFlush<cr>\|:CommandT<cr>
+map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
 
 " Mappings for FiREPLace
 nnoremap <leader>e :Eval<cr>
