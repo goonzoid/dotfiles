@@ -55,6 +55,7 @@ nnoremap <leader>f :CommandTFlush<cr>\|:CommandT<cr>
 " NERDTree
 nnoremap \ :NERDTreeToggle<CR>
 nnoremap \| :NERDTreeFind<CR>
+let NERDTreeShowHidden = 1
 
 " Mappings for FiREPLace
 nnoremap <leader>e :Eval<cr>
