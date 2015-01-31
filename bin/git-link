@@ -1,8 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 
 set -e
 
 HOSTNAME=$1
 PATH="wminor@$HOSTNAME.local:`pwd`"
 
-/usr/bin/git remote add $HOSTNAME $PATH
+git remote add $HOSTNAME $PATH
