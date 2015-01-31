@@ -61,4 +61,4 @@ export GOPATH="$HOME/go"
 PATH="$HOME/bin:$GOPATH/bin:$PATH"
 
 eval "$(rbenv init -)"
-
+eval "$(direnv hook $0)"
