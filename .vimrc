@@ -45,6 +45,7 @@ let g:slime_target = "tmux"
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['objc'] }
 runtime macros/matchit.vim
 let g:go_fmt_command = "goimports"
+let g:sexp_enable_insert_mode_mappings = 0
 
 " CommandT
 let g:CommandTAlwaysShowDotFiles = 1
