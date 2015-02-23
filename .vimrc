@@ -13,7 +13,6 @@ Plugin 'guns/vim-sexp'
 Plugin 'guns/vim-clojure-static'
 Plugin 'jpalardy/vim-slime'
 Plugin 'kana/vim-textobj-user'
-Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
@@ -64,12 +63,6 @@ nnoremap <leader>e :Eval<cr>
 nnoremap <leader>er :Eval!<cr>
 nnoremap <leader>E :%Eval<cr>
 nnoremap <leader>r :w\|:%Eval<cr>\|:Eval (run-tests)<cr>
-
-" I like rainbows
-autocmd VimEnter * RainbowParenthesesToggle
-autocmd Syntax * RainbowParenthesesLoadRound
-autocmd Syntax * RainbowParenthesesLoadSquare
-autocmd Syntax * RainbowParenthesesLoadBraces
 
 " FILETYPE DETECTION
 autocmd FileType go setlocal noexpandtab shiftwidth=4 tabstop=4
