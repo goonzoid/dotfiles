@@ -71,7 +71,7 @@ nnoremap <leader>E :%Eval<cr>
 nnoremap <leader>r :w\|:%Eval<cr>\|:Eval (run-tests)<cr>
 
 " FILETYPE DETECTION
-autocmd FileType go setlocal noexpandtab shiftwidth=4 tabstop=4
+autocmd FileType go setlocal noexpandtab shiftwidth=4 tabstop=4 listchars=tab:\ \ ,trail:·
 autocmd FileType python setlocal shiftwidth=4 tabstop=4
 
 " BASIC EDITING CONFIGURATION
