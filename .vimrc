@@ -41,11 +41,17 @@ set exrc
 set secure
 
 " PLUGIN CONFIG
+runtime macros/matchit.vim
 let g:slime_target = "tmux"
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['objc'] }
-runtime macros/matchit.vim
-let g:go_fmt_command = "goimports"
 let g:sexp_enable_insert_mode_mappings = 0
+
+" Go
+let g:go_fmt_command = "goimports"
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_structs = 1
 
 " CommandT
 let g:CommandTAlwaysShowDotFiles = 1
