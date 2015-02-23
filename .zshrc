@@ -56,6 +56,11 @@ function name() {
   echo -e "\033];$1\007";
 }
 
+# Simple One File C++ compilation
+function ofc() {
+  g++ -Wall -Wextra -pedantic $1 -o `echo $1 | sed 's/\.cpp//'`
+}
+
 export GOPATH="$HOME/go"
 
 PATH="$HOME/bin:$GOPATH/bin:$PATH"
