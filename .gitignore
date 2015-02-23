@@ -39,6 +39,7 @@
 /.pry_history
 /.psql_history
 /.rbenv/
+/.rediscli_history
 /.sqlite_history
 /.ssh/
 /.subversion/
@@ -49,6 +50,7 @@
 !/.vim/colors
 /.vim-tmp/
 /.viminfo
+/.wireshark/
 /.zcache/
 /.zcompdump
 /.zcompdump.zwc
