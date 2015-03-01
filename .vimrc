@@ -160,6 +160,11 @@ nnoremap <leader><leader> <c-^>
 imap <c-l> =><space>
 " Not sure what the diff is between <c-c> and Esc
 imap <c-c> <esc>
+" reselect visual block after indent
+vnoremap < <gv
+vnoremap > >gv
+" make Y consistent with C and D. See :help Y.
+nnoremap Y y$
 
 " MULTIPURPOSE TAB KEY
 function! InsertTabWrapper()
