@@ -46,8 +46,8 @@
 /.swt/
 /.Trash/
 /.vagrant.d/
-/.vim
-!/.vim/colors
+/.vim/bundle
+/.vim/.netrwhist
 /.vim-tmp/
 /.viminfo
 /.wireshark/
