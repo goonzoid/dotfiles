@@ -11,6 +11,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'fatih/vim-go'
 Plugin 'guns/vim-sexp'
 Plugin 'guns/vim-clojure-static'
+Plugin 'honza/vim-snippets'
 Plugin 'jpalardy/vim-slime'
 Plugin 'kana/vim-textobj-user'
 Plugin 'luochen1990/rainbow'
@@ -80,6 +81,12 @@ endif
 let g:neocomplete#keyword_patterns['default'] = '\h\w*'
 
 " NeoSnippet
+let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets,~/.vim/snippets'
+
+imap <C-k> <Plug>(neosnippet_expand_or_jump)
+smap <C-k> <Plug>(neosnippet_expand_or_jump)
+xmap <C-k> <Plug>(neosnippet_expand_target)
+
 imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 \ "\<Plug>(neosnippet_expand_or_jump)"
 \: pumvisible() ? "\<C-n>" : "\<TAB>"
@@ -90,10 +97,6 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 if has('conceal')
   set conceallevel=2 concealcursor=i
 endif
-
-imap <C-k> <Plug>(neosnippet_expand_or_jump)
-smap <C-k> <Plug>(neosnippet_expand_or_jump)
-xmap <C-k> <Plug>(neosnippet_expand_target)
 
 " Mappings for FiREPLace
 nnoremap <leader>e :Eval<cr>
