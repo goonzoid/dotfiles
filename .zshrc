@@ -63,7 +63,7 @@ function ofc() {
 
 export GOPATH="$HOME/go"
 
-PATH="$HOME/bin:$GOPATH/bin:$PATH"
+PATH="$HOME/bin:$GOPATH/bin:$HOME/.vim/bundle/vipe:$PATH"
 
 eval "$(rbenv init -)"
 eval "$(direnv hook $0)"
