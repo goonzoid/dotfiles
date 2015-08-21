@@ -2,6 +2,7 @@
 /.atom/
 /.CFUserTextEncoding
 /.bash_history
+/.boot2docker/
 /.bosh_cache/
 /.bosh_config
 /.cache/
@@ -10,12 +11,15 @@
 /.config/
 /.cups/
 /.dbshell
+/.dockercfg
 /.dropbox/
 /.elinks/
 /.exercism.json
 /.gem/
+/.ghc/
 /.heroku/
 /.htoprc
+/.ipython/
 /.irb-history
 /.irssi/
 /.lesshst
