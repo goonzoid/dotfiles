@@ -3,8 +3,10 @@
 /.CFUserTextEncoding
 /.bash_history
 /.boot2docker/
+/.bosh/
 /.bosh_cache/
 /.bosh_config
+/.bosh_init/
 /.cache/
 /.cf/
 /.cocoapods/
