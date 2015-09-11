@@ -62,6 +62,7 @@ function ofc() {
 }
 
 export GOPATH="$HOME/go"
+export BOSH_USE_BUNDLER=true
 
 PATH="$HOME/bin:$GOPATH/bin:$HOME/.vim/bundle/vipe:$PATH"
 
