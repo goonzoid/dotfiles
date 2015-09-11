@@ -29,6 +29,7 @@
 /.local/
 /.m2/
 /.mailcap
+/.matplotlib/
 /.mongorc.js
 /.mplayer/
 /.mutt/
