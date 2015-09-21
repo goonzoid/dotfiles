@@ -13,6 +13,7 @@ Plugin 'guns/vim-sexp'
 Plugin 'guns/vim-clojure-static'
 Plugin 'honza/vim-snippets'
 Plugin 'jpalardy/vim-slime'
+Plugin 'justinmk/vim-sneak'
 Plugin 'kana/vim-textobj-user'
 Plugin 'luan/vipe'
 Plugin 'luochen1990/rainbow'
@@ -53,6 +54,14 @@ let g:rainbow_active = 1
 let g:slime_target = "tmux"
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['objc'] }
 let g:sexp_enable_insert_mode_mappings = 0
+
+"replace 'f' with 1-char Sneak
+nmap f <Plug>Sneak_f
+nmap F <Plug>Sneak_F
+xmap f <Plug>Sneak_f
+xmap F <Plug>Sneak_F
+omap f <Plug>Sneak_f
+omap F <Plug>Sneak_F
 
 " Go
 let g:go_fmt_command = "goimports"
