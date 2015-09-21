@@ -81,6 +81,7 @@ if !exists('g:neocomplete#keyword_patterns')
     let g:neocomplete#keyword_patterns = {}
 endif
 let g:neocomplete#keyword_patterns['default'] = '\h\w*'
+let g:neocomplete#enable_auto_close_preview = 1
 
 " NeoSnippet
 let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets,~/.vim/snippets'
