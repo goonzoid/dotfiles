@@ -1,4 +1,5 @@
 *.DS_Store
+*.log
 /.atom/
 /.CFUserTextEncoding
 /.bash_history
@@ -84,4 +85,3 @@
 /lib/
 /tmp/
 /workspace/
-
