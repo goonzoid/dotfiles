@@ -1,6 +1,6 @@
 set nocompatible
 
-" VUNDLE PLUGIN CONFIGURATION
+" VUNDLE CONFIGURATION
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
@@ -47,7 +47,7 @@ Plugin 'wlangstroth/vim-racket'
 filetype plugin indent on
 let mapleader=","
 
-" PLUGIN CONFIG
+" PLUGIN CONFIGURATION
 runtime macros/matchit.vim
 let g:rainbow_active = 1
 let g:slime_target = "tmux"
@@ -110,6 +110,13 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 autocmd FileType go setlocal noexpandtab shiftwidth=4 tabstop=4 listchars=tab:\ \ ,trail:·
 autocmd FileType python setlocal shiftwidth=4 tabstop=4
 
+" APPEARANCE
+:set t_Co=256
+:color grb256
+:set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
+set cmdheight=2
+set showtabline=2
+
 " BASIC EDITING CONFIGURATION
 set hidden
 set history=1000
@@ -129,8 +136,6 @@ set list listchars=tab:▸\ ,trail:·
 set ignorecase smartcase
 " Allow backspacing over everything in insert mode
 set backspace=indent,eol,start
-set cmdheight=2
-set showtabline=2
 set title
 set showcmd
 set wildmenu
@@ -144,25 +149,6 @@ set autowrite
 " Fix delay after pressing ESC then O - http://ksjoberg.com/vim-esckeys.html
 set timeout timeoutlen=1000 ttimeoutlen=100
 syntax on
-
-" Only show cursorline in active buffer
-augroup cursorLine
-  au!
-  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
-  au WinLeave * setlocal nocursorline
-augroup END
-
-" Jump to last cursor position unless it's invalid or in an event handler,
-" or the file is a git commit message
-augroup vimrcEx
-  autocmd!
-  autocmd BufReadPost *
-        \ if expand('%:t') == 'COMMIT_EDITMSG' |
-        \   exe "normal gg" |
-        \ elseif line("'\"") > 0 && line("'\"") <= line("$") |
-        \   exe "normal g`\"" |
-        \ endif
-augroup END
 
 " KEY MAPPINGS
 command! W :w
@@ -188,6 +174,25 @@ vnoremap > >gv
 " make Y consistent with C and D. See :help Y.
 nnoremap Y y$
 
+" Only show cursorline in active buffer
+augroup cursorLine
+  au!
+  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+  au WinLeave * setlocal nocursorline
+augroup END
+
+" Jump to last cursor position unless it's invalid or in an event handler,
+" or the file is a git commit message
+augroup vimrcEx
+  autocmd!
+  autocmd BufReadPost *
+        \ if expand('%:t') == 'COMMIT_EDITMSG' |
+        \   exe "normal gg" |
+        \ elseif line("'\"") > 0 && line("'\"") <= line("$") |
+        \   exe "normal g`\"" |
+        \ endif
+augroup END
+
 " MULTIPURPOSE TAB KEY
 function! InsertTabWrapper()
   let col = col('.') - 1
@@ -199,18 +204,6 @@ function! InsertTabWrapper()
 endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>
-
-" ARROW KEYS ARE UNACCEPTABLE
-map <Left> :echo "no!"<cr>
-map <Right> :echo "no!"<cr>
-map <Up> :echo "no!"<cr>
-map <Down> :echo "no!"<cr>
-
-" COLOR
-:set t_Co=256
-:color grb256
-
-:set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
 
 " RENAME CURRENT FILE
 function! RenameCurrent()
