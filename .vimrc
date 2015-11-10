@@ -106,12 +106,6 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 \ "\<Plug>(neosnippet_expand_or_jump)"
 \: "\<TAB>"
 
-" Mappings for FiREPLace
-nnoremap <leader>e :Eval<cr>
-nnoremap <leader>er :Eval!<cr>
-nnoremap <leader>E :%Eval<cr>
-nnoremap <leader>r :w\|:%Eval<cr>\|:Eval (run-tests)<cr>
-
 " FILETYPE DETECTION
 autocmd FileType go setlocal noexpandtab shiftwidth=4 tabstop=4 listchars=tab:\ \ ,trail:·
 autocmd FileType python setlocal shiftwidth=4 tabstop=4
