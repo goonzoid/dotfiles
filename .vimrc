@@ -46,8 +46,6 @@ Plugin 'wlangstroth/vim-racket'
 
 filetype plugin indent on
 let mapleader=","
-set exrc
-set secure
 
 " PLUGIN CONFIG
 runtime macros/matchit.vim
@@ -335,3 +333,6 @@ nnoremap <leader>gz :e ~/.zshrc<CR>
 nnoremap <leader>gt :e ~/.tmux.conf<CR>
 autocmd bufwritepost .tmux.conf silent !tmux source-file ~/.tmux.conf
 
+" Read .vimrc, .exrc and .gvimrc in current working directory
+set exrc
+set secure " deliberately set at end of .vimrc, see :help 'secure'
