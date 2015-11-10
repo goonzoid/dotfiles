@@ -131,7 +131,6 @@ set ignorecase smartcase
 set backspace=indent,eol,start
 set cmdheight=2
 set showtabline=2
-set ruler
 set title
 set showcmd
 set wildmenu
@@ -211,7 +210,6 @@ map <Down> :echo "no!"<cr>
 :set t_Co=256
 :color grb256
 
-" STATUS LINE
 :set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
 
 " RENAME CURRENT FILE
