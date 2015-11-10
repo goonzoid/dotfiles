@@ -184,12 +184,21 @@ augroup END
 " Jump to last cursor position unless it's invalid or in an event handler,
 " or the file is a git commit message
 augroup vimrcEx
-  autocmd!
   autocmd BufReadPost *
         \ if expand('%:t') == 'COMMIT_EDITMSG' |
         \   exe "normal gg" |
         \ elseif line("'\"") > 0 && line("'\"") <= line("$") |
         \   exe "normal g`\"" |
+        \ endif
+augroup END
+
+" Unset modeline for git commit messages and rebase todos
+augroup vimrcEx
+  autocmd BufReadPost *
+        \ if expand('%:t') == 'COMMIT_EDITMSG' |
+        \   setlocal nomodeline |
+        \ elseif expand('%:t') == 'git-rebase-todo' |
+        \   setlocal nomodeline |
         \ endif
 augroup END
 
