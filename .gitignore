@@ -18,6 +18,7 @@
 /.dockercfg
 /.dropbox/
 /.elinks/
+/.elm/
 /.exercism.json
 /.flyrc
 /.gem/
