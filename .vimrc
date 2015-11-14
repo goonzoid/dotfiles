@@ -55,7 +55,7 @@ let g:slime_target = "tmux"
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['objc'] }
 let g:sexp_enable_insert_mode_mappings = 0
 
-"replace 'f' with 1-char Sneak
+" replace 'f' with 1-char Sneak
 nmap f <Plug>Sneak_f
 nmap F <Plug>Sneak_F
 xmap f <Plug>Sneak_f
@@ -154,6 +154,7 @@ syntax on
 " KEY MAPPINGS
 command! W :w
 command! Q :q
+command! Bd :bd
 " Allow yank and put to/from system clipboard
 map <leader>y "*y
 map <leader>p "*p
