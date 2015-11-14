@@ -1,0 +1,4 @@
+#!/bin/bash -e
+
+title="$@"
+open things:add?title="$title"
