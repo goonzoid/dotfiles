@@ -3,6 +3,6 @@
 set -e
 
 HOSTNAME=$1
-PATH="wminor@$HOSTNAME.local:`pwd`"
+REMOTE="wminor@$HOSTNAME.local:`pwd`"
 
-git remote add $HOSTNAME $PATH
+git remote add $HOSTNAME $REMOTE
