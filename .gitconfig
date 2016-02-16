@@ -40,3 +40,8 @@
   default = current
 [init]
   templatedir = ~/.git_template
+[url "git@github.com:"]
+  pushInsteadOf = "https://github.com/"
+  pushInsteadOf = "http://github.com/"
+  pushInsteadOf = "gh:"
+  pushInsteadOf = "gh://"
