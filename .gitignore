@@ -22,6 +22,7 @@
 /.exercism.json
 /.flyrc
 /.gem/
+/.git-authors
 /.ghc/
 /.heroku/
 /.htoprc

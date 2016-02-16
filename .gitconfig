@@ -7,7 +7,7 @@
   ui = auto
 [alias]
   st = status
-  ci = commit --verbose
+  ci = duet-commit --verbose
   co = checkout
   br = branch
   rs = reset
