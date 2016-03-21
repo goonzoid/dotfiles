@@ -7,7 +7,6 @@ call vundle#rc()
 
 Plugin 'gmarik/Vundle.vim'
 
-Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'fatih/vim-go'
 Plugin 'guns/vim-sexp'
 Plugin 'guns/vim-clojure-static'
