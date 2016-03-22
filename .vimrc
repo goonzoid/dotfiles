@@ -112,7 +112,6 @@ autocmd FileType python setlocal shiftwidth=4 tabstop=4
 autocmd FileType make setlocal noexpandtab shiftwidth=4 tabstop=4
 
 " APPEARANCE
-:set t_Co=256
 :color grb256
 :set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
 set cmdheight=2
