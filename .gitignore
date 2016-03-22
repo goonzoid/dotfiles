@@ -61,8 +61,6 @@
 /.Trash/
 /.vagrant.d/
 /.vim/bundle
-/.vim/.netrwhist
-/.vim-tmp/
 /.viminfo
 /.wireshark/
 /.zcache/
