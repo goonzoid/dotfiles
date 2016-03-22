@@ -1,0 +1,6 @@
+[submodule ".vim/colors"]
+	path = .vim/colors
+	url = git@github.com:robertmeta/nofrils.git
+[submodule ".vim/nofrils"]
+	path = .vim/nofrils
+	url = git@github.com:robertmeta/nofrils.git
