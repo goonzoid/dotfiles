@@ -29,6 +29,11 @@ HISTSIZE=1000
 SAVEHIST=$HISTSIZE
 setopt hist_ignore_all_dups hist_ignore_space
 
+# Dir stack
+DIRSTACKSIZE=20
+setopt autopushd pushdsilent pushdtohome pushdignoredups pushdminus
+alias dirs='dirs -v'
+
 # Use C-x C-e to edit the current command line
 autoload -U edit-command-line
 zle -N edit-command-line
