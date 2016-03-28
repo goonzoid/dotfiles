@@ -5,7 +5,7 @@ pushd /tmp
   unzip -p inconsolata-g_font.zip Inconsolata-g.ttf > /Library/Fonts/Inconsolata-g.ttf
   rm inconsolata-g_font.zip
 
-  curl http://www.fontsquirrel.com/fonts/download/source-code-pro > source-code-pro.zip
+  curl https://www.fontsquirrel.com/fonts/download/source-code-pro > source-code-pro.zip
   unzip source-code-pro.zip -d /Library/Fonts
   rm source-code-pro.zip
 popd
