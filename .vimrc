@@ -307,6 +307,12 @@ function! RunTests(filename)
     end
 endfunction
 
+" Spelling
+function! <SID>EnableSpell()
+  :setlocal spell spelllang=en_gb
+endfunction
+command! EnableSpell call <SID>EnableSpell()
+
 " DOTFILE EDITING HELPERS
 nnoremap <leader>gv :e $MYVIMRC<CR>
 autocmd bufwritepost .vimrc source $MYVIMRC
