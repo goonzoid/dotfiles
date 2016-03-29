@@ -312,6 +312,10 @@ function! <SID>EnableSpell()
   :setlocal spell spelllang=en_gb
 endfunction
 command! EnableSpell call <SID>EnableSpell()
+function! <SID>DisableSpell()
+  :setlocal nospell
+endfunction
+command! DisableSpell call <SID>DisableSpell()
 
 " DOTFILE EDITING HELPERS
 nnoremap <leader>gv :e $MYVIMRC<CR>
