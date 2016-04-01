@@ -66,3 +66,5 @@ PATH="$HOME/bin:$GOPATH/bin:$HOME/.vim/bundle/vipe:$PATH"
 
 eval "$(rbenv init -)"
 eval "$(direnv hook $0)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
