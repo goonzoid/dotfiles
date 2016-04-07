@@ -7,6 +7,7 @@ call vundle#rc()
 
 Plugin 'gmarik/Vundle.vim'
 
+Plugin 'ElmCast/elm-vim'
 Plugin 'fatih/vim-go'
 Plugin 'guns/vim-sexp'
 Plugin 'guns/vim-clojure-static'
@@ -14,7 +15,6 @@ Plugin 'honza/vim-snippets'
 Plugin 'jpalardy/vim-slime'
 Plugin 'justinmk/vim-sneak'
 Plugin 'kana/vim-textobj-user'
-Plugin 'lambdatoast/elm.vim'
 Plugin 'luan/vipe'
 Plugin 'luochen1990/rainbow'
 Plugin 'nelstrom/vim-textobj-rubyblock'
