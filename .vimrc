@@ -49,6 +49,7 @@ let mapleader=","
 
 " PLUGIN CONFIGURATION
 runtime macros/matchit.vim
+let g:elm_format_autosave = 1
 let g:slime_target = "tmux"
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['objc'] }
 let g:sexp_enable_insert_mode_mappings = 0
