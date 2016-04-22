@@ -16,7 +16,7 @@ export LSCOLORS="gxfxcxdxbxegedabagacad"
 # Prompt
 autoload -U vcs_info
 zstyle ':vcs_info:*' enable git
-zstyle ':vcs_info:git*' formats "%{$fg[green]%}[%b]%a "
+zstyle ':vcs_info:git*' formats "%{$fg[green]%}[%b]%a%{$reset_color%}"
 precmd() { vcs_info }
 setopt prompt_subst
 autoload -U promptinit && promptinit
