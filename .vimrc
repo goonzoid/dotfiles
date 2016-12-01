@@ -12,6 +12,7 @@ Plugin 'fatih/vim-go'
 Plugin 'guns/vim-sexp'
 Plugin 'guns/vim-clojure-static'
 Plugin 'honza/vim-snippets'
+Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'jpalardy/vim-slime'
 Plugin 'justinmk/vim-sneak'
 Plugin 'kana/vim-textobj-user'
@@ -53,6 +54,8 @@ let g:elm_format_autosave = 1
 let g:slime_target = "tmux"
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['objc'] }
 let g:sexp_enable_insert_mode_mappings = 0
+let vim_markdown_preview_github=1
+let vim_markdown_preview_hotkey='<leader>mp'
 
 " replace 'f' with 1-char Sneak
 nmap f <Plug>Sneak_f
