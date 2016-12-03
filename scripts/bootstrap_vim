@@ -8,7 +8,7 @@ if brew ls vim
 then
   brew uninstall vim
 fi
-brew install vim --override-system-vi --with-lua
+brew install vim --with-override-system-vi --with-lua
 
 rm -rf ~/.vim/bundle/Vundle.vim
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
