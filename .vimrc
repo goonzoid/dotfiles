@@ -55,7 +55,8 @@ let g:slime_target = "tmux"
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['objc'] }
 let g:sexp_enable_insert_mode_mappings = 0
 let vim_markdown_preview_github=1
-let vim_markdown_preview_hotkey='<leader>mp'
+let vim_markdown_preview_hotkey='' " it's ctrl-p by default!
+nnoremap <leader>mp :w\|:call Vim_Markdown_Preview()<cr>
 
 " replace 'f' with 1-char Sneak
 nmap f <Plug>Sneak_f
