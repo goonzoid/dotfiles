@@ -1,16 +1,15 @@
 *.DS_Store
 *.log
-/.atom/
+
 /.CFUserTextEncoding
+/.Trash/
 /.bash_history
-/.boot2docker/
 /.bosh/
 /.bosh_cache/
 /.bosh_config
 /.bosh_init/
 /.cache/
 /.cf/
-/.cocoapods/
 /.config/
 /.cups/
 /.dbshell
@@ -19,19 +18,19 @@
 /.dropbox/
 /.elinks/
 /.elm/
-/.exercism.json
 /.flyrc
 /.gem/
-/.git-authors
 /.ghc/
+/.git-authors
+/.grip/
 /.heroku/
 /.htoprc
 /.ipython/
 /.irb-history
 /.irssi/
 /.jssc/
-/.lesshst
 /.lein/
+/.lesshst
 /.local/
 /.m2/
 /.mailcap
@@ -41,8 +40,8 @@
 /.mutt/
 /.muttrc
 /.netExtender.log
-/.netextender
 /.netExtenderCerts/
+/.netextender
 /.netrc
 /.node-gyp/
 /.npm/
@@ -58,7 +57,6 @@
 /.ssh/
 /.subversion/
 /.swt/
-/.Trash/
 /.vagrant.d/
 /.vim/bundle
 /.viminfo
@@ -67,7 +65,7 @@
 /.zcompdump
 /.zcompdump.zwc
 /.zhistory
-/Applications (Parallels)/
+
 /Applications/
 /Desktop/
 /Documents/
@@ -79,12 +77,9 @@
 /Music/
 /Pictures/
 /Public/
-/Samples/
 /Splice/
 /Videos/
 /VirtualBox VMs/
-/exercism/
+
 /go/
-/lib/
-/tmp/
 /workspace/
