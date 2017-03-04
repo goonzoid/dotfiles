@@ -70,7 +70,7 @@ export GOPATH="$HOME/go"
 export GOBIN="$GOPATH/bin"
 export BOSH_USE_BUNDLER=true
 
-PATH="$HOME/bin:$GOBIN:$HOME/.vim/bundle/vipe:$PATH"
+PATH="$HOME/bin:$GOBIN:$HOME/.vim/plugged/vipe:$PATH"
 
 eval "$(rbenv init -)"
 eval "$(direnv hook $0)"

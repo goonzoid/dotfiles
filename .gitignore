@@ -58,7 +58,8 @@
 /.subversion/
 /.swt/
 /.vagrant.d/
-/.vim/bundle
+/.vim/autoload
+/.vim/plugged
 /.viminfo
 /.wireshark/
 /.zcache/
