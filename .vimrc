@@ -322,6 +322,7 @@ command! DisableSpell call <SID>DisableSpell()
 nnoremap <leader>gv :e $MYVIMRC<CR>
 autocmd bufwritepost .vimrc source $MYVIMRC
 nnoremap <leader>gg :e ~/.gitconfig<CR>
+nnoremap <leader>gn :e ~/.nowdothis<CR>
 nnoremap <leader>gz :e ~/.zshrc<CR>
 nnoremap <leader>gt :e ~/.tmux.conf<CR>
 autocmd bufwritepost .tmux.conf silent !tmux source-file ~/.tmux.conf

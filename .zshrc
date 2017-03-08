@@ -14,13 +14,25 @@ export GREP_OPTIONS="--color"
 export LSCOLORS="gxfxcxdxbxegedabagacad"
 
 # Prompt
+NOWDOTHIS=.nowdothis
+function nowdothis() {
+  echo $(head -1 $NOWDOTHIS 2> /dev/null) || return
+}
+function xx() {
+  local thing
+  thing=$(head -1 $NOWDOTHIS 2> /dev/null)
+  if [ "$thing" = "" ]; then return; fi
+  newlist=$(tail -n +2 $NOWDOTHIS)
+  echo $newlist > $NOWDOTHIS
+  echo "\"$thing\" done!"
+}
 autoload -U vcs_info
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:git*' formats "%{$fg[green]%}[%b]%a%{$reset_color%}"
 precmd() { vcs_info }
 setopt prompt_subst
 autoload -U promptinit && promptinit
-PROMPT='%{$fg[green]%}%m %{$fg[magenta]%}%~ %{$reset_color%}${vcs_info_msg_0_}
+PROMPT='%{$fg[green]%}%m %{$fg[magenta]%}%~ %{$reset_color%}${vcs_info_msg_0_} %{$fg[yellow]%}$(nowdothis) %{$reset_color%}
 %{$fg[blue]%}❯ %{$reset_color%}'
 
 # Better history
