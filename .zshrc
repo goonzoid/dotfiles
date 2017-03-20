@@ -26,6 +26,7 @@ function xx() {
   echo $newlist > $NOWDOTHIS
   echo "\"$thing\" done!"
 }
+alias ndt="vim $NOWDOTHIS"
 autoload -U vcs_info
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:git*' formats "%{$fg[green]%}[%b]%a%{$reset_color%}"
