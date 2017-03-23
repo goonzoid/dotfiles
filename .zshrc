@@ -26,6 +26,9 @@ function xx() {
   echo $newlist > $NOWDOTHIS
   echo "\"$thing\" done!"
 }
+function next() {
+  tail -n +2 $NOWDOTHIS
+}
 alias ndt="vim $NOWDOTHIS"
 autoload -U vcs_info
 zstyle ':vcs_info:*' enable git
