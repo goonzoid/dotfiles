@@ -32,7 +32,8 @@ function next() {
 alias ndt="vim $NOWDOTHIS"
 autoload -U vcs_info
 zstyle ':vcs_info:*' enable git
-zstyle ':vcs_info:git*' formats "%{$fg[green]%}[%b]%a%{$reset_color%}"
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:git*' formats "%{$fg[green]%}%b:%u%c%a%{$reset_color%}"
 precmd() { vcs_info }
 setopt prompt_subst
 autoload -U promptinit && promptinit
