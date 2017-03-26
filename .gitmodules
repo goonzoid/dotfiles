@@ -4,6 +4,6 @@
 [submodule ".vim/nofrils"]
 	path = .vim/nofrils
 	url = git@github.com:robertmeta/nofrils.git
-[submodule "/Users/wminor/.tmux/plugins/tpm"]
-	path = /Users/wminor/.tmux/plugins/tpm
+[submodule ".tmux/plugins/tpm"]
+	path = .tmux/plugins/tpm
 	url = git@github.com:tmux-plugins/tpm
