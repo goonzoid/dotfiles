@@ -3,6 +3,9 @@ export EDITOR="vim"
 bindkey -e
 setopt interactivecomments
 
+# Help
+autoload run-help
+
 # Completion
 autoload -U compinit && compinit
 zstyle ':completion:*' menu select
