@@ -1,3 +1,9 @@
+# Plugins
+source <(antibody init)
+plugin_install() {
+  antibody bundle < $HOME/.zplugins
+}
+
 # Editing
 export EDITOR="vim"
 bindkey -e
