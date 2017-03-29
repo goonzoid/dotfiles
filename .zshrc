@@ -44,7 +44,7 @@ PROMPT='%{$fg[green]%}%m %{$fg[magenta]%}%~ %{$reset_color%}${vcs_info_msg_0_} %
 HISTFILE="$HOME/.zhistory"
 HISTSIZE=1000
 SAVEHIST=$HISTSIZE
-setopt hist_ignore_all_dups hist_ignore_space
+setopt append_history share_history hist_ignore_all_dups hist_ignore_space
 
 # Dir stack
 DIRSTACKSIZE=20
