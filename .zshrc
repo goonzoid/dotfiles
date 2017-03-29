@@ -18,10 +18,10 @@ export LSCOLORS="gxfxcxdxbxegedabagacad"
 
 # Prompt
 NOWDOTHIS=.nowdothis
-function nowdothis() {
+nowdothis() {
   echo $(head -1 $NOWDOTHIS 2> /dev/null) || return
 }
-function xx() {
+xx() {
   local thing
   thing=$(head -1 $NOWDOTHIS 2> /dev/null)
   if [ "$thing" = "" ]; then return; fi
@@ -29,7 +29,7 @@ function xx() {
   echo $newlist > $NOWDOTHIS
   echo "\"$thing\" done!"
 }
-function next() {
+next() {
   tail -n +2 $NOWDOTHIS
 }
 alias ndt="vim $NOWDOTHIS"
@@ -70,12 +70,12 @@ alias be='bundle exec'
 alias serve='python -m SimpleHTTPServer'
 
 # iTerm tab/window naming
-function name() {
+name() {
   echo -e "\033];$1\007";
 }
 
 # Simple One File C++ compilation
-function ofc() {
+ofc() {
   g++ -Wall -Wextra -pedantic $1 -o `echo $1 | sed 's/\.cpp//'`
 }
 
