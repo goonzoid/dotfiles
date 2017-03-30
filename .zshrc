@@ -1,8 +1,6 @@
 # Plugins
 source <(antibody init)
-plugin_install() {
-  antibody bundle < $HOME/.zplugins
-}
+antibody bundle < $HOME/.zplugins
 
 # Editing
 export EDITOR="vim"
