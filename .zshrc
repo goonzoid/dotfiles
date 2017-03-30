@@ -94,4 +94,5 @@ PATH="$HOME/bin:$GOBIN:$HOME/.vim/plugged/vipe:$PATH"
 eval "$(rbenv init -)"
 eval "$(direnv hook $0)"
 
+export FZF_TMUX=1
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
