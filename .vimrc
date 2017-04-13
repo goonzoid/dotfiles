@@ -2,7 +2,7 @@ set nocompatible
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'ElmCast/elm-vim'
+Plug 'elmcast/elm-vim'
 Plug 'fatih/vim-go'
 Plug 'guns/vim-sexp'
 Plug 'guns/vim-clojure-static'
@@ -16,9 +16,9 @@ Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'neomake/neomake'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'Shougo/neocomplete.vim'
-Plug 'Shougo/neosnippet'
-Plug 'Shougo/neosnippet-snippets'
+Plug 'shougo/neocomplete.vim'
+Plug 'shougo/neosnippet'
+Plug 'shougo/neosnippet-snippets'
 Plug 'tmux-plugins/vim-tmux'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-commentary'
