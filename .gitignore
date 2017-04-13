@@ -23,6 +23,7 @@
 /.ghc/
 /.git-authors
 /.grip/
+/.gsutil/
 /.heroku/
 /.htoprc
 /.ipython/
@@ -32,6 +33,7 @@
 /.lein/
 /.lesshst
 /.local/
+/.lpass/
 /.m2/
 /.mailcap
 /.matplotlib/
