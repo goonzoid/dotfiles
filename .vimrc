@@ -47,6 +47,9 @@ let mapleader=","
 runtime macros/matchit.vim
 let g:elm_format_autosave = 1
 let g:sexp_enable_insert_mode_mappings = 0
+let g:neomake_open_list = 2
+let g:neomake_list_height = 8
+autocmd! BufWritePost * Neomake!
 
 " replace 'f' with 1-char Sneak
 nmap f <Plug>Sneak_f
