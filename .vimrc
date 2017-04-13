@@ -7,7 +7,6 @@ Plug 'fatih/vim-go'
 Plug 'guns/vim-sexp'
 Plug 'guns/vim-clojure-static'
 Plug 'honza/vim-snippets'
-Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'justinmk/vim-sneak'
 Plug 'kana/vim-textobj-user'
 Plug 'luan/vim-bosh'
@@ -48,9 +47,6 @@ let mapleader=","
 runtime macros/matchit.vim
 let g:elm_format_autosave = 1
 let g:sexp_enable_insert_mode_mappings = 0
-let vim_markdown_preview_github=1
-let vim_markdown_preview_hotkey='' " it's ctrl-p by default!
-nnoremap <leader>mp :w\|:call Vim_Markdown_Preview()<cr>
 
 " replace 'f' with 1-char Sneak
 nmap f <Plug>Sneak_f
