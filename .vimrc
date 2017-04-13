@@ -14,10 +14,10 @@ Plug 'luan/vim-bosh'
 Plug 'luan/vipe'
 Plug 'luochen1990/rainbow'
 Plug 'nelstrom/vim-textobj-rubyblock'
+Plug 'neomake/neomake'
 Plug 'Raimondi/delimitMate'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/syntastic'
 Plug 'Shougo/neocomplete.vim'
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
@@ -47,7 +47,6 @@ let mapleader=","
 " PLUGIN CONFIGURATION
 runtime macros/matchit.vim
 let g:elm_format_autosave = 1
-let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['objc'] }
 let g:sexp_enable_insert_mode_mappings = 0
 let vim_markdown_preview_github=1
 let vim_markdown_preview_hotkey='' " it's ctrl-p by default!
