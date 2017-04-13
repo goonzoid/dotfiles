@@ -13,6 +13,7 @@ Plug 'luan/vim-bosh'
 Plug 'luan/vim-concourse'
 Plug 'luan/vipe'
 Plug 'luochen1990/rainbow'
+Plug 'mhinz/vim-signify'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'neomake/neomake'
 Plug 'rking/ag.vim'
@@ -47,6 +48,7 @@ let mapleader=","
 runtime macros/matchit.vim
 let g:elm_format_autosave = 1
 let g:sexp_enable_insert_mode_mappings = 0
+let g:signify_vcs_list = [ 'git' ]
 let g:neomake_open_list = 2
 let g:neomake_list_height = 8
 autocmd! BufWritePost * Neomake!
