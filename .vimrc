@@ -4,6 +4,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'elmcast/elm-vim'
 Plug 'fatih/vim-go'
+Plug 'gfontenot/vim-xcode'
 Plug 'guns/vim-sexp'
 Plug 'guns/vim-clojure-static'
 Plug 'honza/vim-snippets'
