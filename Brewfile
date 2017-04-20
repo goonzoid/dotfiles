@@ -7,6 +7,7 @@ tap 'universal-ctags/universal-ctags'
 
 brew 'bash'
 brew 'carthage'
+brew 'clang-format'
 brew 'direnv'
 brew 'elm'
 brew 'elm-format'
