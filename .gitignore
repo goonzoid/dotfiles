@@ -3,6 +3,7 @@
 
 /.CFUserTextEncoding
 /.Trash/
+/.ansible/
 /.bash_history
 /.bosh/
 /.bosh_cache/
