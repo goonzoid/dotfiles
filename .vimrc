@@ -2,6 +2,7 @@ set nocompatible
 
 call plug#begin('~/.vim/plugged')
 
+Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 Plug 'elmcast/elm-vim'
 Plug 'fatih/vim-go'
 Plug 'gfontenot/vim-xcode'
@@ -39,7 +40,6 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'vim-ruby/vim-ruby'
-Plug 'wincent/command-t'
 Plug 'wlangstroth/vim-racket'
 
 call plug#end()
@@ -54,6 +54,9 @@ let g:signify_vcs_list = [ 'git' ]
 let g:neomake_open_list = 2
 let g:neomake_list_height = 8
 autocmd! BufWritePost * Neomake!
+let g:fzf_command_prefix = 'FZF'
+nnoremap <leader>f :FZFFiles<cr>
+nnoremap <leader>b :FZFBuffers<cr>
 
 " replace 'f' with 1-char Sneak
 nmap f <Plug>Sneak_f
@@ -70,13 +73,6 @@ let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_structs = 1
-
-" CommandT
-let g:CommandTAlwaysShowDotFiles = 1
-let g:CommandTTraverseSCM = "pwd"
-nnoremap <c-p> :CommandTFlush<cr>\|:CommandT<cr>
-nnoremap <leader>f :CommandTFlush<cr>\|:CommandT<cr>
-nnoremap <leader>b :CommandTBuffer<cr>
 
 " NERDTree
 nnoremap \ :NERDTreeToggle<CR>

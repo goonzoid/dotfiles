@@ -13,9 +13,3 @@ brew install vim --with-override-system-vi --with-lua
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 vim +PlugUpdate +qall
-
-pushd ~/.vim/plugged/command-t/ruby/command-t/ext/command-t
-  rbenv local system
-  ruby extconf.rb
-  make
-popd
