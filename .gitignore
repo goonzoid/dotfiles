@@ -63,6 +63,7 @@
 /.ssh/
 /.subversion/
 /.swt/
+/.tig_history
 /.vagrant.d/
 /.viminfo
 /.wireshark/
