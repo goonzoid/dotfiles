@@ -203,7 +203,7 @@ augroup vimrcEx
 augroup END
 
 " Rename current file
-function! RenameCurrent()
+function! RenameCurrentFile()
   let old_name = expand('%')
   let new_name = input('New file name: ', expand('%'), 'file')
   if new_name != '' && new_name != old_name
@@ -212,7 +212,7 @@ function! RenameCurrent()
     redraw!
   endif
 endfunction
-command! RenameCurrent :call RenameCurrent()
+command! RenameCurrentFile :call RenameCurrentFile()
 
 " Remove trailing whitespace
 function! <SID>StripTrailingWhitespace()
