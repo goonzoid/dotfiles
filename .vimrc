@@ -47,7 +47,7 @@ call plug#end()
 
 let mapleader=","
 
-" PLUGIN CONFIGURATION
+" Plugin configuration
 runtime macros/matchit.vim
 let g:elm_format_autosave = 1
 let g:sexp_enable_insert_mode_mappings = 0
@@ -59,7 +59,7 @@ let g:fzf_command_prefix = 'FZF'
 nnoremap <leader>f :FZFFiles<cr>
 nnoremap <leader>b :FZFBuffers<cr>
 
-" replace 'f' with 1-char Sneak
+" Replace 'f' with 1-char Sneak
 nmap f <Plug>Sneak_f
 nmap F <Plug>Sneak_F
 xmap f <Plug>Sneak_f
@@ -105,18 +105,18 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 \ "\<Plug>(neosnippet_expand_or_jump)"
 \: "\<TAB>"
 
-" FILETYPE DETECTION
+" Filetype detection
 autocmd FileType go setlocal noexpandtab shiftwidth=4 tabstop=4 listchars=tab:\ \ ,trail:·
 autocmd FileType python setlocal shiftwidth=4 tabstop=4
 autocmd FileType cpp setlocal shiftwidth=4 tabstop=4 commentstring=//\ %s
 autocmd FileType make setlocal noexpandtab shiftwidth=4 tabstop=4
 
-" APPEARANCE
+" Appearance
 :color smyck
 :set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
 set cmdheight=2
 
-" BASIC EDITING CONFIGURATION
+" Basic editing configuration
 set hidden
 set history=1000
 set number
@@ -149,7 +149,7 @@ set autowrite
 set timeout timeoutlen=1000 ttimeoutlen=100
 syntax on
 
-" KEY MAPPINGS
+" Key mappings
 command! W :w
 command! Q :q
 command! Bd :bd
@@ -202,7 +202,7 @@ augroup vimrcEx
         \ endif
 augroup END
 
-" RENAME CURRENT FILE
+" Rename current file
 function! RenameCurrent()
   let old_name = expand('%')
   let new_name = input('New file name: ', expand('%'), 'file')
@@ -214,15 +214,15 @@ function! RenameCurrent()
 endfunction
 command! RenameCurrent :call RenameCurrent()
 
-" REMOVE TRAILING WHITESPACE
+" Remove trailing whitespace
 function! <SID>StripTrailingWhitespace()
-  " Save last search, and cursor position.
+  " Save last search and cursor position
   let _s=@/
   let l = line(".")
   let c = col(".")
-  " Do the business:
+  " Do the business
   %s/\s\+$//e
-  " Clean up: restore previous search history and cursor position
+  " Restore previous search history and cursor position
   let @/=_s
   call cursor(l, c)
 endfunction
@@ -239,7 +239,7 @@ function! <SID>DisableSpell()
 endfunction
 command! DisableSpell call <SID>DisableSpell()
 
-" DOTFILE EDITING HELPERS
+" Dotfile editing helpers
 nnoremap <leader>gv :e $MYVIMRC<CR>
 autocmd bufwritepost .vimrc source $MYVIMRC
 nnoremap <leader>gg :e ~/.gitconfig<CR>
