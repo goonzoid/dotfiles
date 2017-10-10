@@ -112,8 +112,8 @@ autocmd FileType cpp setlocal shiftwidth=4 tabstop=4 commentstring=//\ %s
 autocmd FileType make setlocal noexpandtab shiftwidth=4 tabstop=4
 
 " Appearance
-:color smyck
-:set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
+color smyck
+set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
 set cmdheight=2
 
 " Basic editing configuration
@@ -163,7 +163,7 @@ nnoremap <c-y> 9<c-y>
 " Easier switch between files
 nnoremap <leader><leader> <c-^>
 " Clear search buffer by hitting space
-:nnoremap <space> :nohlsearch<cr>
+nnoremap <space> :nohlsearch<cr>
 " Insert a hash rocket with <c-l>
 imap <c-l> =><space>
 " Not sure what the diff is between <c-c> and Esc
