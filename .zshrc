@@ -78,11 +78,6 @@ iterm_name() {
   echo -e "\033];$1\007";
 }
 
-# Simple One File C++ compilation
-ofc() {
-  g++ -Wall -Wextra -pedantic $1 -o `echo $1 | sed 's/\.cpp//'`
-}
-
 export GOPATH="$HOME/go"
 export GOBIN="$GOPATH/bin"
 export BOSH_USE_BUNDLER=true
