@@ -82,9 +82,12 @@ export GOPATH="$HOME/go"
 export GOBIN="$GOPATH/bin"
 export BOSH_USE_BUNDLER=true
 
-PATH="$HOME/bin:$GOBIN:$HOME/.vim/plugged/vipe:$PATH"
+if [[ -z $WMINOR_PATH_SET ]]; then
+  PATH="$HOME/bin:$GOBIN:$HOME/.vim/plugged/vipe:$PATH"
+  eval "$(rbenv init -)"
+  export WMINOR_PATH_SET=1
+fi
 
-eval "$(rbenv init -)"
 eval "$(direnv hook $0)"
 
 export FZF_TMUX=1
