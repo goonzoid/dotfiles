@@ -74,7 +74,7 @@ alias be='bundle exec'
 alias serve='python -m SimpleHTTPServer'
 
 # iTerm tab/window naming
-name() {
+iterm_name() {
   echo -e "\033];$1\007";
 }
 
