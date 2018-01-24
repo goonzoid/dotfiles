@@ -83,7 +83,7 @@ export GOBIN="$GOPATH/bin"
 export BOSH_USE_BUNDLER=true
 
 if [[ -z $WMINOR_PATH_SET ]]; then
-  PATH="$HOME/bin:$GOBIN:$HOME/.vim/plugged/vipe:$PATH"
+  PATH="$HOME/bin:$GOBIN:$HOME/.cargo/bin:$HOME/.vim/plugged/vipe:$PATH"
   eval "$(rbenv init -)"
   export WMINOR_PATH_SET=1
 fi

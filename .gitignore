@@ -10,6 +10,7 @@
 /.bosh_config
 /.bosh_init/
 /.cache/
+/.cargo/
 /.cf/
 /.config/
 /.cups/
@@ -42,6 +43,7 @@
 /.matplotlib/
 /.mongorc.js
 /.mplayer/
+/.multirust
 /.mutt/
 /.muttrc
 /.netExtender.log
@@ -59,6 +61,7 @@
 /.psql_history
 /.rbenv/
 /.rediscli_history
+/.rustup/
 /.sqlite_history
 /.ssh/
 /.subversion/
