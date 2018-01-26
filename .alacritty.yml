@@ -256,7 +256,9 @@ shell:
 #     strings. For example:
 #     - { ... , command: { program: "alacritty", args: ["-e", "vttest"] } }
 key_bindings:
-  - { key: Space,    mods: Control, chars: "\x00" } # tmux prefix
+  - { key: Space, mods: Control, chars: "\x00" }
+  - { key: F, mods: Alt, chars: "\x1bf" }
+  - { key: B, mods: Alt, chars: "\x1bb" }
   # Defaults:
   - { key: V,        mods: Command, action: Paste                        }
   - { key: C,        mods: Command, action: Copy                         }
