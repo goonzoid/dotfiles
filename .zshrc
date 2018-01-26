@@ -71,6 +71,8 @@ alias mkdir='mkdir -p'
 
 alias be='bundle exec'
 
+alias tma='tmux attach || tmux'
+
 alias serve='python -m SimpleHTTPServer'
 
 # iTerm tab/window naming
