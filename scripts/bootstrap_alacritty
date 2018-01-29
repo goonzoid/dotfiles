@@ -1,0 +1,15 @@
+#!/bin/bash -e
+
+ALACRITTY_SRC_DIR=$HOME/workspace/alacritty
+
+if [ ! -e $ALACRITTY_SRC_DIR ]; then
+  git clone git@github.com:jwilm/alacritty.git $ALACRITTY_SRC_DIR
+fi
+
+pushd $ALACRITTY_SRC_DIR
+  git pull
+  cargo build --release
+  make app
+  cp -r target/release/osx/Alacritty.app /Applications/
+  rm -rf target/release/osx
+popd
