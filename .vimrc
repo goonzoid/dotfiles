@@ -157,9 +157,6 @@ command! Bd :bd
 map <leader>y "*y
 map <leader>p "*p
 nnoremap p ]p
-" Improve scrolling speed
-nnoremap <c-e> 9<c-e>
-nnoremap <c-y> 9<c-y>
 " Easier switch between files
 nnoremap <leader><leader> <c-^>
 " Clear search buffer by hitting space
