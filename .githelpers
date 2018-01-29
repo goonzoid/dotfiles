@@ -4,8 +4,8 @@
 #
 # * 51c333e    (12 days)    <Gary Bernhardt>   add vim-eunuch
 #
-# The log format uses } characters between each field, and `column` is later
-# used to split on them. A } in the commit subject or any other field will
+# The log format uses ^ characters between each field, and `column` is later
+# used to split on them. A ^ in the commit subject or any other field will
 # break this.
 
 HASH="%C(yellow)%h%Creset"
@@ -14,12 +14,12 @@ AUTHOR="%C(bold blue)<%an>%Creset"
 REFS="%C(red)%d%Creset"
 SUBJECT="%s"
 
-FORMAT="$HASH}$RELATIVE_TIME}$AUTHOR}$REFS $SUBJECT"
+FORMAT="$HASH^$RELATIVE_TIME^$AUTHOR^$REFS $SUBJECT"
 
 pretty_git_log() {
     git -c color.ui=always log --graph --abbrev-commit --date=relative --pretty="tformat:${FORMAT}" $* |
-    # Line columns up based on } delimiter
-    column -s '}' -t |
+    # Line columns up based on ^ delimiter
+    column -s '^' -t |
     # Page only if we need to
     less -FXRS
 }
