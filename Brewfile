@@ -6,6 +6,7 @@ tap 'universal-ctags/universal-ctags'
 
 brew 'bash'
 brew 'clang-format'
+brew 'dep'
 brew 'direnv'
 brew 'elm'
 brew 'elm-format'
