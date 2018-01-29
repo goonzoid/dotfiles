@@ -87,7 +87,7 @@ eval "$(rbenv init -)"
 
 eval "$(direnv hook $0)"
 
-PATH="$HOME/bin:$GOBIN:$HOME/.cargo/bin:$HOME/.vim/plugged/vipe:$PATH"
+PATH="$HOME/bin:$GOBIN:$HOME/.cargo/bin:$PATH"
 
 export FZF_TMUX=1
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
