@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/usr/bin/env bash -e
 
 eval "$(rbenv init -)"
 rbenv shell system
