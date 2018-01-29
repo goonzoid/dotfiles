@@ -83,13 +83,14 @@ iterm_name() {
 export GOPATH="$HOME/go"
 export GOBIN="$GOPATH/bin"
 
-if [[ -z $WMINOR_PATH_SET ]]; then
-  PATH="$HOME/bin:$GOBIN:$HOME/.cargo/bin:$HOME/.vim/plugged/vipe:$PATH"
-  eval "$(rbenv init -)"
-  export WMINOR_PATH_SET=1
-fi
+eval "$(rbenv init -)"
 
 eval "$(direnv hook $0)"
 
+PATH="$HOME/bin:$GOBIN:$HOME/.cargo/bin:$HOME/.vim/plugged/vipe:$PATH"
+
 export FZF_TMUX=1
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# No duplicates in $PATH
+typeset -U path
