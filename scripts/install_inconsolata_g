@@ -1,7 +1,0 @@
-#!/bin/bash
-
-pushd /tmp
-  curl http://www.fantascienza.net/leonardo/ar/inconsolatag/inconsolata-g_font.zip > inconsolata-g_font.zip
-  unzip -p inconsolata-g_font.zip Inconsolata-g.ttf > /Library/Fonts/Inconsolata-g.ttf
-  rm inconsolata-g_font.zip
-popd
