@@ -242,6 +242,7 @@ command! DisableSpell call <SID>DisableSpell()
 " Dotfile editing helpers
 nnoremap <leader>gv :e $MYVIMRC<CR>
 autocmd bufwritepost .vimrc source $MYVIMRC
+nnoremap <leader>ga :e ~/.alacritty.yml<CR>
 nnoremap <leader>gg :e ~/.gitconfig<CR>
 nnoremap <leader>gn :e ~/.nowdothis<CR>
 nnoremap <leader>gz :e ~/.zshrc<CR>
