@@ -91,6 +91,8 @@ eval "$(direnv hook $0)"
 PATH="$HOME/bin:$GOBIN:$HOME/.cargo/bin:$PATH"
 
 export FZF_TMUX=1
+export FZF_DEFAULT_COMMAND='fd -IH'
+export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # No duplicates in $PATH
