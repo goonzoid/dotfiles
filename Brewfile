@@ -1,7 +1,6 @@
 tap 'getantibody/tap'
 tap 'homebrew/bundle'
 tap 'homebrew/core'
-tap 'homebrew/versions'
 tap 'universal-ctags/universal-ctags'
 
 brew 'bash'
