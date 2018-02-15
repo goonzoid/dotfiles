@@ -4,6 +4,7 @@
 /.CFUserTextEncoding
 /.Trash/
 /.ansible/
+/.base16_theme
 /.bash_history
 /.bosh/
 /.bosh_cache/
@@ -12,7 +13,9 @@
 /.cache/
 /.cargo/
 /.cf/
-/.config/
+/.config/direnv/
+/.config/gcloud/
+/.config/htop/
 /.cups/
 /.dbshell
 /.docker/
@@ -69,6 +72,7 @@
 /.tig_history
 /.vagrant.d/
 /.viminfo
+/.vimrc_background
 /.wireshark/
 /.zcache/
 /.zcompdump

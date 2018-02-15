@@ -95,5 +95,8 @@ export FZF_DEFAULT_COMMAND='fd -IH'
 export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+BASE16_SHELL=$HOME/.config/base16-shell/
+[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+
 # No duplicates in $PATH
 typeset -U path
