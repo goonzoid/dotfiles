@@ -1,47 +1,48 @@
+# vim: noexpandtab
 [user]
-  name = Will Pragnell
-  email = wpragnell@gmail.com
+	name = Will Pragnell
+	email = wpragnell@gmail.com
 [core]
-  autocrlf = input
+	autocrlf = input
 [color]
-  ui = auto
+	ui = auto
 [alias]
-  st = status
-  ci = commit --verbose
-  co = checkout
-  br = branch
-  rs = reset
-  di = diff
-  diw = diff -w
-  dc = diff --cached
-  dcw = diff --cached -w
-  dh1 = diff HEAD~1
-  dr = diff -w -U20
-  amend = commit --amend
-  aa = add --all
-  ap = add --all -p
-  au = add -u
-  puff = pull --ff-only
-  purb = pull --rebase
-  rb = rebase
-  ri = rebase -i
-  l = "!source ~/.githelpers && pretty_git_log"
-  la = !git l --all
-  lg = !git l -16
-  lga = !git r --all
-  sl = stash list
-  sp = stash pop
-  sno = show --name-only
-  sns = show --name-status
-  ctags = !.git/hooks/ctags
+	st = status
+	ci = commit --verbose
+	co = checkout
+	br = branch
+	rs = reset
+	di = diff
+	diw = diff -w
+	dc = diff --cached
+	dcw = diff --cached -w
+	dh1 = diff HEAD~1
+	dr = diff -w -U20
+	amend = commit --amend
+	aa = add --all
+	ap = add --all -p
+	au = add -u
+	puff = pull --ff-only
+	purb = pull --rebase
+	rb = rebase
+	ri = rebase -i
+	l = "!source ~/.githelpers && pretty_git_log"
+	la = !git l --all
+	lg = !git l -16
+	lga = !git r --all
+	sl = stash list
+	sp = stash pop
+	sno = show --name-only
+	sns = show --name-status
+	ctags = !.git/hooks/ctags
 [github]
-  user = goonzoid
+	user = goonzoid
 [push]
-  default = current
+	default = current
 [init]
-  templatedir = ~/.git_template
+	templatedir = ~/.git_template
 [url "git@github.com:"]
-  pushInsteadOf = "https://github.com/"
-  pushInsteadOf = "http://github.com/"
-  pushInsteadOf = "gh:"
-  pushInsteadOf = "gh://"
+	pushInsteadOf = "https://github.com/"
+	pushInsteadOf = "http://github.com/"
+	pushInsteadOf = "gh:"
+	pushInsteadOf = "gh://"
