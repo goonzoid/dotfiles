@@ -27,6 +27,7 @@ brew 'tig'
 brew 'tmux'
 brew 'tree'
 brew 'universal-ctags/universal-ctags/universal-ctags', args: ['HEAD']
+brew 'urlview'
 brew 'watch'
 brew 'wget'
 brew 'youtube-dl'
