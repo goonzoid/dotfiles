@@ -16,6 +16,7 @@ Plug 'luan/vim-bosh'
 Plug 'luan/vim-concourse'
 Plug 'luan/vipe'
 Plug 'luochen1990/rainbow'
+Plug 'majutsushi/tagbar'
 Plug 'mhinz/vim-signify'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'neomake/neomake'
@@ -58,6 +59,7 @@ autocmd! BufWritePost * Neomake!
 let g:fzf_command_prefix = 'FZF'
 nnoremap <leader>f :FZFFiles<cr>
 nnoremap <leader>b :FZFBuffers<cr>
+nnoremap \| :TagbarToggle<CR>
 
 " Replace 'f' with 1-char Sneak
 nmap f <Plug>Sneak_f
@@ -77,7 +79,6 @@ let g:go_highlight_structs = 1
 
 " NERDTree
 nnoremap \ :NERDTreeToggle<CR>
-nnoremap \| :NERDTreeFind<CR>
 let NERDTreeShowHidden = 1
 
 " NeoComplete
