@@ -1,10 +1,31 @@
-# Key bindings
-source "/usr/local/opt/fzf/shell/key-bindings.zsh"
-source "$HOME/.fzf-git-sha-widget.zsh"
-
-# Auto-completion
 if [[ $- == *i* ]]; then
 
+# Key bindings
+source "/usr/local/opt/fzf/shell/key-bindings.zsh"
+
+__gssel() {
+  local cmd='git log --pretty="tformat:%h %s"'
+  setopt localoptions pipefail 2> /dev/null
+  eval "$cmd" | FZF_DEFAULT_OPTS="--height ${FZF_TMUX_HEIGHT:-40%} --reverse $FZF_DEFAULT_OPTS $FZF_CTRL_T_OPTS" $(__fzfcmd) -m "$@" | while read item; do
+    echo -n "${${(z)item}[1]} "
+  done
+  local ret=$?
+  echo
+  return $ret
+}
+
+fzf-git-sha-widget() {
+  LBUFFER="${LBUFFER}$(__gssel)"
+  local ret=$?
+  zle redisplay
+  typeset -f zle-line-init >/dev/null && zle zle-line-init
+  return $ret
+}
+zle     -N   fzf-git-sha-widget
+bindkey '^G' fzf-git-sha-widget
+
+# Auto-completion
+#
 # fzf/shell/completion.zsh checks for declerations of _fzf_compgen_{path,dir}, so
 # declare before sourcing that
 #
@@ -20,6 +41,7 @@ _fzf_compgen_dir() {
 
 source "/usr/local/opt/fzf/shell/completion.zsh" 2> /dev/null
 
+# for some reason $prefix is set, but $lbuf is passed as the first argument
 _fzf_complete_git() {
   if [ "${${(z)1}[2]}" = "show" ]; then
     matches=$(__gssel)
