@@ -1,5 +1,10 @@
+# Key bindings
+source "/usr/local/opt/fzf/shell/key-bindings.zsh"
+source "$HOME/.fzf-git-sha-widget.zsh"
+
 # Auto-completion
-#
+if [[ $- == *i* ]]; then
+
 # fzf/shell/completion.zsh checks for declerations of _fzf_compgen_{path,dir}, so
 # declare before sourcing that
 #
@@ -13,11 +18,22 @@ _fzf_compgen_dir() {
   fd --type d --hidden --follow --exclude ".git" . "$1"
 }
 
-[[ $- == *i* ]] && source "/usr/local/opt/fzf/shell/completion.zsh" 2> /dev/null
+source "/usr/local/opt/fzf/shell/completion.zsh" 2> /dev/null
 
-# Key bindings
-source "/usr/local/opt/fzf/shell/key-bindings.zsh"
-source "$HOME/.fzf-git-sha-widget.zsh"
+_fzf_complete_git() {
+  if [ "${${(z)1}[2]}" = "show" ]; then
+    matches=$(__gssel)
+    if [ -n "$matches" ]; then
+      LBUFFER="$lbuf$matches"
+      zle redisplay
+      typeset -f zle-line-init >/dev/null && zle zle-line-init
+    fi
+  else
+    _fzf_path_completion "$prefix" "$1"
+  fi
+}
+
+fi
 
 # Configuration
 export FZF_TMUX=1
