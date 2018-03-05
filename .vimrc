@@ -9,7 +9,6 @@ Plug 'fatih/vim-go'
 Plug 'gfontenot/vim-xcode'
 Plug 'guns/vim-sexp'
 Plug 'guns/vim-clojure-static'
-Plug 'honza/vim-snippets'
 Plug 'justinmk/vim-sneak'
 Plug 'kana/vim-textobj-user'
 Plug 'luan/vim-bosh'
@@ -24,8 +23,6 @@ Plug 'rhysd/vim-clang-format'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'shougo/neocomplete.vim'
-Plug 'shougo/neosnippet'
-Plug 'shougo/neosnippet-snippets'
 Plug 'tmux-plugins/vim-tmux'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-commentary'
@@ -91,20 +88,6 @@ if !exists('g:neocomplete#keyword_patterns')
 endif
 let g:neocomplete#keyword_patterns['default'] = '\h\w*'
 let g:neocomplete#enable_auto_close_preview = 1
-
-" NeoSnippet
-let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets,~/.vim/snippets'
-
-imap <C-k> <Plug>(neosnippet_expand_or_jump)
-smap <C-k> <Plug>(neosnippet_expand_or_jump)
-xmap <C-k> <Plug>(neosnippet_expand_target)
-
-imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: pumvisible() ? "\<C-n>" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: "\<TAB>"
 
 " Filetype detection
 autocmd FileType go setlocal noexpandtab shiftwidth=4 tabstop=4 listchars=tab:\ \ ,trail:·
