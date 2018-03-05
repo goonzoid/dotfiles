@@ -25,6 +25,7 @@ Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'neomake/neomake'
 Plug 'rhysd/vim-clang-format'
 Plug 'rking/ag.vim'
+Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'shougo/neocomplete.vim'
 Plug 'tmux-plugins/vim-tmux'
@@ -53,6 +54,7 @@ let mapleader=","
 " Plugin configuration
 runtime macros/matchit.vim
 let g:elm_format_autosave = 1
+let g:rustfmt_autosave = 1
 let g:sexp_enable_insert_mode_mappings = 0
 let g:signify_vcs_list = [ 'git' ]
 let g:neomake_open_list = 2
