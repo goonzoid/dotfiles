@@ -27,6 +27,7 @@ Plug 'tmux-plugins/vim-tmux'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fireplace'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-leiningen'
@@ -182,18 +183,6 @@ augroup vimrcEx
         \   setlocal nomodeline |
         \ endif
 augroup END
-
-" Rename current file
-function! RenameCurrentFile()
-  let old_name = expand('%')
-  let new_name = input('New file name: ', expand('%'), 'file')
-  if new_name != '' && new_name != old_name
-    exec ':saveas ' . new_name
-    exec ':silent !rm ' . old_name
-    redraw!
-  endif
-endfunction
-command! RenameCurrentFile :call RenameCurrentFile()
 
 " Remove trailing whitespace
 function! <SID>StripTrailingWhitespace()
