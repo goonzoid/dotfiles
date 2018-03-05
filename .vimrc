@@ -25,9 +25,11 @@ Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'neomake/neomake'
 Plug 'rhysd/vim-clang-format'
 Plug 'rking/ag.vim'
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
 Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'shougo/neocomplete.vim'
+Plug 'shougo/deoplete.nvim'
 Plug 'tmux-plugins/vim-tmux'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-commentary'
@@ -53,6 +55,7 @@ let mapleader=","
 
 " Plugin configuration
 runtime macros/matchit.vim
+let g:deoplete#enable_at_startup = 1
 let g:elm_format_autosave = 1
 let g:rustfmt_autosave = 1
 let g:sexp_enable_insert_mode_mappings = 0
@@ -84,17 +87,6 @@ let g:go_highlight_structs = 1
 " NERDTree
 nnoremap \ :NERDTreeToggle<CR>
 let NERDTreeShowHidden = 1
-
-" NeoComplete
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_case = 1
-let g:neocomplete#sources#syntax#min_keyword_length = 3
-let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
-if !exists('g:neocomplete#keyword_patterns')
-    let g:neocomplete#keyword_patterns = {}
-endif
-let g:neocomplete#keyword_patterns['default'] = '\h\w*'
-let g:neocomplete#enable_auto_close_preview = 1
 
 " Filetype detection
 autocmd FileType go setlocal noexpandtab shiftwidth=4 tabstop=4 listchars=tab:\ \ ,trail:·
