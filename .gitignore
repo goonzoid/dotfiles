@@ -15,6 +15,7 @@
 /.cf/
 /.config/direnv/
 /.config/gcloud/
+/.config/gocode/
 /.config/htop/
 /.cups/
 /.dbshell
