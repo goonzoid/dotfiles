@@ -74,6 +74,7 @@
 /.viminfo
 /.vimrc_background
 /.vim/.netrwhist
+/.wget-hsts
 /.wireshark/
 /.zcache/
 /.zcompdump
