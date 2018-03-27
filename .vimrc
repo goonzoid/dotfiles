@@ -103,6 +103,7 @@ set cmdheight=2
 set hidden
 set history=1000
 set number
+set splitright
 set expandtab
 set tabstop=2
 set shiftwidth=2
