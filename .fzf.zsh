@@ -4,7 +4,7 @@ if [[ $- == *i* ]]; then
 source "/usr/local/opt/fzf/shell/key-bindings.zsh"
 
 __gssel() {
-  local cmd='git log --pretty="tformat:%h %s"'
+  local cmd='git log --all --pretty="tformat:%h %s"'
   setopt localoptions pipefail 2> /dev/null
   eval "$cmd" | FZF_DEFAULT_OPTS="--height ${FZF_TMUX_HEIGHT:-40%} --reverse $FZF_DEFAULT_OPTS $FZF_CTRL_T_OPTS" $(__fzfcmd) -m "$@" | while read item; do
     echo -n "${${(z)item}[1]} "
