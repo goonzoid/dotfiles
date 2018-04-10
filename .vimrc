@@ -12,7 +12,6 @@ Plug 'guns/vim-sexp'
 Plug 'guns/vim-clojure-static'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
-Plug 'justinmk/vim-sneak'
 Plug 'kana/vim-textobj-user'
 Plug 'luan/vim-bosh'
 Plug 'luan/vim-concourse'
@@ -67,14 +66,6 @@ let g:fzf_command_prefix = 'FZF'
 nnoremap <leader>f :FZFFiles<cr>
 nnoremap <leader>b :FZFBuffers<cr>
 nnoremap \| :TagbarToggle<CR>
-
-" Replace 'f' with 1-char Sneak
-nmap f <Plug>Sneak_f
-nmap F <Plug>Sneak_F
-xmap f <Plug>Sneak_f
-xmap F <Plug>Sneak_F
-omap f <Plug>Sneak_f
-omap F <Plug>Sneak_F
 
 " Go
 let g:go_fmt_command = "goimports"
