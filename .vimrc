@@ -26,6 +26,7 @@ Plug 'rhysd/vim-clang-format'
 Plug 'rking/ag.vim'
 Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
+Plug 'ruanyl/vim-gh-line'
 Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'shougo/deoplete.nvim'
@@ -56,6 +57,7 @@ let mapleader=","
 runtime macros/matchit.vim
 let g:deoplete#enable_at_startup = 1
 let g:elm_format_autosave = 1
+let g:gh_use_canonical = 1
 let g:rustfmt_autosave = 1
 let g:sexp_enable_insert_mode_mappings = 0
 let g:signify_vcs_list = [ 'git' ]
