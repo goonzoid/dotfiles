@@ -33,6 +33,7 @@
 	lga = !git r --all
 	sl = stash list
 	sp = stash pop
+	su = submodule update --init --recursive
 	sno = show --name-only
 	sns = show --name-status
 	ctags = !.git/hooks/ctags
