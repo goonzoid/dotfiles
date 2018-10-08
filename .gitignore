@@ -13,6 +13,7 @@
 /.cache/
 /.cargo/
 /.cf/
+/.config/configstore/
 /.config/direnv/
 /.config/gcloud/
 /.config/gocode/
