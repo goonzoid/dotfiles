@@ -1,3 +1,4 @@
+tap 'caskroom/cask'
 tap 'getantibody/tap'
 tap 'homebrew/bundle'
 tap 'homebrew/core'
@@ -33,3 +34,5 @@ brew 'watch'
 brew 'wget'
 brew 'youtube-dl'
 brew 'zsh'
+
+cask 'fluor'
