@@ -121,7 +121,7 @@ set autowrite
 set lazyredraw
 " Fix delay after pressing ESC then O - http://ksjoberg.com/vim-esckeys.html
 set timeout timeoutlen=1000 ttimeoutlen=100
-syntax on
+syntax enable
 
 " Key mappings
 command! W :w
