@@ -3,7 +3,7 @@ set nocompatible
 call plug#begin('~/.vim/plugged')
 
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
-Plug 'dim13/smyck.vim'
+Plug 'chriskempson/base16-vim'
 Plug 'elmcast/elm-vim'
 Plug 'fatih/vim-go'
 Plug 'gfontenot/vim-xcode'
@@ -89,7 +89,10 @@ autocmd FileType cpp setlocal shiftwidth=4 tabstop=4 commentstring=//\ %s
 autocmd FileType make setlocal noexpandtab shiftwidth=4 tabstop=4
 
 " Appearance
-color smyck
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
 set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
 
 " Basic editing configuration
