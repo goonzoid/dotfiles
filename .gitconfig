@@ -4,6 +4,7 @@
 [core]
 	autocrlf = input
 	attributesfile = /Users/wminor/.gitattributes
+	excludesfile = ~/.global_gitignore
 [color]
 	ui = auto
 [alias]
