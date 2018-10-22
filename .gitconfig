@@ -35,13 +35,10 @@
 	su = submodule update --init --recursive
 	sno = show --name-only
 	sns = show --name-status
-	ctags = !.git/hooks/ctags
 [github]
 	user = goonzoid
 [push]
 	default = current
-[init]
-	templatedir = ~/.git_template
 [url "git@github.com:"]
 	pushInsteadOf = "https://github.com/"
 	pushInsteadOf = "http://github.com/"
