@@ -29,7 +29,7 @@ brew 'the_silver_searcher'
 brew 'tig'
 brew 'tmux'
 brew 'tree'
-brew 'universal-ctags/universal-ctags/universal-ctags', args: ['HEAD']
+brew 'universal-ctags/universal-ctags/universal-ctags', args: ['HEAD', 'env=std']
 brew 'urlview'
 brew 'watch'
 brew 'wget'
