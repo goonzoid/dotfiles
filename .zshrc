@@ -70,6 +70,8 @@ alias ll='ls -AlhG'
 
 alias mkdir='mkdir -p'
 
+alias agg='ag --nobreak --nofilename'
+
 alias be='bundle exec'
 
 alias tma='tmux attach || tmux'
