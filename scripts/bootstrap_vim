@@ -1,13 +1,5 @@
 #!/usr/bin/env bash -e
 
-eval "$(rbenv init -)"
-rbenv shell system
-
-brew update
-if brew ls vim
-then
-  brew uninstall vim
-fi
 brew install vim --with-override-system-vi --with-lua
 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
