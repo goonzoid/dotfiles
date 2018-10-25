@@ -9,3 +9,5 @@ vim +PlugUpdate +qall
 if [ ! -f /usr/local/bin/vipe ]; then
   ln -s ~/.vim/plugged/vipe/vipe /usr/local/bin
 fi
+
+gem install xcpretty
