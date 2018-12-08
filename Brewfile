@@ -26,6 +26,7 @@ brew 'rg'
 brew 'ruby-build'
 brew 'the_silver_searcher'
 brew 'tig'
+brew 'tldr'
 brew 'tmux'
 brew 'tree'
 brew 'universal-ctags/universal-ctags/universal-ctags', args: ['HEAD', 'env=std']
