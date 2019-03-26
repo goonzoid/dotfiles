@@ -10,6 +10,7 @@
 /.bosh_cache/
 /.bosh_config
 /.bosh_init/
+/.cabal/
 /.cache/
 /.cargo/
 /.cf/
