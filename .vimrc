@@ -30,6 +30,7 @@ Plug 'rking/ag.vim'
 Plug 'ruanyl/vim-gh-line'
 Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/nerdtree'
+Plug 'tidalcycles/vim-tidal'
 Plug 'tmux-plugins/vim-tmux'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-bundler'
@@ -62,6 +63,7 @@ let g:gh_use_canonical = 1
 let g:rustfmt_autosave = 1
 let g:sexp_enable_insert_mode_mappings = 0
 let g:signify_vcs_list = [ 'git' ]
+let g:tidal_default_config = {"socket_name":"default", "target_pane":":.2"}
 let g:neomake_open_list = 2
 let g:neomake_list_height = 8
 autocmd! BufWritePost * Neomake!
