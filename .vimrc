@@ -68,7 +68,7 @@ autocmd! BufWritePost * Neomake!
 let g:fzf_command_prefix = 'FZF'
 nnoremap <leader>f :FZFFiles<cr>
 nnoremap <leader>b :FZFBuffers<cr>
-nnoremap \| :TagbarToggle<CR>
+nnoremap \| :TagbarToggle<cr>
 
 " Go
 let g:go_fmt_command = "goimports"
@@ -79,7 +79,7 @@ let g:go_highlight_operators = 1
 let g:go_highlight_structs = 1
 
 " NERDTree
-nnoremap \ :NERDTreeToggle<CR>
+nnoremap \ :NERDTreeToggle<cr>
 let NERDTreeShowHidden = 1
 
 " Filetype detection
@@ -206,13 +206,13 @@ endfunction
 command! DisableSpell call <SID>DisableSpell()
 
 " Dotfile editing helpers
-nnoremap <leader>gv :e ~/.vimrc<CR>
+nnoremap <leader>gv :e ~/.vimrc<cr>
 autocmd bufwritepost .vimrc source $MYVIMRC
-nnoremap <leader>ga :e ~/.alacritty.yml<CR>
-nnoremap <leader>gg :e ~/.gitconfig<CR>
-nnoremap <leader>gn :e ~/.nowdothis<CR>
-nnoremap <leader>gz :e ~/.zshrc<CR>
-nnoremap <leader>gt :e ~/.tmux.conf<CR>
+nnoremap <leader>ga :e ~/.alacritty.yml<cr>
+nnoremap <leader>gg :e ~/.gitconfig<cr>
+nnoremap <leader>gn :e ~/.nowdothis<cr>
+nnoremap <leader>gz :e ~/.zshrc<cr>
+nnoremap <leader>gt :e ~/.tmux.conf<cr>
 autocmd bufwritepost .tmux.conf silent !tmux source-file ~/.tmux.conf
 
 " Read .vimrc, .exrc and .gvimrc in current working directory
