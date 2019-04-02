@@ -10,6 +10,7 @@ Plug 'gfontenot/vim-xcode'
 Plug 'godlygeek/tabular'
 Plug 'guns/vim-sexp'
 Plug 'guns/vim-clojure-static'
+Plug 'jpalardy/vim-slime'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'kana/vim-textobj-user'
@@ -61,7 +62,7 @@ let g:gh_use_canonical = 1
 let g:rustfmt_autosave = 1
 let g:sexp_enable_insert_mode_mappings = 0
 let g:signify_vcs_list = [ 'git' ]
-let g:tidal_default_config = {"socket_name":"default", "target_pane":":.2"}
+let g:tidal_no_mappings = 1
 let g:neomake_open_list = 2
 let g:neomake_list_height = 8
 autocmd! BufWritePost * Neomake!
@@ -69,6 +70,15 @@ let g:fzf_command_prefix = 'FZF'
 nnoremap <leader>f :FZFFiles<cr>
 nnoremap <leader>b :FZFBuffers<cr>
 nnoremap \| :TagbarToggle<cr>
+
+" Slime
+let g:slime_default_config = {"socket_name": get(split($TMUX, ","), 0), "target_pane": "{next}"}
+let g:slime_dont_ask_default = 1
+let g:slime_haskell_ghci_add_let = 0
+let g:slime_target = "tmux"
+imap <c-e> <esc><Plug>SlimeParagraphSend<cr>
+nmap <c-e> <Plug>SlimeParagraphSend<cr>
+xmap <c-e> <Plug>SlimeRegionSend<cr>
 
 " Go
 let g:go_fmt_command = "goimports"

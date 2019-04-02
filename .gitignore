@@ -68,6 +68,7 @@
 /.rbenv/
 /.rediscli_history
 /.rustup/
+/.slime_paste
 /.sqlite_history
 /.ssh/
 /.subversion/
