@@ -87,6 +87,7 @@ let g:go_highlight_structs = 1
 " NERDTree
 nnoremap \ :NERDTreeToggle<cr>
 let NERDTreeShowHidden = 1
+let NERDTreeHijackNetrw = 0
 
 " Filetype detection
 autocmd FileType go setlocal noexpandtab shiftwidth=4 tabstop=4 listchars=tab:\ \ ,trail:·
