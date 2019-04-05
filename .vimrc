@@ -2,6 +2,7 @@ set nocompatible
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'benmills/vimux'                               " run commands in tmux panes
 Plug 'chriskempson/base16-vim'                      " colour schemes
 Plug 'elmcast/elm-vim'                              " all things elm
 Plug 'fatih/vim-go'                                 " all things go
@@ -14,7 +15,6 @@ Plug 'junegunn/goyo.vim'                            " focus mode
 Plug 'junegunn/limelight.vim'                       " hyper focus mode
 Plug 'kana/vim-operator-user'                       " define custom operators - required by vim-clang-format
 Plug 'kana/vim-textobj-user'                        " define custom text objects - required by vim-textobj-ruby
-Plug 'luan/vipe'                                    " run tests in other terminal sessions
 Plug 'ludovicchabant/vim-gutentags'                 " generates ctags files in the background
 Plug 'luochen1990/rainbow'                          " rainbow parens and other markers
 Plug 'machakann/vim-swap'                           " reorder delimited items
