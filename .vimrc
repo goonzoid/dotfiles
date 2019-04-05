@@ -2,49 +2,49 @@ set nocompatible
 
 call plug#begin('~/.vim/plugged')
 
-Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
-Plug 'chriskempson/base16-vim'
-Plug 'elmcast/elm-vim'
-Plug 'fatih/vim-go'
-Plug 'gfontenot/vim-xcode'
-Plug 'godlygeek/tabular'
-Plug 'guns/vim-sexp'
-Plug 'jpalardy/vim-slime'
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
-Plug 'kana/vim-textobj-user'
-Plug 'kana/vim-operator-user'
-Plug 'luan/vipe'
-Plug 'ludovicchabant/vim-gutentags'
-Plug 'luochen1990/rainbow'
-Plug 'machakann/vim-swap'
-Plug 'majutsushi/tagbar'
-Plug 'mhinz/vim-signify'
-Plug 'milkypostman/vim-togglelist'
-Plug 'nelstrom/vim-textobj-rubyblock'
-Plug 'neomake/neomake'
-Plug 'rhysd/vim-clang-format'
-Plug 'rking/ag.vim'
-Plug 'ruanyl/vim-gh-line'
-Plug 'rust-lang/rust.vim'
-Plug 'scrooloose/nerdtree'
-Plug 'tidalcycles/vim-tidal'
-Plug 'tmux-plugins/vim-tmux'
-Plug 'tpope/vim-abolish'
-Plug 'tpope/vim-bundler'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-eunuch'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-rails'
-Plug 'tpope/vim-rake'
-Plug 'tpope/vim-sexp-mappings-for-regular-people'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-unimpaired'
-Plug 'tpope/vim-vinegar'
-Plug 'vim-ruby/vim-ruby'
-Plug 'wlangstroth/vim-racket'
+Plug 'chriskempson/base16-vim'                      " colour schemes
+Plug 'elmcast/elm-vim'                              " all things elm
+Plug 'fatih/vim-go'                                 " all things go
+Plug 'gfontenot/vim-xcode'                          " work with Xcode projects
+Plug 'godlygeek/tabular'                            " make tables
+Plug 'guns/vim-sexp'                                " s-expression editing
+Plug 'jpalardy/vim-slime'                           " send text to REPLs and other things
+Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim' " fzf integration
+Plug 'junegunn/goyo.vim'                            " focus mode
+Plug 'junegunn/limelight.vim'                       " hyper focus mode
+Plug 'kana/vim-operator-user'                       " define custom operators - required by vim-clang-format
+Plug 'kana/vim-textobj-user'                        " define custom text objects - required by vim-textobj-ruby
+Plug 'luan/vipe'                                    " run tests in other terminal sessions
+Plug 'ludovicchabant/vim-gutentags'                 " generates ctags files in the background
+Plug 'luochen1990/rainbow'                          " rainbow parens and other markers
+Plug 'machakann/vim-swap'                           " reorder delimited items
+Plug 'majutsushi/tagbar'                            " ctag navigation
+Plug 'mhinz/vim-signify'                            " show linewise vcs indicators
+Plug 'milkypostman/vim-togglelist'                  " <leader>q/l for quickfix and location lists
+Plug 'nelstrom/vim-textobj-rubyblock'               " custom text onbject for ruby blocks
+Plug 'neomake/neomake'                              " async linting and make framework
+Plug 'rhysd/vim-clang-format'                       " clang-format integration
+Plug 'rking/ag.vim'                                 " ag integration
+Plug 'ruanyl/vim-gh-line'                           " <leader>gh/gb to open current line on github
+Plug 'rust-lang/rust.vim'                           " all things rust
+Plug 'scrooloose/nerdtree'                          " filesystem tree explorer and utils
+Plug 'tidalcycles/vim-tidal'                        " generate completions for superdirt samples
+Plug 'tmux-plugins/vim-tmux'                        " tmux.conf editing help
+Plug 'tpope/vim-abolish'                            " cr{c,m,s} to coerce to {camel,mixed,snake} case (and more)
+Plug 'tpope/vim-bundler'                            " all things bundler
+Plug 'tpope/vim-commentary'                         " comment stuff out
+Plug 'tpope/vim-endwise'                            " close some structures automatically - e.g. add `end` for ruby funcs
+Plug 'tpope/vim-eunuch'                             " wrappers for 'nix shell commands
+Plug 'tpope/vim-fugitive'                           " wrappers for git commands
+Plug 'tpope/vim-rails'                              " all things rails
+Plug 'tpope/vim-rake'                               " all things rake
+Plug 'tpope/vim-repeat'                             " better repetition
+Plug 'tpope/vim-sexp-mappings-for-regular-people'   " additional s-expression mappings
+Plug 'tpope/vim-surround'                           " mappings for editing 'surrounding pairs'
+Plug 'tpope/vim-unimpaired'                         " pairs of handy bracket mappings
+Plug 'tpope/vim-vinegar'                            " netrw enhancements
+Plug 'vim-ruby/vim-ruby'                            " all things ruby
+Plug 'wlangstroth/vim-racket'                       " all things racket
 
 call plug#end()
 
@@ -224,3 +224,5 @@ autocmd bufwritepost .tmux.conf silent !tmux source-file ~/.tmux.conf
 " Read .vimrc, .exrc and .gvimrc in current working directory
 set exrc
 set secure " deliberately set at end of .vimrc, see :help 'secure'
+
+" vim: textwidth=0
