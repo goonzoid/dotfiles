@@ -1,6 +1,8 @@
 # Plugins
-source <(antibody init)
-antibody bundle < $HOME/.zplugins
+source $HOME/.zplugins.sh
+zsh_update_plugins() {
+  antibody bundle < ~/.zplugins.txt > ~/.zplugins.sh
+}
 
 # Editing
 export EDITOR="vim"
