@@ -9,12 +9,10 @@ then
   echo "/usr/local/bin/zsh" | sudo tee -a /etc/shells
 fi
 
-chsh -s /usr/local/bin/zsh $USER
+sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
 
 if [ -f /etc/zshenv ]
 then
   echo "Moving /etc/zshenv to /etc/zprofile"
   sudo mv /etc/{zshenv,zprofile}
 fi
-
-echo "You now need to restart OS X for zsh to become the default shell"
