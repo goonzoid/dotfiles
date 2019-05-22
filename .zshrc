@@ -1,9 +1,3 @@
-# Plugins
-source $HOME/.zplugins.sh
-zsh_update_plugins() {
-  antibody bundle < ~/.zplugins.txt > ~/.zplugins.sh
-}
-
 # Editing
 export EDITOR="vim"
 bindkey -e
@@ -101,3 +95,10 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 
 # No duplicates in $PATH
 typeset -U path
+
+# Plugins - must be loaded after all calls to zle and compinit
+source $HOME/.zplugins.sh
+
+zsh_update_plugins() {
+  antibody bundle < ~/.zplugins.txt > ~/.zplugins.sh
+}
