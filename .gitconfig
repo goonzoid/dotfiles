@@ -5,6 +5,7 @@
 	autocrlf = input
 	attributesfile = /Users/wminor/.gitattributes
 	excludesfile = ~/.global_gitignore
+	pager = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
 [color]
 	ui = auto
 [alias]
