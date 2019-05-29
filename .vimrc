@@ -3,7 +3,7 @@ set nocompatible
 call plug#begin('~/.vim/plugged')
 
 Plug 'benmills/vimux'                               " run commands in tmux panes
-Plug 'chriskempson/base16-vim'                      " colour schemes
+Plug 'danielwe/base16-vim'                          " colour schemes (using this fork until https://github.com/chriskempson/base16-vim/pull/198 is merged)
 Plug 'elmcast/elm-vim'                              " all things elm
 Plug 'fatih/vim-go'                                 " all things go
 Plug 'gfontenot/vim-xcode'                          " work with Xcode projects
