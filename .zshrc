@@ -104,4 +104,5 @@ zsh_update_plugins() {
   sed -i '' "s,$HOME,\$HOME,g" ~/.zplugins.sh
 }
 
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 ZSH_HIGHLIGHT_STYLES[path]='fg=white'
