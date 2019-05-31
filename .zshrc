@@ -103,3 +103,5 @@ zsh_update_plugins() {
   antibody bundle < ~/.zplugins.txt > ~/.zplugins.sh
   sed -i '' "s,$HOME,\$HOME,g" ~/.zplugins.sh
 }
+
+ZSH_HIGHLIGHT_STYLES[path]='fg=white'
