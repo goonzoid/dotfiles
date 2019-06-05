@@ -1,5 +1,3 @@
-set nocompatible
-
 call plug#begin('~/.vim/plugged')
 
 Plug 'benmills/vimux'                               " run commands in tmux panes
