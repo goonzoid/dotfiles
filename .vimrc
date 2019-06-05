@@ -44,6 +44,7 @@ Plug 'tpope/vim-surround'                           " mappings for editing 'surr
 Plug 'tpope/vim-unimpaired'                         " pairs of handy bracket mappings
 Plug 'tpope/vim-vinegar'                            " netrw enhancements
 Plug 'vim-ruby/vim-ruby'                            " all things ruby
+Plug 'wellle/tmux-complete.vim'                     " completions from tmux panes, sets completefunc by default
 Plug 'wlangstroth/vim-racket'                       " all things racket
 
 call plug#end()
