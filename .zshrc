@@ -40,7 +40,7 @@ zstyle ':vcs_info:git*' formats "%{$fg[green]%}%b:%u%c%a%{$reset_color%}"
 precmd() { vcs_info }
 setopt prompt_subst
 autoload -U promptinit && promptinit
-PROMPT='%{$fg[green]%}%m %{$fg[blue]%}%~ %{$reset_color%}${vcs_info_msg_0_} %{$fg[yellow]%}$(nowdothis) %{$reset_color%}
+PROMPT='%{$fg[magenta]%}%m %{$fg[blue]%}%~ %{$reset_color%}${vcs_info_msg_0_} %{$fg[yellow]%}$(nowdothis) %{$reset_color%}
 %{$fg[blue]%}❯ %{$reset_color%}'
 RPROMPT='%(?..%{$fg[red]%}%?%{$reset_color%})'
 
