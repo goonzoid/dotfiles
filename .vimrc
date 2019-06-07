@@ -29,6 +29,7 @@ Plug 'scrooloose/nerdtree'                          " filesystem tree explorer a
 Plug 'tidalcycles/vim-tidal'                        " generate completions for superdirt samples
 Plug 'tmux-plugins/vim-tmux'                        " tmux.conf editing help
 Plug 'tpope/vim-abolish'                            " cr{c,m,s} to coerce to {camel,mixed,snake} case (and more)
+Plug 'tpope/vim-apathy'                             " set path and friends
 Plug 'tpope/vim-bundler'                            " all things bundler
 Plug 'tpope/vim-commentary'                         " comment stuff out
 Plug 'tpope/vim-endwise'                            " close some structures automatically - e.g. add `end` for ruby funcs
