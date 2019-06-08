@@ -38,6 +38,7 @@ Plug 'tpope/vim-fugitive'                           " wrappers for git commands
 Plug 'tpope/vim-rails'                              " all things rails
 Plug 'tpope/vim-rake'                               " all things rake
 Plug 'tpope/vim-repeat'                             " better repetition
+Plug 'tpope/vim-sensible'                           " sensible defaults
 Plug 'tpope/vim-sexp-mappings-for-regular-people'   " additional s-expression mappings
 Plug 'tpope/vim-surround'                           " mappings for editing 'surrounding pairs'
 Plug 'tpope/vim-unimpaired'                         " pairs of handy bracket mappings
@@ -104,38 +105,27 @@ set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
 
 " Basic editing configuration
 set hidden
-set history=1000
 set number
 set splitright
 set expandtab
 set tabstop=2
 set shiftwidth=2
 set textwidth=80
-set autoindent
-set laststatus=2
 set showmatch
-set incsearch
 set hlsearch
 " Make tabs and trailing whitespace visible
 set list listchars=tab:▸\ ,trail:·
 " Make searches case sensitive only if they contain upper-case characters
 set ignorecase smartcase
-" Allow backspacing over everything in insert mode
-set backspace=indent,eol,start
 set title
 set showcmd
-set wildmenu
 set wildmode=longest,list
 set wildignore+=*/tmp/*,*/node_modules/*,*.o,*.obj,*.exe,*.so,*.dll,*.pyc,.svn,.hg,.bzr,.git,.sass-cache,*.class,*.scssc,*/Godeps/*,elm-stuff
-set scrolloff=3
 set backup
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set autowrite
 set lazyredraw
-" Fix delay after pressing ESC then O - http://ksjoberg.com/vim-esckeys.html
-set timeout timeoutlen=1000 ttimeoutlen=100
-syntax enable
 
 " Key mappings
 command! W :w
