@@ -1,3 +1,5 @@
+scriptencoding utf-8
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'benmills/vimux'                               " run commands in tmux panes
@@ -49,7 +51,7 @@ Plug 'wlangstroth/vim-racket'                       " all things racket
 
 call plug#end()
 
-let mapleader=","
+let mapleader=','
 
 " Plugin configuration
 runtime macros/matchit.vim
@@ -66,16 +68,16 @@ nnoremap <leader>b :FZFBuffers<cr>
 nnoremap \| :TagbarToggle<cr>
 
 " Slime
-let g:slime_default_config = {"socket_name": get(split($TMUX, ","), 0), "target_pane": "{next}"}
+let g:slime_default_config = {'socket_name': get(split($TMUX, ','), 0), 'target_pane': '{next}'}
 let g:slime_dont_ask_default = 1
 let g:slime_haskell_ghci_add_let = 0
-let g:slime_target = "tmux"
+let g:slime_target = 'tmux'
 imap <c-j> <esc><Plug>SlimeParagraphSend<cr>
 nmap <c-j> <Plug>SlimeParagraphSend<cr>
 xmap <c-j> <Plug>SlimeRegionSend<cr>
 
 " Go
-let g:go_fmt_command = "goimports"
+let g:go_fmt_command = 'goimports'
 let g:go_fmt_experimental = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
@@ -88,13 +90,17 @@ let NERDTreeShowHidden = 1
 let NERDTreeHijackNetrw = 0
 
 " Filetype detection
-autocmd FileType go setlocal noexpandtab shiftwidth=4 tabstop=4 listchars=tab:\ \ ,trail:·
-autocmd FileType python setlocal shiftwidth=4 tabstop=4
-autocmd FileType cpp setlocal shiftwidth=4 tabstop=4 commentstring=//\ %s
-autocmd FileType make setlocal noexpandtab shiftwidth=4 tabstop=4
+augroup MiscFileType
+  autocmd!
+
+  autocmd FileType go setlocal noexpandtab shiftwidth=4 tabstop=4 listchars=tab:\ \ ,trail:·
+  autocmd FileType python setlocal shiftwidth=4 tabstop=4
+  autocmd FileType cpp setlocal shiftwidth=4 tabstop=4 commentstring=//\ %s
+  autocmd FileType make setlocal noexpandtab shiftwidth=4 tabstop=4
+augroup END
 
 " Appearance
-if filereadable(expand("~/.vimrc_background"))
+if filereadable(expand('~/.vimrc_background'))
   let base16colorspace=256
   source ~/.vimrc_background
 endif
@@ -178,8 +184,8 @@ augroup END
 function! <SID>StripTrailingWhitespace()
   " Save last search and cursor position
   let _s=@/
-  let l = line(".")
-  let c = col(".")
+  let l = line('.')
+  let c = col('.')
   " Do the business
   %s/\s\+$//e
   " Restore previous search history and cursor position
@@ -201,13 +207,18 @@ command! DisableSpell call <SID>DisableSpell()
 
 " Dotfile editing helpers
 nnoremap <leader>gv :e ~/.vimrc<cr>
-autocmd bufwritepost .vimrc source $MYVIMRC
 nnoremap <leader>ga :e ~/.alacritty.yml<cr>
 nnoremap <leader>gg :e ~/.gitconfig<cr>
 nnoremap <leader>gn :e ~/.nowdothis<cr>
 nnoremap <leader>gz :e ~/.zshrc<cr>
 nnoremap <leader>gt :e ~/.tmux.conf<cr>
-autocmd bufwritepost .tmux.conf silent !tmux source-file ~/.tmux.conf
+
+augroup Dotfiles
+  autocmd!
+
+  autocmd bufwritepost .vimrc source $MYVIMRC
+  autocmd bufwritepost .tmux.conf silent !tmux source-file ~/.tmux.conf
+augroup END
 
 " Read .vimrc, .exrc and .gvimrc in current working directory
 set exrc
