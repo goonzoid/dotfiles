@@ -1,4 +1,6 @@
-#!/usr/bin/env bash -e
+#!/usr/bin/env bash
+
+set -e
 
 brew update
 brew install zsh
@@ -9,7 +11,7 @@ then
   echo "/usr/local/bin/zsh" | sudo tee -a /etc/shells
 fi
 
-sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
+sudo dscl . -create /Users/"$USER" UserShell /usr/local/bin/zsh
 
 if [ -f /etc/zshenv ]
 then

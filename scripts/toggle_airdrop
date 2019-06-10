@@ -1,6 +1,8 @@
-#!/usr/bin/env bash -e
+#!/usr/bin/env bash
 
-IFCONFIG_OUTPUT=`ifconfig awdl0`
+set -e
+
+IFCONFIG_OUTPUT=$(ifconfig awdl0)
 
 if [[ $IFCONFIG_OUTPUT == *"status: active"* ]]
 then
