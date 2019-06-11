@@ -93,10 +93,9 @@ let NERDTreeHijackNetrw = 0
 augroup MiscFileType
   autocmd!
 
-  autocmd FileType go setlocal noexpandtab shiftwidth=4 tabstop=4 listchars=tab:\ \ ,trail:·
-  autocmd FileType python setlocal shiftwidth=4 tabstop=4
-  autocmd FileType cpp setlocal shiftwidth=4 tabstop=4 commentstring=//\ %s
-  autocmd FileType make setlocal noexpandtab shiftwidth=4 tabstop=4
+  autocmd FileType go setlocal noexpandtab listchars=tab:\ \ ,trail:·
+  autocmd FileType cpp setlocal commentstring=//\ %s
+  autocmd FileType make setlocal noexpandtab
 augroup END
 
 " Appearance
@@ -111,8 +110,8 @@ set hidden
 set number
 set splitright
 set expandtab
-set tabstop=2
-set shiftwidth=2
+set softtabstop=4
+set shiftwidth=4
 set textwidth=80
 set showmatch
 set hlsearch
