@@ -96,6 +96,8 @@ augroup MiscFileType
   autocmd FileType go setlocal noexpandtab listchars=tab:\ \ ,trail:·
   autocmd FileType cpp setlocal commentstring=//\ %s
   autocmd FileType make setlocal noexpandtab
+  autocmd FileType gitcommit setlocal nomodeline
+  autocmd FileType gitrebase setlocal nomodeline
 augroup END
 
 " Appearance
@@ -166,16 +168,6 @@ augroup vimrcEx
         \   exe "normal gg" |
         \ elseif line("'\"") > 0 && line("'\"") <= line("$") |
         \   exe "normal g`\"" |
-        \ endif
-augroup END
-
-" Unset modeline for git commit messages and rebase todos
-augroup vimrcEx
-  autocmd BufReadPost *
-        \ if expand('%:t') == 'COMMIT_EDITMSG' |
-        \   setlocal nomodeline |
-        \ elseif expand('%:t') == 'git-rebase-todo' |
-        \   setlocal nomodeline |
         \ endif
 augroup END
 
