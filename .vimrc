@@ -130,6 +130,7 @@ set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set autowrite
 set lazyredraw
+set undofile
 
 " Key mappings
 command! W :w
