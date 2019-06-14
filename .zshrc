@@ -16,11 +16,12 @@ autoload -U colors && colors
 export GREP_OPTIONS="--color"
 export LSCOLORS="gxfxcxdxbxegedabagacad"
 
-# Prompt
+# Now Do This
 NOWDOTHIS=.nowdothis
 nowdothis() {
   echo $(head -1 $NOWDOTHIS 2> /dev/null) || return
 }
+alias now=nowdothis
 xx() {
   local thing
   thing=$(head -1 $NOWDOTHIS 2> /dev/null)
@@ -33,6 +34,8 @@ next() {
   tail -n +2 $NOWDOTHIS
 }
 alias ndt="vim $NOWDOTHIS"
+
+# Prompt
 autoload -U vcs_info
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' check-for-changes true
@@ -40,7 +43,7 @@ zstyle ':vcs_info:git*' formats "%{$fg[green]%}%b:%u%c%a%{$reset_color%}"
 precmd() { vcs_info }
 setopt prompt_subst
 autoload -U promptinit && promptinit
-PROMPT='%{$fg[magenta]%}%m %{$fg[blue]%}%~ %{$reset_color%}${vcs_info_msg_0_} %{$fg[yellow]%}$(nowdothis) %{$reset_color%}
+PROMPT='%{$fg[magenta]%}%m %{$fg[blue]%}%~ %{$reset_color%}${vcs_info_msg_0_} %{$reset_color%}
 %{$fg[blue]%}❯ %{$reset_color%}'
 RPROMPT='%(?..%{$fg[red]%}%?%{$reset_color%})'
 
