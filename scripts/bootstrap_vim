@@ -9,4 +9,4 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 vim +PlugUpdate +qall
 
 gem install xcpretty
-pip3 install vint
+pip3 install vim-vint
