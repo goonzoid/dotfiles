@@ -12,9 +12,3 @@ then
 fi
 
 sudo dscl . -create /Users/"$USER" UserShell /usr/local/bin/zsh
-
-if [ -f /etc/zshenv ]
-then
-  echo "Moving /etc/zshenv to /etc/zprofile"
-  sudo mv /etc/{zshenv,zprofile}
-fi
