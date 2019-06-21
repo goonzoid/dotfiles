@@ -41,3 +41,7 @@ brew 'youtube-dl'
 brew 'zsh'
 
 cask 'fluor'
+cask 'google-chrome'
+cask 'iterm2'
+cask 'karabiner-elements'
+cask 'spectacle'
