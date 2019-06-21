@@ -6,6 +6,7 @@
 /.ansible/
 /.base16_theme
 /.bash_history
+/.bash_sessions/
 /.bosh/
 /.bosh_cache/
 /.bosh_config
