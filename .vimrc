@@ -4,6 +4,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'benmills/vimux'                               " run commands in tmux panes
 Plug 'danielwe/base16-vim'                          " colour schemes (using this fork until https://github.com/chriskempson/base16-vim/pull/198 is merged)
+Plug 'dense-analysis/ale'                           " async linting
 Plug 'elmcast/elm-vim'                              " all things elm
 Plug 'fatih/vim-go'                                 " all things go
 Plug 'gfontenot/vim-xcode'                          " work with Xcode projects
@@ -46,7 +47,6 @@ Plug 'tpope/vim-surround'                           " mappings for editing 'surr
 Plug 'tpope/vim-unimpaired'                         " pairs of handy bracket mappings
 Plug 'tpope/vim-vinegar'                            " netrw enhancements
 Plug 'vim-ruby/vim-ruby'                            " all things ruby
-Plug 'w0rp/ale'                                     " async linting
 Plug 'wellle/tmux-complete.vim'                     " completions from tmux panes, sets completefunc by default
 Plug 'wlangstroth/vim-racket'                       " all things racket
 
