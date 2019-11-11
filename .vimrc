@@ -24,6 +24,7 @@ Plug 'majutsushi/tagbar'                            " ctag navigation
 Plug 'mhinz/vim-signify'                            " show linewise vcs indicators
 Plug 'milkypostman/vim-togglelist'                  " <leader>q/l for quickfix and location lists
 Plug 'nelstrom/vim-textobj-rubyblock'               " custom text onbject for ruby blocks
+Plug 'pangloss/vim-javascript'                      " all things javascipt
 Plug 'rhysd/vim-clang-format'                       " clang-format integration
 Plug 'rking/ag.vim'                                 " ag integration
 Plug 'ruanyl/vim-gh-line'                           " <leader>gh/gb to open current line on github
