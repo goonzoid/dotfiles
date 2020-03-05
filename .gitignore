@@ -11,6 +11,7 @@
 /.bosh_cache/
 /.bosh_config
 /.bosh_init/
+/.boto
 /.cabal/
 /.cache/
 /.cargo/
@@ -42,6 +43,8 @@
 /.irssi/
 /.iStats/
 /.jssc/
+/.k9s/
+/.kube/
 /.lein/
 /.lesshst
 /.local/
