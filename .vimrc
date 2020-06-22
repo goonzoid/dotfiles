@@ -3,7 +3,7 @@ scriptencoding utf-8
 call plug#begin('~/.vim/plugged')
 
 Plug 'benmills/vimux'                               " run commands in tmux panes
-Plug 'danielwe/base16-vim'                          " colour schemes (using this fork until https://github.com/chriskempson/base16-vim/pull/198 is merged)
+Plug 'chriskempson/base16-vim'                      " colour schemes
 Plug 'dense-analysis/ale'                           " async linting
 Plug 'elmcast/elm-vim'                              " all things elm
 Plug 'fatih/vim-go'                                 " all things go
