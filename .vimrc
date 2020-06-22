@@ -18,13 +18,13 @@ Plug 'junegunn/limelight.vim'                       " hyper focus mode
 Plug 'kana/vim-operator-user'                       " define custom operators - required by vim-clang-format
 Plug 'kana/vim-textobj-user'                        " define custom text objects - required by vim-textobj-ruby
 Plug 'keith/swift.vim'                              " all things swift
-Plug 'ludovicchabant/vim-gutentags'                 " generates ctags files in the background
+Plug 'ludovicchabant/vim-gutentags'                 " generate ctags files in the background
 Plug 'luochen1990/rainbow'                          " rainbow parens and other markers
 Plug 'machakann/vim-swap'                           " reorder delimited items
 Plug 'majutsushi/tagbar'                            " ctag navigation
 Plug 'mhinz/vim-signify'                            " show linewise vcs indicators
 Plug 'milkypostman/vim-togglelist'                  " <leader>q/l for quickfix and location lists
-Plug 'nelstrom/vim-textobj-rubyblock'               " custom text onbject for ruby blocks
+Plug 'nelstrom/vim-textobj-rubyblock'               " custom text object for ruby blocks
 Plug 'pangloss/vim-javascript'                      " all things javascipt
 Plug 'rhysd/vim-clang-format'                       " clang-format integration
 Plug 'rking/ag.vim'                                 " ag integration
