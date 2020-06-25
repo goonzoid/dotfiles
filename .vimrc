@@ -2,6 +2,7 @@ scriptencoding utf-8
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'axelf4/vim-strip-trailing-whitespace'         " smart trailing whitespace stripping
 Plug 'benmills/vimux'                               " run commands in tmux panes
 Plug 'chriskempson/base16-vim'                      " colour schemes
 Plug 'dense-analysis/ale'                           " async linting
@@ -176,21 +177,6 @@ augroup vimrcEx
         \   exe "normal g`\"" |
         \ endif
 augroup END
-
-" Remove trailing whitespace
-function! <SID>StripTrailingWhitespace()
-  " Save last search and cursor position
-  let _s=@/
-  let l = line('.')
-  let c = col('.')
-  " Do the business
-  %s/\s\+$//e
-  " Restore previous search history and cursor position
-  let @/=_s
-  call cursor(l, c)
-endfunction
-command! StripTrailingWhitespace call <SID>StripTrailingWhitespace()
-nnoremap <leader>s :StripTrailingWhitespace<cr>
 
 " Spelling
 function! <SID>EnableSpell()
