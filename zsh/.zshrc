@@ -86,7 +86,7 @@ export GOBIN="$GOPATH/bin"
 
 eval "$(direnv hook $0)"
 
-PATH="$HOME/bin:$GOBIN:$HOME/.cargo/bin:$PATH"
+PATH="$HOME/bin:$HOME/.local/bin:$GOBIN:$HOME/.cargo/bin:$PATH"
 
 source "$HOME/.fzf.zsh"
 
@@ -97,12 +97,12 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 typeset -U path
 
 # Plugins - must be loaded after all calls to zle and compinit
-source $HOME/.zplugins.sh
+# source $HOME/.zplugins.sh
 
-zsh_update_plugins() {
-  antibody bundle < ~/.zplugins.txt > ~/.zplugins.sh
-  sed -i '' "s,$HOME,\$HOME,g" ~/.zplugins.sh
-}
+# zsh_update_plugins() {
+#   antibody bundle < ~/.zplugins.txt > ~/.zplugins.sh
+#   sed -i '' "s,$HOME,\$HOME,g" ~/.zplugins.sh
+# }
 
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
-ZSH_HIGHLIGHT_STYLES[path]='fg=white'
+# ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
+# ZSH_HIGHLIGHT_STYLES[path]='fg=white'

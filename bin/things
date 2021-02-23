@@ -1,4 +1,0 @@
-#!/usr/bin/env bash -e
-
-title="$@"
-open things:add?title="$title"

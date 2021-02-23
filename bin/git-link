@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-set -e
-
-HOSTNAME=$1
-REMOTE="wminor@$HOSTNAME.local:`pwd`"
-
-git remote add $HOSTNAME $REMOTE

@@ -1,0 +1,18 @@
+todo:
+- zsh plugins
+
+things that did't make it:
+- xcpretty
+- karabiner
+- things
+- Spectacle
+- OS X keybindings in ~/Library
+- airdrop toggling
+- git link
+- git autofix (use fixup and autosquash)
+- neovim
+
+git diff-highlight isn't installed on ubuntu by default, we're using diffr instead, installation may be rough
+
+future improvements:
+- vim fzf respect gitignore and ignore un~ files

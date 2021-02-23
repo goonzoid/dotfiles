@@ -1,7 +1,7 @@
 if [[ $- == *i* ]]; then
 
 # Key bindings
-source "/usr/local/opt/fzf/shell/key-bindings.zsh"
+source "/home/wminor/.fzf/shell/key-bindings.zsh"
 
 __gssel() {
   local cmd='git log --all --pretty="tformat:%h (%ar)	%s"'
@@ -39,7 +39,7 @@ _fzf_compgen_dir() {
   fd --type d --hidden --follow --exclude ".git" . "$1"
 }
 
-source "/usr/local/opt/fzf/shell/completion.zsh" 2> /dev/null
+source "/home/wminor/.fzf/shell/completion.zsh" 2> /dev/null
 
 # for some reason $prefix is set, but $lbuf is passed as the first argument
 _fzf_complete_git() {
@@ -61,3 +61,7 @@ fi
 export FZF_TMUX=1
 export FZF_DEFAULT_COMMAND='fd -IH'
 export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
+
+if [[ ! "$PATH" == */${HOME}/.fzf/bin* ]]; then
+  export PATH="${PATH:+${PATH}:}/${HOME}/.fzf/bin"
+fi

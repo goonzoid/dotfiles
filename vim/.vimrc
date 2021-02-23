@@ -12,7 +12,7 @@ Plug 'gfontenot/vim-xcode'                          " work with Xcode projects
 Plug 'godlygeek/tabular'                            " make tables
 Plug 'guns/vim-sexp'                                " s-expression editing
 Plug 'jpalardy/vim-slime'                           " send text to REPLs and other things
-Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim' " fzf integration
+Plug '~/.fzf' | Plug 'junegunn/fzf.vim'             " fzf integration
 Plug 'jremmen/vim-ripgrep'                          " ripgrep integration
 Plug 'junegunn/goyo.vim'                            " focus mode
 Plug 'junegunn/limelight.vim'                       " hyper focus mode
@@ -186,7 +186,7 @@ endfunction
 command! DisableSpell call <SID>DisableSpell()
 
 " Dotfile editing helpers
-nnoremap <leader>gv :e ~/.vimrc<cr>
+nnoremap <leader>gv :e $MYVIMRC<cr>
 nnoremap <leader>gz :e ~/.zshrc<cr>
 nnoremap <leader>gt :e ~/.tmux.conf<cr>
 
