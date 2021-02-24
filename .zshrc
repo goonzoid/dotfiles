@@ -13,7 +13,6 @@ setopt completealiases
 
 # Colours!
 autoload -U colors && colors
-export GREP_OPTIONS="--color"
 export LSCOLORS="gxfxcxdxbxegedabagacad"
 
 # Now Do This
@@ -68,6 +67,8 @@ alias ls='ls -aG'
 alias ll='ls -AlhG'
 
 alias mkdir='mkdir -p'
+
+alias grep='grep --color=auto'
 
 alias agg='ag --nobreak --nofilename'
 
