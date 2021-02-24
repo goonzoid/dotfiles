@@ -71,8 +71,6 @@ alias mkdir='mkdir -p'
 
 alias agg='ag --nobreak --nofilename'
 
-alias be='bundle exec'
-
 alias tma='tmux attach || tmux'
 
 alias serve='python -m SimpleHTTPServer'
@@ -84,8 +82,6 @@ iterm_name() {
 
 export GOPATH="$HOME/go"
 export GOBIN="$GOPATH/bin"
-
-eval "$(rbenv init -)"
 
 eval "$(direnv hook $0)"
 

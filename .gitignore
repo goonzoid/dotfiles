@@ -69,11 +69,9 @@
 /.npmrc
 /.oracle_jre_usage/
 /.pip/
-/.pow
 /.pry_history
 /.psql_history
 /.python_history
-/.rbenv/
 /.rediscli_history
 /.rustup/
 /.slime_paste

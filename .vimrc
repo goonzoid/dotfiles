@@ -17,7 +17,6 @@ Plug 'jremmen/vim-ripgrep'                          " ripgrep integration
 Plug 'junegunn/goyo.vim'                            " focus mode
 Plug 'junegunn/limelight.vim'                       " hyper focus mode
 Plug 'kana/vim-operator-user'                       " define custom operators - required by vim-clang-format
-Plug 'kana/vim-textobj-user'                        " define custom text objects - required by vim-textobj-ruby
 Plug 'keith/swift.vim'                              " all things swift
 Plug 'ludovicchabant/vim-gutentags'                 " generate ctags files in the background
 Plug 'luochen1990/rainbow'                          " rainbow parens and other markers
@@ -25,7 +24,6 @@ Plug 'machakann/vim-swap'                           " reorder delimited items
 Plug 'majutsushi/tagbar'                            " ctag navigation
 Plug 'mhinz/vim-signify'                            " show linewise vcs indicators
 Plug 'milkypostman/vim-togglelist'                  " <leader>q/l for quickfix and location lists
-Plug 'nelstrom/vim-textobj-rubyblock'               " custom text object for ruby blocks
 Plug 'pangloss/vim-javascript'                      " all things javascipt
 Plug 'rhysd/vim-clang-format'                       " clang-format integration
 Plug 'rking/ag.vim'                                 " ag integration
@@ -36,20 +34,16 @@ Plug 'tidalcycles/vim-tidal'                        " generate completions for s
 Plug 'tmux-plugins/vim-tmux'                        " tmux.conf editing help
 Plug 'tpope/vim-abolish'                            " cr{c,m,s} to coerce to {camel,mixed,snake} case (and more)
 Plug 'tpope/vim-apathy'                             " set path and friends
-Plug 'tpope/vim-bundler'                            " all things bundler
 Plug 'tpope/vim-commentary'                         " comment stuff out
-Plug 'tpope/vim-endwise'                            " close some structures automatically - e.g. add `end` for ruby funcs
+Plug 'tpope/vim-endwise'                            " close some structures automatically - e.g. add `endfunction` for vimscript funcs
 Plug 'tpope/vim-eunuch'                             " wrappers for 'nix shell commands
 Plug 'tpope/vim-fugitive'                           " wrappers for git commands
-Plug 'tpope/vim-rails'                              " all things rails
-Plug 'tpope/vim-rake'                               " all things rake
 Plug 'tpope/vim-repeat'                             " better repetition
 Plug 'tpope/vim-sensible'                           " sensible defaults
 Plug 'tpope/vim-sexp-mappings-for-regular-people'   " additional s-expression mappings
 Plug 'tpope/vim-surround'                           " mappings for editing 'surrounding pairs'
 Plug 'tpope/vim-unimpaired'                         " pairs of handy bracket mappings
 Plug 'tpope/vim-vinegar'                            " netrw enhancements
-Plug 'vim-ruby/vim-ruby'                            " all things ruby
 Plug 'wellle/tmux-complete.vim'                     " completions from tmux panes, sets completefunc by default
 Plug 'wlangstroth/vim-racket'                       " all things racket
 
