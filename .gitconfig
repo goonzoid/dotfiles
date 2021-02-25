@@ -17,7 +17,7 @@
 	purb = pull --rebase
 	rb = rebase
 	ri = rebase -i
-	l = "!source ~/.githelpers && pretty_git_log"
+	l = "!. ~/.githelpers && pretty_git_log"
 	lg = !git l -16
 	la = !git lg --all
 	su = submodule update --init --recursive
