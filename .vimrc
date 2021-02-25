@@ -27,7 +27,7 @@ Plug 'milkypostman/vim-togglelist'                  " <leader>q/l for quickfix a
 Plug 'pangloss/vim-javascript'                      " all things javascipt
 Plug 'rhysd/vim-clang-format'                       " clang-format integration
 Plug 'rking/ag.vim'                                 " ag integration
-Plug 'ruanyl/vim-gh-line'                           " <leader>gh/gb to open current line on github
+Plug 'ruanyl/vim-gh-line'                           " <leader>gh/gb/go to open current line on github
 Plug 'rust-lang/rust.vim'                           " all things rust
 Plug 'scrooloose/nerdtree'                          " filesystem tree explorer and utils
 Plug 'tidalcycles/vim-tidal'                        " generate completions for superdirt samples
