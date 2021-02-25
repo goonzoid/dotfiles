@@ -155,6 +155,7 @@ vnoremap < <gv
 vnoremap > >gv
 " make Y consistent with C and D. See :help Y.
 nnoremap Y y$
+nnoremap <leader>m :silent w \| :make<cr>
 
 " Only show cursorline in active buffer
 augroup cursorLine
