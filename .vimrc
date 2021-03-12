@@ -187,9 +187,6 @@ command! DisableSpell call <SID>DisableSpell()
 
 " Dotfile editing helpers
 nnoremap <leader>gv :e ~/.vimrc<cr>
-nnoremap <leader>ga :e ~/.alacritty.yml<cr>
-nnoremap <leader>gg :e ~/.gitconfig<cr>
-nnoremap <leader>gn :e ~/.nowdothis<cr>
 nnoremap <leader>gz :e ~/.zshrc<cr>
 nnoremap <leader>gt :e ~/.tmux.conf<cr>
 
