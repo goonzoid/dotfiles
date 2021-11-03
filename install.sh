@@ -8,7 +8,7 @@ if [[ $OS == 'Darwin' ]]; then
         echo "brew not found, install homebrew and try again"
         exit 1
     fi
-    brew bundle
+    brew tap homebrew/bundle && brew bundle
 elif [[ $OS == 'Linux' ]]; then
     sudo add-apt-repository -y ppa:jonathonf/vim
     sudo apt update
