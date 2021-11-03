@@ -13,7 +13,6 @@ Plug 'godlygeek/tabular'                            " make tables
 Plug 'guns/vim-sexp'                                " s-expression editing
 Plug 'jpalardy/vim-slime'                           " send text to REPLs and other things
 Plug '~/.fzf' | Plug 'junegunn/fzf.vim'             " fzf integration
-Plug 'jremmen/vim-ripgrep'                          " ripgrep integration
 Plug 'junegunn/goyo.vim'                            " focus mode
 Plug 'junegunn/limelight.vim'                       " hyper focus mode
 Plug 'kana/vim-operator-user'                       " define custom operators - required by vim-clang-format
