@@ -59,7 +59,7 @@ fi
 
 # Configuration
 export FZF_TMUX=1
-export FZF_DEFAULT_COMMAND='fd -IH'
+export FZF_DEFAULT_COMMAND="fd -H -E .git -E '*.un~'"
 export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
 
 if [[ ! "$PATH" == */${HOME}/.fzf/bin* ]]; then
