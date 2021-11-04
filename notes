@@ -12,7 +12,8 @@ things that did't make it:
 - git autofix (use fixup and autosquash)
 - neovim
 
-git diff-highlight isn't installed on ubuntu by default, we're using diffr instead, installation may be rough
+git diff-highlight isn't installed on ubuntu by default, we're using diffr
+instead, but not yet automatically installing it on linux
 
 future improvements:
 - vim fzf respect gitignore and ignore un~ files
