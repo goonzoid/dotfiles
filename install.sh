@@ -49,3 +49,5 @@ vim +PlugUpdate +PlugClean! +qall
 pip3 install vim-vint
 
 echo "Success \o/ - don't forget to install tmux plugins"
+
+# vim: tw=0
