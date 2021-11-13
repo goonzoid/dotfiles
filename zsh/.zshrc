@@ -96,13 +96,8 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 # No duplicates in $PATH
 typeset -U path
 
-# Plugins - must be loaded after all calls to zle and compinit
-# source $HOME/.zplugins.sh
+source "$HOME/.config/zplugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
+source "$HOME/.config/zplugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
-# zsh_update_plugins() {
-#   antibody bundle < ~/.zplugins.txt > ~/.zplugins.sh
-#   sed -i '' "s,$HOME,\$HOME,g" ~/.zplugins.sh
-# }
-
-# ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
-# ZSH_HIGHLIGHT_STYLES[path]='fg=white'
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
+ZSH_HIGHLIGHT_STYLES[path]='fg=white'

@@ -35,6 +35,10 @@ clone_if_not_present git@github.com:chriskempson/base16-shell ~/.config/base16-s
 clone_if_not_present git@github.com:junegunn/fzf ~/.fzf
 ~/.fzf/install --bin
 
+clone_if_not_present git@github.com:zsh-users/zsh-syntax-highlighting ~/.config/zplugins/zsh-syntax-highlighting
+
+clone_if_not_present git@github.com:zsh-users/zsh-autosuggestions ~/.config/zplugins/zsh-autosuggestions
+
 stow -t ~ zsh
 chsh -s "$(command -v zsh)"
 
