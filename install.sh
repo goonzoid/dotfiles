@@ -2,6 +2,14 @@
 
 set -e -u
 
+clone_if_not_present () {
+    if [[ ! -d "$2" ]]; then
+        git clone "$1" "$2"
+    else
+        echo "$2 already exists - skipping"
+    fi
+}
+
 OS=$(uname)
 if [[ $OS == 'Darwin' ]]; then
     if ! [ -x "$(command -v brew)" ]; then
@@ -20,18 +28,12 @@ else
     exit 1
 fi
 
-if [[ ! -d ~/.tmux/plugins/tpm ]]; then
-    git clone git@github.com:tmux-plugins/tpm ~/.tmux/plugins/tpm
-fi
+clone_if_not_present git@github.com:tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-if [[ ! -d ~/.config/base16-shell ]]; then
-    git clone git@github.com:chriskempson/base16-shell ~/.config/base16-shell
-fi
+clone_if_not_present git@github.com:chriskempson/base16-shell ~/.config/base16-shell
 
-if [[ ! -d ~/.fzf ]]; then
-    git clone git@github.com:junegunn/fzf ~/.fzf
-    ~/.fzf/install --bin
-fi
+clone_if_not_present git@github.com:junegunn/fzf ~/.fzf
+~/.fzf/install --bin
 
 stow -t ~ zsh
 chsh -s "$(command -v zsh)"
