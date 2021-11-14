@@ -21,6 +21,8 @@ clone_if_not_present git@github.com:zsh-users/zsh-syntax-highlighting ~/.config/
 
 clone_if_not_present git@github.com:zsh-users/zsh-autosuggestions ~/.config/zplugins/zsh-autosuggestions
 
+clone_if_not_present git@github.com:sindresorhus/pure ~/.config/zplugins/pure
+
 stow -t ~ zsh
 
 stow -t ~ git
