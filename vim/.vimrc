@@ -98,6 +98,7 @@ augroup MiscFileType
   autocmd FileType make setlocal noexpandtab
   autocmd FileType gitcommit setlocal nomodeline
   autocmd FileType gitrebase setlocal nomodeline
+  autocmd FileType tidal setlocal textwidth=0
 augroup END
 
 " Appearance
