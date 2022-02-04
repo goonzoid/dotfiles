@@ -87,6 +87,7 @@ let g:go_highlight_structs = 1
 
 " NERDTree
 nnoremap \ :NERDTreeToggle<cr>
+nnoremap <leader>nf :NERDTreeFind<cr>
 let NERDTreeShowHidden = 1
 let NERDTreeHijackNetrw = 0
 
