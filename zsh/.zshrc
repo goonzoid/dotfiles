@@ -8,6 +8,7 @@ autoload run-help
 
 # Completion
 autoload -U compinit && compinit
+autoload -U +X bashcompinit && bashcompinit
 zstyle ':completion:*' menu select
 setopt completealiases
 
