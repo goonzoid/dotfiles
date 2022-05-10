@@ -60,15 +60,10 @@ bindkey '\C-x\C-e' edit-command-line
 # Aliases
 alias ls='ls -aG'
 alias ll='ls -AlhG'
-
 alias mkdir='mkdir -p'
-
 alias grep='grep --color=auto'
-
 alias agg='ag --nobreak --nofilename'
-
 alias tma='tmux attach || tmux'
-
 alias serve='python -m SimpleHTTPServer'
 
 # iTerm tab/window naming
@@ -78,15 +73,17 @@ iterm_name() {
 
 eval "$(direnv hook $0)"
 
-PATH="$HOME/bin:$HOME/.local/bin:$HOME/.cargo/bin:$PATH"
+PATH="$HOME/.cargo/bin:$PATH"
 
-source "$HOME/.fzf.zsh"
-
-BASE16_SHELL=$HOME/.config/base16-shell/
-[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
 # No duplicates in $PATH
 typeset -U path
+
+source "$HOME/.fzf.zsh"
+
+BASE16_SHELL="$HOME/.config/base16-shell/"
+[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
 source "$HOME/.config/zplugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 source "$HOME/.config/zplugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
