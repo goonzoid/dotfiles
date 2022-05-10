@@ -73,6 +73,9 @@ iterm_name() {
 
 eval "$(direnv hook $0)"
 
+# probably only relevant on os x
+PATH="/usr/local/opt/llvm/bin:$PATH"
+
 PATH="$HOME/.cargo/bin:$PATH"
 
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
