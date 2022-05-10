@@ -76,12 +76,9 @@ iterm_name() {
   echo -e "\033];$1\007";
 }
 
-export GOPATH="$HOME/go"
-export GOBIN="$GOPATH/bin"
-
 eval "$(direnv hook $0)"
 
-PATH="$HOME/bin:$HOME/.local/bin:$GOBIN:$HOME/.cargo/bin:$PATH"
+PATH="$HOME/bin:$HOME/.local/bin:$HOME/.cargo/bin:$PATH"
 
 source "$HOME/.fzf.zsh"
 
