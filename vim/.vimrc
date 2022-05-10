@@ -85,6 +85,9 @@ let g:go_highlight_methods = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_structs = 1
 
+" C/C++
+let g:ale_c_parse_compile_commands = 1
+
 " NERDTree
 nnoremap \ :NERDTreeToggle<cr>
 nnoremap <leader>nf :NERDTreeFind<cr>
