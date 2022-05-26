@@ -43,6 +43,7 @@ Plug 'tpope/vim-sexp-mappings-for-regular-people'   " additional s-expression ma
 Plug 'tpope/vim-surround'                           " mappings for editing 'surrounding pairs'
 Plug 'tpope/vim-unimpaired'                         " pairs of handy bracket mappings
 Plug 'tpope/vim-vinegar'                            " netrw enhancements
+Plug 'vim-ruby/vim-ruby'                            " all things ruby
 Plug 'wellle/tmux-complete.vim'                     " completions from tmux panes, sets completefunc by default
 Plug 'wlangstroth/vim-racket'                       " all things racket
 
@@ -151,8 +152,8 @@ nnoremap p ]p
 nnoremap <leader><leader> <c-^>
 " Clear search buffer by hitting space
 nnoremap <space> :nohlsearch<cr>
-" Insert a hash rocket with <c-l>
-imap <c-l> =><space>
+" Insert an arrow with <c-l>
+imap <c-l> ->
 " Not sure what the diff is between <c-c> and Esc
 imap <c-c> <esc>
 " reselect visual block after indent
