@@ -9,6 +9,7 @@ Plug 'dense-analysis/ale'                           " async linting
 Plug 'elmcast/elm-vim'                              " all things elm
 Plug 'fatih/vim-go'                                 " all things go
 Plug 'gfontenot/vim-xcode'                          " work with Xcode projects
+Plug 'gmoe/vim-faust'                               " all things faust
 Plug 'godlygeek/tabular'                            " make tables
 Plug 'guns/vim-sexp'                                " s-expression editing
 Plug 'jpalardy/vim-slime'                           " send text to REPLs and other things
