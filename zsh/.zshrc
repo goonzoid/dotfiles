@@ -73,6 +73,8 @@ iterm_name() {
 
 eval "$(direnv hook $0)"
 
+source "$HOME/.fzf.zsh"
+
 if [[ $(uname -s) == 'Darwin' ]]; then
   PATH="/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/llvm/bin:$PATH"
 fi
@@ -80,11 +82,6 @@ fi
 PATH="$HOME/.cargo/bin:$PATH"
 
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
-
-# No duplicates in $PATH
-typeset -U path
-
-source "$HOME/.fzf.zsh"
 
 BASE16_SHELL="$HOME/.config/base16-shell/"
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
@@ -94,3 +91,6 @@ source "$HOME/.config/zplugins/zsh-syntax-highlighting/zsh-syntax-highlighting.z
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 ZSH_HIGHLIGHT_STYLES[path]='fg=white'
+
+# No duplicates in $PATH
+typeset -U path

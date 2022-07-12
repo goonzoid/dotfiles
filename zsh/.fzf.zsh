@@ -63,5 +63,5 @@ export FZF_DEFAULT_COMMAND="fd -H -E .git -E '*.un~'"
 export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
 
 if [[ ! "$PATH" == */${HOME}/.fzf/bin* ]]; then
-  export PATH="${PATH:+${PATH}:}/${HOME}/.fzf/bin"
+  export PATH="${HOME}/.fzf/bin:${PATH:+${PATH}}"
 fi
