@@ -80,6 +80,7 @@ if [[ $(uname -s) == 'Darwin' ]]; then
 fi
 
 PATH="$HOME/.cargo/bin:$PATH"
+PATH="$HOME/go/bin:$PATH"
 
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
