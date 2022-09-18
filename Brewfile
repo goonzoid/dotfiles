@@ -1,5 +1,4 @@
 tap 'homebrew/core'
-tap 'universal-ctags/universal-ctags'
 
 brew 'bash'
 brew 'cabal-install'
@@ -25,7 +24,7 @@ brew 'stow'
 brew 'the_silver_searcher'
 brew 'tmux'
 brew 'tree'
-brew 'universal-ctags/universal-ctags/universal-ctags', args: ['HEAD', 'env=std']
+brew 'universal-ctags'
 brew 'urlview'
 brew 'vim'
 brew 'watch'
