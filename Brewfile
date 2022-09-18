@@ -1,6 +1,7 @@
 tap 'homebrew/core'
 
 brew 'bash'
+brew 'blackhole-2ch'
 brew 'cabal-install'
 brew 'clang-format'
 brew 'cmake'
