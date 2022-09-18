@@ -7,6 +7,8 @@ if ! [ -x "$(command -v brew)" ]; then
     exit 1
 fi
 brew tap homebrew/bundle && brew bundle
+
+rehash # so that command -v returns homebrew zsh path
 chsh -s "$(command -v zsh)"
 
 ./install_or_update.sh
