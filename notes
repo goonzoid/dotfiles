@@ -17,3 +17,13 @@ instead, but not yet automatically installing it on linux
 future improvements:
 - vim fzf respect gitignore and ignore un~ files
 - autocomplete from tmux buffers
+
+notes for cloud workstation:
+
+persistent disk created manually?
+
+provisioning:
+- pass in disk name, create instance
+- auto clone dotfiles and install
+- run additional script for package installation
+- that's it?
