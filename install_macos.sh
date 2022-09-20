@@ -11,4 +11,7 @@ brew tap homebrew/bundle && brew bundle
 rehash # so that command -v returns homebrew zsh path
 chsh -s "$(command -v zsh)"
 
+mkdir -p ~/Library/KeyBindings
+printf '{\n\t"^w" = "deleteWordBackward:";\n}' > ~/Library/KeyBindings/DefaultKeyBinding.dict
+
 ./install_or_update.sh
