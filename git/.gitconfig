@@ -31,11 +31,10 @@
 	default = current
 [init]
 	defaultBranch = main
-[url "git@github.com:"]
-	pushInsteadOf = "https://github.com/"
-	pushInsteadOf = "http://github.com/"
-	pushInsteadOf = "gh:"
-	pushInsteadOf = "gh://"
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
+[url "ssh://git@bitbucket.org/"]
+	insteadOf = https://bitbucket.org/
 [diff "plist"]
 	textconv = plutil -convert xml1 -o -
 [advice]
