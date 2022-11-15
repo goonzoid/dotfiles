@@ -71,7 +71,9 @@ iterm_name() {
   echo -e "\033];$1\007";
 }
 
-eval "$(direnv hook $0)"
+if (( $+commands[direnv] )); then
+  eval "$(direnv hook $0)"
+fi
 
 source "$HOME/.fzf.zsh"
 
