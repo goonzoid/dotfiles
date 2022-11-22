@@ -81,7 +81,6 @@ if [[ $(uname -s) == 'Darwin' ]]; then
   PATH="/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/llvm/bin:$PATH"
 fi
 
-PATH="$HOME/.cargo/bin:$PATH"
 PATH="$HOME/go/bin:$PATH"
 
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
