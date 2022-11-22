@@ -1,6 +1,5 @@
 [user]
 	name = Will Pragnell
-	email = wpragnell@gmail.com
 [core]
 	autocrlf = input
 	attributesfile = ~/.gitattributes
