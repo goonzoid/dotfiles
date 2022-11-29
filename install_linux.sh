@@ -4,7 +4,7 @@ set -e -u
 
 sudo add-apt-repository -y ppa:jonathonf/vim
 sudo apt update
-sudo apt install -y git stow zsh fd-find tmux vim python3-pip
+sudo apt install -y git stow zsh fd-find tmux tree vim python3-pip
 chsh -s "$(command -v zsh)"
 mkdir -p ~/.local/bin
 ln -f -s "$(command -v fdfind)" ~/.local/bin/fd
