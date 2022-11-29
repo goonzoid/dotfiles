@@ -8,6 +8,9 @@ sudo apt install -y git stow zsh fd-find tmux vim python3-pip
 chsh -s "$(command -v zsh)"
 mkdir -p ~/.local/bin
 ln -f -s "$(command -v fdfind)" ~/.local/bin/fd
-pip3 install --user git+https://github.com/cpbotha/xdg-open-wsl
+
+if grep -qi microsoft /proc/version; then
+    pip3 install --user git+https://github.com/cpbotha/xdg-open-wsl
+fi
 
 ./install_or_update.sh
