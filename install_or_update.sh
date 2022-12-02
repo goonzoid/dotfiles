@@ -35,6 +35,16 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 vim +PlugUpdate +PlugClean! +qall
 pip3 install vim-vint
 
+if ! command -v rustup &> /dev/null
+then
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    # shellcheck source=/dev/null
+    # https://www.shellcheck.net/wiki/SC1090
+    source ~/.cargo/env
+fi
+
+cargo install diffr
+
 echo "Success \o/ - don't forget to install tmux plugins"
 
 # vim: tw=0
