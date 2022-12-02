@@ -9,6 +9,17 @@ chsh -s "$(command -v zsh)"
 mkdir -p ~/.local/bin
 ln -f -s "$(command -v fdfind)" ~/.local/bin/fd
 
+if ! command -v ctags &> /dev/null
+then
+    git clone git@github.com:universal-ctags/ctags "$TMPDIR/ctags"
+    pushd "$TMPDIR/ctags"
+      ./autogen.sh
+      ./configure
+      make
+      make install
+    popd
+fi
+
 if grep -qi microsoft /proc/version; then
     pip3 install --user git+https://github.com/cpbotha/xdg-open-wsl
 fi
