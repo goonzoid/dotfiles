@@ -5,18 +5,15 @@ call plug#begin('~/.vim/plugged')
 Plug 'axelf4/vim-strip-trailing-whitespace'         " smart trailing whitespace stripping
 Plug 'chriskempson/base16-vim'                      " colour schemes
 Plug 'dense-analysis/ale'                           " async linting
-Plug 'elmcast/elm-vim'                              " all things elm
 Plug 'fatih/vim-go'                                 " all things go
 Plug 'gfontenot/vim-xcode'                          " work with Xcode projects
 Plug 'gmoe/vim-faust'                               " all things faust
 Plug 'godlygeek/tabular'                            " make tables
-Plug 'guns/vim-sexp'                                " s-expression editing
 Plug 'jpalardy/vim-slime'                           " send text to REPLs and other things
 Plug '~/.fzf' | Plug 'junegunn/fzf.vim'             " fzf integration
 Plug 'junegunn/goyo.vim'                            " focus mode
 Plug 'junegunn/limelight.vim'                       " hyper focus mode
 Plug 'kana/vim-operator-user'                       " define custom operators - required by vim-clang-format
-Plug 'keith/swift.vim'                              " all things swift
 Plug 'ludovicchabant/vim-gutentags'                 " generate ctags files in the background
 Plug 'luochen1990/rainbow'                          " rainbow parens and other markers
 Plug 'machakann/vim-swap'                           " reorder delimited items
@@ -40,13 +37,11 @@ Plug 'tpope/vim-eunuch'                             " wrappers for 'nix shell co
 Plug 'tpope/vim-fugitive'                           " wrappers for git commands
 Plug 'tpope/vim-repeat'                             " better repetition
 Plug 'tpope/vim-sensible'                           " sensible defaults
-Plug 'tpope/vim-sexp-mappings-for-regular-people'   " additional s-expression mappings
 Plug 'tpope/vim-surround'                           " mappings for editing 'surrounding pairs'
 Plug 'tpope/vim-unimpaired'                         " pairs of handy bracket mappings
 Plug 'tpope/vim-vinegar'                            " netrw enhancements
 Plug 'vim-ruby/vim-ruby'                            " all things ruby
 Plug 'wellle/tmux-complete.vim'                     " completions from tmux panes, sets completefunc by default
-Plug 'wlangstroth/vim-racket'                       " all things racket
 
 call plug#end()
 
