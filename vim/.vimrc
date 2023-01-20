@@ -3,7 +3,6 @@ scriptencoding utf-8
 call plug#begin('~/.vim/plugged')
 
 Plug 'axelf4/vim-strip-trailing-whitespace'         " smart trailing whitespace stripping
-Plug 'benmills/vimux'                               " run commands in tmux panes
 Plug 'chriskempson/base16-vim'                      " colour schemes
 Plug 'dense-analysis/ale'                           " async linting
 Plug 'elmcast/elm-vim'                              " all things elm
@@ -25,6 +24,7 @@ Plug 'majutsushi/tagbar'                            " ctag navigation
 Plug 'mhinz/vim-signify'                            " show linewise vcs indicators
 Plug 'milkypostman/vim-togglelist'                  " <leader>q/l for quickfix and location lists
 Plug 'pangloss/vim-javascript'                      " all things javascipt
+Plug 'preservim/vimux'                              " run commands in tmux panes
 Plug 'rhysd/vim-clang-format'                       " clang-format integration
 Plug 'ruanyl/vim-gh-line'                           " <leader>gh/gb/go to open current line on github
 Plug 'rust-lang/rust.vim'                           " all things rust
