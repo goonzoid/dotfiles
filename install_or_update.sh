@@ -25,6 +25,8 @@ clone_if_not_present git@github.com:sindresorhus/pure ~/.config/zplugins/pure
 
 stow -t ~ zsh
 
+stow -t ~ bin
+
 stow -t ~ git
 
 stow -t ~ tmux
