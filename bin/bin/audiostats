@@ -1,17 +1,9 @@
 #!/usr/bin/env bash
 
-shopt -s nocaseglob
-
-files="*.wav"
-
-echo "  #  sample rate"
-for file in $files; do
-  soxi -r "$file"
-done | sort | uniq -c
+echo "   # sample rate"
+find . -iname '*.wav' -exec soxi -r {} \; | sort | uniq -c
 
 echo ""
 
-echo "  #  bit depth"
-for file in $files; do
-  soxi -b "$file"
-done | sort | uniq -c
+echo "   # bit depth"
+find . -iname '*.wav' -exec soxi -b {} \; | sort | uniq -c
