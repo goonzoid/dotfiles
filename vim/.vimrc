@@ -103,6 +103,7 @@ augroup MiscFileType
   autocmd FileType gitcommit setlocal nomodeline
   autocmd FileType gitrebase setlocal nomodeline
   autocmd FileType tidal setlocal textwidth=0
+  autocmd FileType lua setlocal shiftwidth=2 softtabstop=2
 augroup END
 
 " Appearance
