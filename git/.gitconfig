@@ -16,8 +16,6 @@
 	br = branch
 	puff = pull --ff-only
 	purb = pull --rebase
-	rb = rebase
-	ri = rebase -i
 	l = "!. ~/.githelpers && pretty_git_log"
 	lg = !git l -16
 	la = !git lg --all
