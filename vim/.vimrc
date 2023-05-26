@@ -44,6 +44,7 @@ Plug 'tpope/vim-vinegar'                            " netrw enhancements
 Plug 'vim-ruby/vim-ruby'                            " all things ruby
 Plug 'wellle/tmux-complete.vim'                     " completions from tmux panes, sets completefunc by default
 Plug 'wincent/ferret'                               " multi-file search (:Ack / <leader>a and more!)
+Plug 'ziglang/zig.vim'                              " zig!
 
 call plug#end()
 
