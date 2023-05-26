@@ -9,6 +9,7 @@ Plug 'fatih/vim-go'                                 " all things go
 Plug 'gfontenot/vim-xcode'                          " work with Xcode projects
 Plug 'gmoe/vim-faust'                               " all things faust
 Plug 'godlygeek/tabular'                            " make tables
+Plug 'hashivim/vim-terraform'                       " all things terraform
 Plug 'jpalardy/vim-slime'                           " send text to REPLs and other things
 Plug '~/.fzf' | Plug 'junegunn/fzf.vim'             " fzf integration
 Plug 'junegunn/goyo.vim'                            " focus mode
