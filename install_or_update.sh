@@ -38,6 +38,9 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 vim +PlugUpdate +PlugClean! +qall
 pip3 install vim-vint
 
+mkdir -p ~/.config/nvim
+stow -t ~/.config/nvim nvim
+
 if ! command -v rustup &> /dev/null
 then
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
