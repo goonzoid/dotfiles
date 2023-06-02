@@ -56,6 +56,7 @@ let g:ale_completion_enabled = 1
 let g:ale_open_list = 1
 let g:ale_list_window_size = 4
 let g:ale_echo_msg_format = '%linter%:%code% %s'
+nnoremap <leader>g :ALEGoToDefinition<cr>
 let g:clang_format#auto_format = 1
 let g:elm_format_autosave = 1
 let g:gh_use_canonical = 1
