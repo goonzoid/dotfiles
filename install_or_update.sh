@@ -53,6 +53,7 @@ then
     # https://www.shellcheck.net/wiki/SC1090
     source ~/.cargo/env
 fi
+rustup component add rust-analyzer
 
 cargo install diffr
 
