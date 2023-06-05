@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -e -u
+set -e
 
 clone_if_not_present () {
     if [[ ! -d "$2" ]]; then
@@ -33,10 +33,15 @@ stow -t ~ git
 stow -t ~ tmux
 
 stow -t ~ vim
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-      https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-vim +PlugUpdate +PlugClean! +qall
-pip3 install vim-vint
+
+if [[ -n $SKIP_VIM ]]; then
+    echo 'skipping vim plugin and vint update'
+else
+    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+          https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    vim +PlugUpdate +PlugClean! +qall
+    pip3 install vim-vint
+fi
 
 mkdir -p ~/.config/nvim
 stow -t ~/.config/nvim nvim
