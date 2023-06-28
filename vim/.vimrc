@@ -3,7 +3,6 @@ scriptencoding utf-8
 call plug#begin('~/.vim/plugged')
 
 Plug 'axelf4/vim-strip-trailing-whitespace'         " smart trailing whitespace stripping
-Plug 'chriskempson/base16-vim'                      " colour schemes
 Plug 'dense-analysis/ale'                           " async linting
 Plug 'fatih/vim-go'                                 " all things go
 Plug 'gfontenot/vim-xcode'                          " work with Xcode projects
@@ -11,6 +10,7 @@ Plug 'gmoe/vim-faust'                               " all things faust
 Plug 'godlygeek/tabular'                            " make tables
 Plug 'hashivim/vim-terraform'                       " all things terraform
 Plug 'jpalardy/vim-slime'                           " send text to REPLs and other things
+Plug 'jonathanfilip/vim-lucius'                     " colour scheme
 Plug '~/.fzf' | Plug 'junegunn/fzf.vim'             " fzf integration
 Plug 'junegunn/goyo.vim'                            " focus mode
 Plug 'junegunn/limelight.vim'                       " hyper focus mode
@@ -112,11 +112,8 @@ augroup MiscFileType
 augroup END
 
 " Appearance
-if exists('$BASE16_THEME')
-      \ && (!exists('g:colors_name') || g:colors_name !=? 'base16-$BASE16_THEME')
-    let base16colorspace=256
-    colorscheme base16-$BASE16_THEME
-endif
+colorscheme lucius
+LuciusBlackLowContrast
 set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V\ %P%)
 
 " Basic editing configuration
