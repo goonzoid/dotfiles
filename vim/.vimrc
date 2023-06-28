@@ -196,7 +196,7 @@ endfunction
 command! DisableSpell call <SID>DisableSpell()
 
 " Dotfile editing helpers
-nnoremap <leader>gv :e $MYVIMRC<cr>
+nnoremap <leader>gv :e ~/.vimrc<cr>
 nnoremap <leader>gz :e ~/.zshrc<cr>
 nnoremap <leader>gt :e ~/.tmux.conf<cr>
 
