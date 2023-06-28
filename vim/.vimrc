@@ -114,7 +114,8 @@ augroup END
 
 " Appearance
 colorscheme lucius
-LuciusBlackLowContrast
+LuciusBlack
+
 set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V\ %P%)
 
 " Basic editing configuration
