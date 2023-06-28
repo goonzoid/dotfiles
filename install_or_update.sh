@@ -12,8 +12,6 @@ clone_if_not_present () {
 
 clone_if_not_present git@github.com:tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-clone_if_not_present git@github.com:chriskempson/base16-shell ~/.config/base16-shell
-
 clone_if_not_present git@github.com:junegunn/fzf ~/.fzf
 ~/.fzf/install --bin
 

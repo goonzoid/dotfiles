@@ -85,9 +85,6 @@ PATH="$HOME/go/bin:$PATH"
 
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
-BASE16_SHELL="$HOME/.config/base16-shell/"
-[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && source "$BASE16_SHELL/profile_helper.sh"
-
 source "$HOME/.config/zplugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 source "$HOME/.config/zplugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
