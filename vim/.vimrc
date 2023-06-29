@@ -55,9 +55,9 @@ let mapleader=','
 " Plugin configuration
 runtime macros/matchit.vim
 let g:ale_completion_enabled = 1
-let g:ale_open_list = 1
-let g:ale_list_window_size = 4
+let g:ale_lsp_suggestions = 1
 let g:ale_echo_msg_format = '%linter%:%code% %s'
+let g:ale_rename_tsserver_find_in_comments = 1
 let g:ale_linters = {'rust': ['analyzer']}
 let g:ale_fixers = {'zig': ['zls']}
 nnoremap <leader>gd :ALEGoToDefinition<cr>
