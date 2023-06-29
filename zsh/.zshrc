@@ -66,6 +66,7 @@ alias agg='ag --nobreak --nofilename'
 alias tma='tmux attach || tmux'
 alias serve='python -m SimpleHTTPServer'
 alias vim='nvim'
+alias k='kubectl'
 
 # iTerm tab/window naming
 iterm_name() {
