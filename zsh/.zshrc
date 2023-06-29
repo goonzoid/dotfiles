@@ -77,10 +77,6 @@ fi
 
 source "$HOME/.fzf.zsh"
 
-if [[ $(uname -s) == 'Darwin' ]]; then
-  PATH="/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/llvm/bin:$PATH"
-fi
-
 PATH="$HOME/go/bin:$PATH"
 
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
