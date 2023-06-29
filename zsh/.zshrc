@@ -1,5 +1,5 @@
 # Editing
-export EDITOR="vim"
+export EDITOR="nvim"
 bindkey -e
 setopt interactivecomments
 
@@ -65,6 +65,7 @@ alias grep='grep --color=auto'
 alias agg='ag --nobreak --nofilename'
 alias tma='tmux attach || tmux'
 alias serve='python -m SimpleHTTPServer'
+alias vim='nvim'
 
 # iTerm tab/window naming
 iterm_name() {
