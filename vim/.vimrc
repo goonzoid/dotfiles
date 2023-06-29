@@ -15,6 +15,7 @@ Plug '~/.fzf' | Plug 'junegunn/fzf.vim'             " fzf integration
 Plug 'junegunn/goyo.vim'                            " focus mode
 Plug 'junegunn/limelight.vim'                       " hyper focus mode
 Plug 'kana/vim-operator-user'                       " define custom operators - required by vim-clang-format
+Plug 'leafgarland/typescript-vim'                   " all things typescript
 Plug 'ludovicchabant/vim-gutentags'                 " generate ctags files in the background
 Plug 'luochen1990/rainbow'                          " rainbow parens and other markers
 Plug 'machakann/vim-swap'                           " reorder delimited items
@@ -22,6 +23,7 @@ Plug 'majutsushi/tagbar'                            " ctag navigation
 Plug 'mhinz/vim-signify'                            " show linewise vcs indicators
 Plug 'milkypostman/vim-togglelist'                  " <leader>q/l for quickfix and location lists
 Plug 'pangloss/vim-javascript'                      " all things javascipt
+Plug 'peitalin/vim-jsx-typescript'                  " jsx/txs
 Plug 'preservim/vimux'                              " run commands in tmux panes
 Plug 'rhysd/vim-clang-format'                       " clang-format integration
 Plug 'ruanyl/vim-gh-line'                           " <leader>gh/gb/go to open current line on github
