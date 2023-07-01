@@ -81,9 +81,9 @@ let g:slime_default_config = {'socket_name': get(split($TMUX, ','), 0), 'target_
 let g:slime_dont_ask_default = 1
 let g:slime_haskell_ghci_add_let = 0
 let g:slime_target = 'tmux'
-imap <c-j> <esc><Plug>SlimeParagraphSend<cr>
-nmap <c-j> <Plug>SlimeParagraphSend<cr>
-xmap <c-j> <Plug>SlimeRegionSend<cr>
+imap <c-j> <esc><Plug>SlimeParagraphSend
+nmap <c-j> <Plug>SlimeParagraphSend
+xmap <c-j> <Plug>SlimeRegionSend
 
 " Go
 let g:go_fmt_command = 'goimports'
