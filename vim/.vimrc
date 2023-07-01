@@ -54,13 +54,6 @@ let mapleader=','
 
 " Plugin configuration
 runtime macros/matchit.vim
-let g:ale_completion_enabled = 1
-let g:ale_lsp_suggestions = 1
-let g:ale_echo_msg_format = '%linter%:%code% %s'
-let g:ale_rename_tsserver_find_in_comments = 1
-let g:ale_linters = {'rust': ['analyzer']}
-let g:ale_fixers = {'zig': ['zls']}
-nnoremap <leader>gd :ALEGoToDefinition<cr>
 let g:clang_format#auto_format = 1
 let g:elm_format_autosave = 1
 let g:gh_use_canonical = 1
@@ -73,6 +66,16 @@ let g:fzf_command_prefix = 'FZF'
 nnoremap <leader>f :FZFFiles<cr>
 nnoremap <leader>b :FZFBuffers<cr>
 nnoremap \| :TagbarToggle<cr>
+
+" ALE
+let g:ale_completion_enabled = 1
+let g:ale_lsp_suggestions = 1
+let g:ale_echo_msg_format = '%linter%:%code% %s'
+let g:ale_rename_tsserver_find_in_comments = 1
+let g:ale_linters = {'rust': ['analyzer']}
+let g:ale_fixers = {'zig': ['zls']}
+let g:ale_c_parse_compile_commands = 1
+nnoremap <leader>gd :ALEGoToDefinition<cr>
 
 " Slime
 let g:slime_default_config = {'socket_name': get(split($TMUX, ','), 0), 'target_pane': '{next}'}
@@ -90,9 +93,6 @@ let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_structs = 1
-
-" C/C++
-let g:ale_c_parse_compile_commands = 1
 
 " NERDTree
 nnoremap \ :NERDTreeToggle<cr>
