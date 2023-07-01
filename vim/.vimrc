@@ -53,7 +53,6 @@ call plug#end()
 let mapleader=','
 
 " Plugin configuration
-runtime macros/matchit.vim
 let g:clang_format#auto_format = 1
 let g:elm_format_autosave = 1
 let g:gh_use_canonical = 1
