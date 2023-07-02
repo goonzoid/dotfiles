@@ -40,6 +40,9 @@ fpath+=$HOME/.config/zplugins/pure
 autoload -U promptinit; promptinit
 prompt pure
 zstyle :prompt:pure:git:stash show yes
+if [[ -z $TMUX ]]; then
+    prompt_pure_set_title() {}
+fi
 
 # Better history
 HISTFILE="$HOME/.zhistory"
