@@ -3,6 +3,8 @@ scriptencoding utf-8
 call plug#begin('~/.vim/plugged')
 
 Plug 'axelf4/vim-strip-trailing-whitespace'         " smart trailing whitespace stripping
+Plug 'davidgranstrom/scnvim'                        " supercollider (nvim only)
+Plug 'davidgranstrom/scnvim-tmux'                   " tmux support for supercollider (nvim only)
 Plug 'dense-analysis/ale'                           " async linting
 Plug 'fatih/vim-go'                                 " all things go
 Plug 'gfontenot/vim-xcode'                          " work with Xcode projects
@@ -29,7 +31,6 @@ Plug 'rhysd/vim-clang-format'                       " clang-format integration
 Plug 'ruanyl/vim-gh-line'                           " <leader>gh/gb/go to open current line on github
 Plug 'rust-lang/rust.vim'                           " all things rust
 Plug 'scrooloose/nerdtree'                          " filesystem tree explorer and utils
-Plug 'supercollider/scvim'                          " syntax, completions, etc. for supercollider
 Plug 'tidalcycles/vim-tidal'                        " generate completions for superdirt samples
 Plug 'tmux-plugins/vim-tmux'                        " tmux.conf editing help
 Plug 'tpope/vim-abolish'                            " cr{c,m,s} to coerce to {camel,mixed,snake} case (and more)
