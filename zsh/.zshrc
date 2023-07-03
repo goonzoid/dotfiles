@@ -90,7 +90,7 @@ source "$HOME/.config/zplugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 source "$HOME/.config/zplugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
-ZSH_HIGHLIGHT_STYLES[path]='fg=white'
+ZSH_HIGHLIGHT_STYLES[path]='fg=green'
 
 # No duplicates in $PATH
 typeset -U path
