@@ -4,7 +4,7 @@ local map_expr = scnvim.map_expr
 
 scnvim.setup({
   keymaps = {
-    ['<C-i>'] = map('editor.send_line', {'i', 'n'}),
+    ['<M-j>'] = map('editor.send_line', {'i', 'n'}),
     ['<C-j>'] = {
       map('editor.send_block', {'i', 'n'}),
       map('editor.send_selection', 'x'),
@@ -16,6 +16,7 @@ scnvim.setup({
     ['<leader>cb'] = map_expr('s.boot'),
     ['<leader>cq'] = map_expr('s.quit'),
     ['<leader>cm'] = map_expr('s.meter'),
+    ['<leader>cn'] = map_expr('s.plotTree'),
   },
   extensions = {
     tmux = {
