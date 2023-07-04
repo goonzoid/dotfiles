@@ -102,7 +102,6 @@ let NERDTreeHijackNetrw = 0
 " Filetype detection
 augroup MiscFileType
   autocmd!
-
   autocmd FileType go setlocal noexpandtab listchars=tab:\ \ ,trail:·
   autocmd FileType cpp setlocal commentstring=//\ %s
   autocmd FileType make setlocal noexpandtab
@@ -168,7 +167,7 @@ nnoremap Y y$
 nnoremap <leader>m :silent w \| :make<cr>
 
 " Only show cursorline in active buffer
-augroup cursorLine
+augroup cursorline
   au!
   au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
   au WinLeave * setlocal nocursorline
@@ -195,12 +194,12 @@ function! <SID>DisableSpell()
 endfunction
 command! DisableSpell call <SID>DisableSpell()
 
-" Dotfile editing helpers
+" dotfile editing helpers
 nnoremap <leader>gv :e ~/.vimrc<cr>
 nnoremap <leader>gz :e ~/.zshrc<cr>
 nnoremap <leader>gt :e ~/.tmux.conf<cr>
 
-augroup Dotfiles
+augroup dotfiles
   autocmd!
 
   autocmd bufwritepost .vimrc source $MYVIMRC
