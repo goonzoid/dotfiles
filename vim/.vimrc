@@ -201,8 +201,7 @@ nnoremap <leader>gt :e ~/.tmux.conf<cr>
 
 augroup dotfiles
   autocmd!
-
-  autocmd bufwritepost .vimrc source $MYVIMRC
+  autocmd bufwritepost .vimrc source $MYVIMRC | edit ~/.vimrc
   autocmd bufwritepost .tmux.conf silent !tmux source-file ~/.tmux.conf
 augroup END
 
@@ -210,4 +209,4 @@ augroup END
 set exrc
 set secure " deliberately set at end of .vimrc, see :help 'secure'
 
-" vim: textwidth=0
+" vim: textwidth=0 tabstop=2 softtabstop=2 shiftwidth=2
