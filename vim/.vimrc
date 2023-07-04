@@ -161,8 +161,6 @@ nnoremap <leader><leader> <c-^>
 nnoremap <space> :nohlsearch<cr>
 " Insert an arrow with <c-l>
 imap <c-l> =>
-" Not sure what the diff is between <c-c> and Esc
-imap <c-c> <esc>
 " reselect visual block after indent
 vnoremap < <gv
 vnoremap > >gv
