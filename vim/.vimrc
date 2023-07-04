@@ -122,6 +122,7 @@ set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V\ %P%)
 " Basic editing configuration
 set hidden
 set number
+set scrolloff=5
 set splitright
 set expandtab
 set tabstop=4
