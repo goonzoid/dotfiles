@@ -17,6 +17,8 @@ scnvim.setup({
     ['<leader>cq'] = map_expr('s.quit'),
     ['<leader>cm'] = map_expr('s.meter'),
     ['<leader>cn'] = map_expr('s.plotTree'),
+    ['<F9>'] = map_expr('s.record'),
+    ['<F8>'] = map_expr('s.stopRecording'),
   },
   extensions = {
     tmux = {
