@@ -185,11 +185,11 @@ augroup END
 
 " Spelling
 function! <SID>EnableSpell()
-  :setlocal spell spelllang=en_gb
+  setlocal spell spelllang=en_gb spellcapcheck=
 endfunction
 command! EnableSpell call <SID>EnableSpell()
 function! <SID>DisableSpell()
-  :setlocal nospell
+  setlocal nospell
 endfunction
 command! DisableSpell call <SID>DisableSpell()
 
