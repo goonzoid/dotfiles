@@ -195,13 +195,13 @@ endfunction
 command! DisableSpell call <SID>DisableSpell()
 
 " dotfile editing helpers
-nnoremap <leader>gv :e ~/.vimrc<cr>
-nnoremap <leader>gz :e ~/.zshrc<cr>
-nnoremap <leader>gt :e ~/.tmux.conf<cr>
+nnoremap <leader>gv :e ~/dotfiles/vim/.vimrc<cr>
+nnoremap <leader>gz :e ~/dotfiles/zsh/.zshrc<cr>
+nnoremap <leader>gt :e ~/dotfiles/tmux/.tmux.conf<cr>
 
 augroup dotfiles
   autocmd!
-  autocmd bufwritepost .vimrc source $MYVIMRC | edit ~/.vimrc
+  autocmd bufwritepost .vimrc source $MYVIMRC | edit ~/dotfiles/vim/.vimrc
   autocmd bufwritepost .tmux.conf silent !tmux source-file ~/.tmux.conf
 augroup END
 
