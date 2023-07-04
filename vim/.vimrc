@@ -154,7 +154,6 @@ command! Bd :bd
 " Allow yank and put to/from system clipboard
 map <leader>y "*y
 map <leader>p "*p
-nnoremap p ]p
 " Easier switch between files
 nnoremap <leader><leader> <c-^>
 " Clear search buffer by hitting space
