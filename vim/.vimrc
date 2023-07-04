@@ -57,6 +57,7 @@ let g:clang_format#auto_format = 1
 let g:elm_format_autosave = 1
 let g:gh_use_canonical = 1
 let g:netrw_liststyle = 3
+let g:rainbow_active = 1
 let g:rustfmt_autosave = 1
 let g:signify_vcs_list = [ 'git' ]
 let g:tidal_no_mappings = 1
