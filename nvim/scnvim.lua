@@ -1,12 +1,23 @@
 local scnvim = require 'scnvim'
+local editor = require 'scnvim.editor'
 local map = scnvim.map
 local map_expr = scnvim.map_expr
 
 scnvim.setup({
   keymaps = {
-    ['<M-j>'] = map('editor.send_line', {'i', 'n'}),
+    ['<M-j>'] = {
+      map(function()
+        editor.send_line()
+        vim.cmd('stopinsert')
+      end, 'i'),
+      map('editor.send_line', 'n'),
+    },
     ['<C-j>'] = {
-      map('editor.send_block', {'i', 'n'}),
+      map(function()
+        editor.send_block()
+        vim.cmd('stopinsert')
+      end, 'i'),
+      map('editor.send_block', 'n'),
       map('editor.send_selection', 'x'),
     },
     ['<CR>'] = map('postwin.toggle'),
