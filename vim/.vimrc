@@ -15,7 +15,6 @@ Plug 'jpalardy/vim-slime'                           " send text to REPLs and oth
 Plug 'jonathanfilip/vim-lucius'                     " colour scheme
 Plug '~/.fzf' | Plug 'junegunn/fzf.vim'             " fzf integration
 Plug 'junegunn/goyo.vim'                            " focus mode
-Plug 'junegunn/limelight.vim'                       " hyper focus mode
 Plug 'kana/vim-operator-user'                       " define custom operators - required by vim-clang-format
 Plug 'leafgarland/typescript-vim'                   " all things typescript
 Plug 'ludovicchabant/vim-gutentags'                 " generate ctags files in the background
@@ -59,7 +58,6 @@ let g:elm_format_autosave = 1
 let g:gh_use_canonical = 1
 let g:netrw_liststyle = 3
 let g:rustfmt_autosave = 1
-let g:sexp_enable_insert_mode_mappings = 0
 let g:signify_vcs_list = [ 'git' ]
 let g:tidal_no_mappings = 1
 let g:fzf_command_prefix = 'FZF'
