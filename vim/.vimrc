@@ -145,6 +145,7 @@ set autowrite
 set lazyredraw
 set undofile
 set modeline
+set completeopt=menu,preview,noinsert,noselect
 
 " Key mappings
 command! W :w
