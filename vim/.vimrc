@@ -7,8 +7,6 @@ Plug 'davidgranstrom/scnvim'                        " supercollider (nvim only)
 Plug 'davidgranstrom/scnvim-tmux'                   " tmux support for supercollider (nvim only)
 Plug 'dense-analysis/ale'                           " async linting
 Plug 'fatih/vim-go'                                 " all things go
-Plug 'gfontenot/vim-xcode'                          " work with Xcode projects
-Plug 'gmoe/vim-faust'                               " all things faust
 Plug 'godlygeek/tabular'                            " make tables
 Plug 'hashivim/vim-terraform'                       " all things terraform
 Plug 'jpalardy/vim-slime'                           " send text to REPLs and other things
