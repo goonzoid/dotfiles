@@ -149,7 +149,7 @@ map <leader>y "*y
 map <leader>p "*p
 " Easier switch between files
 nnoremap <leader><leader> <c-^>
-" Insert an arrow with <c-l>
+" Insert a hash rocket with <c-l>
 imap <c-l> =>
 " reselect visual block after indent
 vnoremap < <gv
