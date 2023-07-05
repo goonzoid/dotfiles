@@ -27,6 +27,7 @@ Plug 'pangloss/vim-javascript'                      " all things javascipt
 Plug 'peitalin/vim-jsx-typescript'                  " jsx/txs
 Plug 'preservim/vimux'                              " run commands in tmux panes
 Plug 'rhysd/vim-clang-format'                       " clang-format integration
+Plug 'romainl/vim-cool'                             " automatic :nohl
 Plug 'ruanyl/vim-gh-line'                           " <leader>gh/gb/go to open current line on github
 Plug 'rust-lang/rust.vim'                           " all things rust
 Plug 'scrooloose/nerdtree'                          " filesystem tree explorer and utils
@@ -154,8 +155,6 @@ map <leader>y "*y
 map <leader>p "*p
 " Easier switch between files
 nnoremap <leader><leader> <c-^>
-" Clear search buffer by hitting space
-nnoremap <space> :nohlsearch<cr>
 " Insert an arrow with <c-l>
 imap <c-l> =>
 " reselect visual block after indent
