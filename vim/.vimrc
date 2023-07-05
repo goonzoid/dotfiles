@@ -116,7 +116,7 @@ augroup END
 colorscheme lucius
 LuciusBlack
 
-set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V\ %P%)
+set statusline=%n:\ %f\ %y\ %m%=%(%3l:%02c%03V\ %P%)
 
 " Basic editing configuration
 set hidden
