@@ -4,9 +4,12 @@
 	autocrlf = input
 	attributesfile = ~/.gitattributes
 	excludesfile = ~/.global_gitignore
-	pager = diffr | less
+	pager = delta --diff-so-fancy
 [interactive]
-	diffFilter = diffr
+	diffFilter = delta --diff-so-fancy --color-only
+[delta]
+	line-numbers = true
+	hunk-header-style = omit
 [color]
 	ui = auto
 [alias]

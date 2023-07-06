@@ -53,8 +53,6 @@ then
 fi
 rustup component add rust-analyzer
 
-cargo install diffr
-
 echo "Success \o/ - don't forget to install tmux plugins"
 
 # vim: tw=0
