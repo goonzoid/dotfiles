@@ -10,6 +10,8 @@
 [delta]
 	line-numbers = true
 	hunk-header-style = omit
+[diff]
+	colorMoved = default
 [color]
 	ui = auto
 [alias]
