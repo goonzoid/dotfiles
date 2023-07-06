@@ -54,6 +54,7 @@ let mapleader=','
 let g:clang_format#auto_format = 1
 let g:elm_format_autosave = 1
 let g:gh_use_canonical = 1
+let g:go_highlight_functions = 1
 let g:netrw_liststyle = 3
 let g:rainbow_active = 1
 let g:rustfmt_autosave = 1
@@ -82,14 +83,6 @@ let g:slime_target = 'tmux'
 imap <c-j> <esc><Plug>SlimeParagraphSend
 nmap <c-j> <Plug>SlimeParagraphSend
 xmap <c-j> <Plug>SlimeRegionSend
-
-" Go
-let g:go_fmt_command = 'goimports'
-let g:go_fmt_experimental = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_structs = 1
 
 " Filetype detection
 augroup MiscFileType
