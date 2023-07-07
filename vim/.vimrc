@@ -52,7 +52,6 @@ let mapleader=','
 
 " Plugin configuration
 let g:clang_format#auto_format = 1
-let g:elm_format_autosave = 1
 let g:gh_use_canonical = 1
 let g:go_highlight_functions = 1
 let g:netrw_liststyle = 3
@@ -120,7 +119,7 @@ set ignorecase smartcase
 set title
 set showcmd
 set wildmode=longest,list
-set wildignore+=*/tmp/*,*/node_modules/*,*.o,*.obj,*.exe,*.so,*.dll,*.pyc,.svn,.hg,.bzr,.git,.sass-cache,*.class,*.scssc,elm-stuff
+set wildignore+=*/tmp/*,*/node_modules/*,*.o,*.obj,*.exe,*.so,*.dll,*.pyc,.svn,.hg,.bzr,.git,.sass-cache,*.class,*.scssc
 set backup
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
