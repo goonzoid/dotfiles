@@ -112,7 +112,6 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set textwidth=120
-set showmatch
 set hlsearch
 " Make tabs and trailing whitespace visible
 set list listchars=tab:▸\ ,trail:·
