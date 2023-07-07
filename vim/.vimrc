@@ -2,49 +2,64 @@ scriptencoding utf-8
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'axelf4/vim-strip-trailing-whitespace'         " smart trailing whitespace stripping
-Plug 'davidgranstrom/scnvim'                        " supercollider (nvim only)
-Plug 'davidgranstrom/scnvim-tmux'                   " tmux support for supercollider (nvim only)
-Plug 'dense-analysis/ale'                           " async linting
-Plug 'fatih/vim-go'                                 " all things go
-Plug 'godlygeek/tabular'                            " make tables
-Plug 'hashivim/vim-terraform'                       " all things terraform
-Plug 'jpalardy/vim-slime'                           " send text to REPLs and other things
-Plug 'jonathanfilip/vim-lucius'                     " colour scheme
-Plug '~/.fzf' | Plug 'junegunn/fzf.vim'             " fzf integration
-Plug 'junegunn/goyo.vim'                            " focus mode
-Plug 'kana/vim-operator-user'                       " define custom operators - required by vim-clang-format
-Plug 'leafgarland/typescript-vim'                   " all things typescript
-Plug 'ludovicchabant/vim-gutentags'                 " generate ctags files in the background
-Plug 'luochen1990/rainbow'                          " rainbow parens and other markers
-Plug 'machakann/vim-swap'                           " reorder delimited items
-Plug 'majutsushi/tagbar'                            " ctag navigation
-Plug 'mhinz/vim-signify'                            " show linewise vcs indicators
-Plug 'milkypostman/vim-togglelist'                  " <leader>q/l for quickfix and location lists
-Plug 'pangloss/vim-javascript'                      " all things javascipt
-Plug 'peitalin/vim-jsx-typescript'                  " jsx/txs
-Plug 'preservim/vimux'                              " run commands in tmux panes
-Plug 'rhysd/vim-clang-format'                       " clang-format integration
-Plug 'romainl/vim-cool'                             " automatic :nohl
-Plug 'ruanyl/vim-gh-line'                           " <leader>gh/gb/go to open current line on github
-Plug 'rust-lang/rust.vim'                           " all things rust
-Plug 'tidalcycles/vim-tidal'                        " generate completions for superdirt samples
-Plug 'tmux-plugins/vim-tmux'                        " tmux.conf editing help
-Plug 'tpope/vim-abolish'                            " cr{c,m,s} to coerce to {camel,mixed,snake} case (and more)
-Plug 'tpope/vim-apathy'                             " set path and friends
-Plug 'tpope/vim-commentary'                         " comment stuff out
-Plug 'tpope/vim-endwise'                            " close some structures automatically - e.g. add `endfunction` for vimscript funcs
-Plug 'tpope/vim-eunuch'                             " wrappers for 'nix shell commands
-Plug 'tpope/vim-fugitive'                           " wrappers for git commands
-Plug 'tpope/vim-repeat'                             " better repetition
-Plug 'tpope/vim-sensible'                           " sensible defaults
-Plug 'tpope/vim-surround'                           " mappings for editing 'surrounding pairs'
-Plug 'tpope/vim-unimpaired'                         " pairs of handy bracket mappings
-Plug 'tpope/vim-vinegar'                            " netrw enhancements
-Plug 'vim-ruby/vim-ruby'                            " all things ruby
-Plug 'wellle/tmux-complete.vim'                     " completions from tmux panes, sets completefunc by default
-Plug 'wincent/ferret'                               " multi-file search (:Ack / <leader>a and more!)
-Plug 'ziglang/zig.vim'                              " zig!
+" basics
+Plug 'tpope/vim-sensible'
+Plug 'jonathanfilip/vim-lucius'
+
+" search and file navigation
+Plug 'tpope/vim-vinegar'
+Plug 'wincent/ferret'
+Plug '~/.fzf' | Plug 'junegunn/fzf.vim'
+
+" editing and navigation helpers
+Plug 'axelf4/vim-strip-trailing-whitespace'
+Plug 'godlygeek/tabular'
+Plug 'junegunn/goyo.vim'
+Plug 'machakann/vim-swap'
+Plug 'milkypostman/vim-togglelist'
+Plug 'romainl/vim-cool' " automatic :noh
+Plug 'tpope/vim-abolish' " cr{c,m,s} to coerce to {camel,mixed,snake} case (and more)
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+
+" git
+Plug 'mhinz/vim-signify'
+Plug 'ruanyl/vim-gh-line'
+Plug 'tpope/vim-fugitive'
+
+" ctags
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'majutsushi/tagbar'
+
+" system integration
+Plug 'jpalardy/vim-slime'
+Plug 'preservim/vimux'
+Plug 'tpope/vim-eunuch'
+Plug 'wellle/tmux-complete.vim'
+
+" supercollider and tidal
+Plug 'davidgranstrom/scnvim'
+Plug 'davidgranstrom/scnvim-tmux'
+Plug 'tidalcycles/vim-tidal'
+
+" syntax, indentation, linting, formatting, and language specific things
+Plug 'dense-analysis/ale'
+Plug 'fatih/vim-go'
+Plug 'hashivim/vim-terraform'
+Plug 'kana/vim-operator-user' " required by vim-clang-format
+Plug 'leafgarland/typescript-vim'
+Plug 'luochen1990/rainbow'
+Plug 'pangloss/vim-javascript'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'rhysd/vim-clang-format'
+Plug 'rust-lang/rust.vim'
+Plug 'tmux-plugins/vim-tmux'
+Plug 'tpope/vim-apathy'
+Plug 'vim-ruby/vim-ruby'
+Plug 'ziglang/zig.vim'
 
 call plug#end()
 
