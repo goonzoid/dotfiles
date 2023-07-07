@@ -116,7 +116,6 @@ set hlsearch
 set list listchars=tab:▸\ ,trail:·
 " Make searches case sensitive only if they contain upper-case characters
 set ignorecase smartcase
-set title
 set showcmd
 set wildmode=longest,list
 set wildignore+=*/tmp/*,*/node_modules/*,*.o,*.obj,*.exe,*.so,*.dll,*.pyc,.svn,.hg,.bzr,.git,.sass-cache,*.class,*.scssc
