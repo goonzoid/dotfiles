@@ -112,6 +112,7 @@ augroup END
 
 " Appearance
 colorscheme lucius
+let g:lucius_no_term_bg = 1
 LuciusBlack
 
 set statusline=%n:\ %f\ %y\ %m%=%(%3l:%02c%03V\ %P%)
