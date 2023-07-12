@@ -8,6 +8,7 @@
 [interactive]
 	diffFilter = delta --diff-so-fancy --color-only
 [delta]
+	navigate = true
 	line-numbers = true
 	hunk-header-style = omit
 [diff]
