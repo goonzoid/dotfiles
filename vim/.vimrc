@@ -73,10 +73,16 @@ let g:rainbow_active = 1
 let g:rustfmt_autosave = 1
 let g:signify_vcs_list = [ 'git' ]
 let g:tidal_no_mappings = 1
+nnoremap \| :TagbarToggle<cr>
+
+" fzf
 let g:fzf_command_prefix = 'FZF'
 nnoremap <leader>f :FZFFiles<cr>
+nnoremap <c-g> :FZFCommits<cr>
+nnoremap <leader>gs :FZFGFiles?<cr>
 nnoremap <leader>b :FZFBuffers<cr>
-nnoremap \| :TagbarToggle<cr>
+nnoremap <leader>z :FZFRg<cr>
+nnoremap <leader>ch :FZFHistory:<cr>
 
 " ALE
 let g:ale_completion_enabled = 1
