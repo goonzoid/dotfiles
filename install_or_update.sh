@@ -30,19 +30,17 @@ stow -t ~ git
 
 stow -t ~ tmux
 
-stow -t ~ vim
+mkdir -p ~/.config/nvim
+stow -t ~/.config/nvim nvim
 
 if [[ -n $SKIP_VIM ]]; then
     echo 'skipping vim plugin and vint update'
 else
-    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-          https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    vim +PlugUpdate +PlugClean! +qall
+    curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    nvim +PlugUpdate +PlugClean! +qall
     pip3 install vim-vint
 fi
-
-mkdir -p ~/.config/nvim
-stow -t ~/.config/nvim nvim
 
 if ! command -v rustup &> /dev/null
 then
