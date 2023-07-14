@@ -73,6 +73,7 @@ let g:rainbow_active = 1
 let g:rustfmt_autosave = 1
 let g:signify_vcs_list = [ 'git' ]
 let g:tidal_no_mappings = 1
+nnoremap <leader>S <Plug>(FerretAcks)
 nnoremap \| :TagbarToggle<cr>
 source $HOME/.config/nvim/scnvim.lua
 
