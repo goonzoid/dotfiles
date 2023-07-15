@@ -78,13 +78,13 @@ nnoremap <leader>S <Plug>(FerretAcks)
 nnoremap \| :TagbarToggle<cr>
 
 " fzf
-let g:fzf_command_prefix = 'FZF'
-nnoremap <leader>f :FZFFiles<cr>
-nnoremap <c-g> :FZFCommits<cr>
-nnoremap <leader>gs :FZFGFiles?<cr>
-nnoremap <leader>b :FZFBuffers<cr>
-nnoremap <leader>z :FZFRg<cr>
-nnoremap <leader>ch :FZFHistory:<cr>
+let g:fzf_command_prefix = 'Fzf'
+nnoremap <leader>f :FzfFiles<cr>
+nnoremap <c-g> :FzfCommits<cr>
+nnoremap <leader>gs :FzfGFiles?<cr>
+nnoremap <leader>b :FzfBuffers<cr>
+nnoremap <leader>z :FzfRg<cr>
+nnoremap <leader>ch :FzfHistory:<cr>
 
 " Slime
 let g:slime_default_config = {'socket_name': get(split($TMUX, ','), 0), 'target_pane': '{next}'}
