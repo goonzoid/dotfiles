@@ -121,7 +121,7 @@ augroup MiscFileType
   autocmd FileType gitcommit,gitrebase setlocal nomodeline | :EnableSpell
   autocmd FileType tidal setlocal textwidth=0
   autocmd FileType lua setlocal shiftwidth=2 softtabstop=2
-  autocmd BufNewFile,BufRead Jenkinsfile setlocal filetype=groovy
+  autocmd BufNewFile,BufRead Jenkinsfile* setlocal filetype=groovy
 augroup END
 
 " Appearance
