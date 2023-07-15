@@ -114,6 +114,7 @@ let g:loaded_ruby_provider = 0
 " Filetype detection
 augroup MiscFileType
   autocmd!
+  autocmd FileType tmux setlocal keywordprg=:Man\ tmux(#)
   autocmd FileType go setlocal noexpandtab listchars=tab:\ \ ,trail:·
   autocmd FileType cpp setlocal commentstring=//\ %s
   autocmd FileType make setlocal noexpandtab
