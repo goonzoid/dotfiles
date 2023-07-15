@@ -34,6 +34,10 @@ Plug 'tpope/vim-fugitive'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'majutsushi/tagbar'
 
+" lsp and linting
+Plug 'neovim/nvim-lspconfig'
+Plug 'dense-analysis/ale'
+
 " system integration
 Plug 'jpalardy/vim-slime'
 Plug 'preservim/vimux'
@@ -45,18 +49,13 @@ Plug 'davidgranstrom/scnvim'
 Plug 'davidgranstrom/scnvim-tmux'
 Plug 'tidalcycles/vim-tidal'
 
-" syntax, indentation, linting, formatting, and language specific things
-Plug 'dense-analysis/ale'
-Plug 'fatih/vim-go'
+" syntax highlighting, indentation, and language specific things
 Plug 'hashivim/vim-terraform'
-Plug 'kana/vim-operator-user' " required by vim-clang-format
 Plug 'leafgarland/typescript-vim'
 Plug 'luochen1990/rainbow'
 Plug 'pangloss/vim-javascript'
 Plug 'peitalin/vim-jsx-typescript'
-Plug 'rhysd/vim-clang-format'
 Plug 'rust-lang/rust.vim'
-Plug 'tpope/vim-apathy'
 Plug 'vim-ruby/vim-ruby'
 Plug 'ziglang/zig.vim'
 
@@ -65,9 +64,11 @@ call plug#end()
 let mapleader=','
 
 " Plugin configuration
-let g:clang_format#auto_format = 1
+source $HOME/.config/nvim/lsp.lua
+source $HOME/.config/nvim/scnvim.lua
+
+let g:ale_echo_msg_format = '%linter%:%code% %s'
 let g:gh_use_canonical = 1
-let g:go_highlight_functions = 1
 let g:netrw_liststyle = 3
 let g:rainbow_active = 1
 let g:rustfmt_autosave = 1
@@ -75,7 +76,6 @@ let g:signify_vcs_list = [ 'git' ]
 let g:tidal_no_mappings = 1
 nnoremap <leader>S <Plug>(FerretAcks)
 nnoremap \| :TagbarToggle<cr>
-source $HOME/.config/nvim/scnvim.lua
 
 " fzf
 let g:fzf_command_prefix = 'FZF'
@@ -85,16 +85,6 @@ nnoremap <leader>gs :FZFGFiles?<cr>
 nnoremap <leader>b :FZFBuffers<cr>
 nnoremap <leader>z :FZFRg<cr>
 nnoremap <leader>ch :FZFHistory:<cr>
-
-" ALE
-let g:ale_completion_enabled = 1
-let g:ale_lsp_suggestions = 1
-let g:ale_echo_msg_format = '%linter%:%code% %s'
-let g:ale_rename_tsserver_find_in_comments = 1
-let g:ale_linters = {'rust': ['analyzer']}
-let g:ale_fixers = {'zig': ['zls']}
-let g:ale_c_parse_compile_commands = 1
-nnoremap <leader>gd :ALEGoToDefinition<cr>
 
 " Slime
 let g:slime_default_config = {'socket_name': get(split($TMUX, ','), 0), 'target_pane': '{next}'}
