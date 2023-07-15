@@ -6,6 +6,10 @@ call plug#begin()
 Plug 'tpope/vim-sensible'
 Plug 'jonathanfilip/vim-lucius'
 
+" treesitter
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/playground'
+
 " search and file navigation
 Plug 'tpope/vim-vinegar'
 Plug 'wincent/ferret'
@@ -49,16 +53,6 @@ Plug 'davidgranstrom/scnvim'
 Plug 'davidgranstrom/scnvim-tmux'
 Plug 'tidalcycles/vim-tidal'
 
-" syntax highlighting, indentation, and language specific things
-Plug 'hashivim/vim-terraform'
-Plug 'leafgarland/typescript-vim'
-Plug 'luochen1990/rainbow'
-Plug 'pangloss/vim-javascript'
-Plug 'peitalin/vim-jsx-typescript'
-Plug 'rust-lang/rust.vim'
-Plug 'vim-ruby/vim-ruby'
-Plug 'ziglang/zig.vim'
-
 call plug#end()
 
 let mapleader=','
@@ -66,12 +60,11 @@ let mapleader=','
 " Plugin configuration
 source $HOME/.config/nvim/lsp.lua
 source $HOME/.config/nvim/scnvim.lua
+source $HOME/.config/nvim/treesitter.lua
 
 let g:ale_echo_msg_format = '%linter%:%code% %s'
 let g:gh_use_canonical = 1
 let g:netrw_liststyle = 3
-let g:rainbow_active = 1
-let g:rustfmt_autosave = 1
 let g:signify_vcs_list = [ 'git' ]
 let g:tidal_no_mappings = 1
 nnoremap <leader>S <Plug>(FerretAcks)
