@@ -95,7 +95,7 @@ let g:loaded_python3_provider = 0
 let g:loaded_ruby_provider = 0
 
 " Filetype detection
-augroup MiscFileType
+augroup miscFileType
   autocmd!
   autocmd FileType tmux setlocal keywordprg=:Man\ tmux(#)
   autocmd FileType go setlocal noexpandtab listchars=tab:\ \ ,trail:·
@@ -162,14 +162,15 @@ nnoremap <leader>m :silent w \| :make<cr>
 
 " Only show cursorline in active buffer
 augroup cursorline
-  au!
-  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
-  au WinLeave * setlocal nocursorline
+  autocmd!
+  autocmd VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+  autocmd WinLeave * setlocal nocursorline
 augroup END
 
 " Jump to last cursor position unless it's invalid or in an event handler,
 " or the file is a git commit message
-augroup vimrcEx
+augroup lastCursorPosition
+  autocmd!
   autocmd BufReadPost *
         \ if expand('%:t') == 'COMMIT_EDITMSG' |
         \   exe "normal gg" |
