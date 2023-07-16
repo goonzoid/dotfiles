@@ -4,7 +4,7 @@ call plug#begin()
 
 " basics
 Plug 'tpope/vim-sensible'
-Plug 'jonathanfilip/vim-lucius'
+Plug 'rebelot/kanagawa.nvim'
 
 " treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -108,10 +108,7 @@ augroup miscFileType
 augroup END
 
 " Appearance
-colorscheme lucius
-let g:lucius_no_term_bg = 1
-LuciusBlack
-
+colorscheme kanagawa-dragon
 set statusline=%n:\ %f\ %y\ %m%=%(%3l:%02c%03V\ %P%)
 set guicursor=
 
