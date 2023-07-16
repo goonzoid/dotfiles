@@ -47,3 +47,16 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous dia
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
 vim.keymap.set('n', '<leader>dl', vim.diagnostic.setloclist, { desc = 'Show diagnostic list in the location list' })
 vim.keymap.set('n', '<leader>df', vim.diagnostic.open_float, { desc = 'Show diagnostic list in a floating window' })
+
+-- borders for lsp and diagnostic windows
+local border_style = 'rounded'
+require('lspconfig.ui.windows').default_options.border = border_style
+vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(
+  vim.lsp.handlers.hover, { border = border_style }
+)
+vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(
+  vim.lsp.handlers.signature_help, { border = border_style }
+)
+vim.diagnostic.config {
+  float = { border = border_style },
+}
