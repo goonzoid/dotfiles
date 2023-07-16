@@ -23,7 +23,7 @@ scnvim.setup({
     ['<CR>'] = map('postwin.toggle'),
     ['<leader>cs'] = map('sclang.start'),
     ['<leader>ct'] = map('sclang.stop'),
-    ['<leader>cr'] = map('sclang.recompile'),
+    ['<leader>cc'] = map('sclang.recompile'),
     ['<leader>cb'] = map_expr('s.boot'),
     ['<leader>cq'] = map_expr('s.quit'),
     ['<leader>cm'] = map_expr('s.meter'),
