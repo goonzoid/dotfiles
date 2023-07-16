@@ -5,27 +5,21 @@ lspconfig.eslint.setup {}
 lspconfig.lua_ls.setup {
   settings = {
     Lua = {
-      runtime = {
-        version = 'LuaJIT',
-      },
-      diagnostics = {
-        globals = { 'vim' },
-      },
+      runtime = { version = 'LuaJIT' },
+      diagnostics = { globals = { 'vim' } },
+      telemetry = { enable = false },
       workspace = {
         library = vim.api.nvim_get_runtime_file("", true),
-      },
-      telemetry = {
-        enable = false,
       },
     },
   },
 }
 lspconfig.gopls.setup {}
 lspconfig.pyright.setup {}
-lspconfig.rubocop.setup{}
-lspconfig.ruby_ls.setup{}
+lspconfig.rubocop.setup {}
+lspconfig.ruby_ls.setup {}
 lspconfig.rust_analyzer.setup {}
-lspconfig.tailwindcss.setup{}
+lspconfig.tailwindcss.setup {}
 lspconfig.tsserver.setup {}
 lspconfig.zls.setup {}
 
