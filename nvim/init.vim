@@ -71,6 +71,7 @@ nnoremap <leader>S <Plug>(FerretAcks)
 nnoremap \| :TagbarToggle<cr>
 
 " fzf
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.9 } }
 let g:fzf_command_prefix = 'Fzf'
 nnoremap <leader>f :FzfFiles<cr>
 nnoremap <c-g> :FzfCommits<cr>
