@@ -147,6 +147,7 @@ command! Bd :bd
 " Allow yank and put to/from system clipboard
 map <leader>y "*y
 map <leader>p "*p
+map <leader>P :setlocal paste! \| :set paste?<cr>
 " Easier switch between files
 nnoremap <leader><leader> <c-^>
 " Insert a hash rocket with <c-l>
