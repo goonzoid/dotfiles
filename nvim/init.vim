@@ -135,7 +135,6 @@ set backup
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set autowrite
-set lazyredraw
 set undofile
 set modeline
 set completeopt=menu,preview,longest
