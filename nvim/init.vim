@@ -200,8 +200,7 @@ augroup dotfiles
   autocmd bufwritepost .tmux.conf silent !tmux source-file ~/.tmux.conf
 augroup END
 
-" Read .nvimrc in current working directory
+" Read .nvim.lua, .nvimrc, or .exrc in current working directory
 set exrc
-set secure " deliberately set at end of .vimrc, see :help 'secure'
 
 " vim: textwidth=0 tabstop=2 softtabstop=2 shiftwidth=2
