@@ -8,8 +8,12 @@ if ! [ -x "$(command -v brew)" ]; then
 fi
 brew tap homebrew/bundle && brew bundle
 
-rehash # so that command -v returns homebrew zsh path
-chsh -s "$(command -v zsh)"
+hash -r # so that command -v returns homebrew zsh path
+zsh_path="$(command -v zsh)"
+if ! grep -q "$zsh_path" /etc/shells; then
+    echo "$zsh_path" | sudo tee -a /etc/shells
+fi
+chsh -s "$zsh_path"
 
 mkdir -p ~/Library/KeyBindings
 printf '{\n\t"^w" = "deleteWordBackward:";\n}' > ~/Library/KeyBindings/DefaultKeyBinding.dict
