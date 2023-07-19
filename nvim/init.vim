@@ -35,7 +35,9 @@ Plug 'ruanyl/vim-gh-line'
 Plug 'tpope/vim-fugitive'
 
 " ctags
-Plug 'ludovicchabant/vim-gutentags'
+if executable('ctags')
+  Plug 'ludovicchabant/vim-gutentags'
+endif
 Plug 'majutsushi/tagbar'
 
 " lsp and linting
