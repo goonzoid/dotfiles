@@ -1,5 +1,5 @@
-[user]
-	name = Will Pragnell
+[include]
+	path = .gituser
 [core]
 	autocrlf = input
 	attributesfile = ~/.gitattributes
@@ -29,8 +29,6 @@
 	su = submodule update --init --recursive
 	sno = show --name-only
 	sns = show --name-status
-[github]
-	user = goonzoid
 [push]
 	default = current
 [init]
