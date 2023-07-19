@@ -81,11 +81,6 @@ if (( $+commands[direnv] )); then
 fi
 
 source "$HOME/.fzf.zsh"
-
-PATH="$HOME/go/bin:$PATH"
-
-PATH="$HOME/bin:$HOME/.local/bin:$PATH"
-
 source "$HOME/.config/zplugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 source "$HOME/.config/zplugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
