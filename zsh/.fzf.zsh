@@ -1,7 +1,7 @@
 if [[ $- == *i* ]]; then
 
 # Key bindings
-source "/$HOME/.fzf/shell/key-bindings.zsh"
+source "$HOME/.fzf/shell/key-bindings.zsh"
 
 __gssel() {
   local cmd='git log --all --pretty="tformat:%h (%ar)	%s"'

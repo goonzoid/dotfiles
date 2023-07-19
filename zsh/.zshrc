@@ -66,9 +66,7 @@ bindkey '\C-x\C-e' edit-command-line
 # Aliases
 alias ls='ls -aGB'
 alias ll='ls -AlhG'
-alias mkdir='mkdir -p'
 alias grep='grep --color=auto'
-alias agg='ag --nobreak --nofilename'
 alias tma='tmux attach || tmux'
 alias serve='python -m SimpleHTTPServer'
 alias vim='nvim'
