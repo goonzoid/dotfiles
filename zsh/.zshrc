@@ -7,6 +7,9 @@ setopt interactivecomments
 autoload run-help
 
 # Completion
+if type brew &>/dev/null; then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+fi
 autoload -U compinit && compinit
 autoload -U +X bashcompinit && bashcompinit
 zstyle ':completion:*' menu select
