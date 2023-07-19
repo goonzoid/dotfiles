@@ -48,8 +48,7 @@ if [[ -z $TMUX ]]; then
 fi
 
 # Better history
-HISTFILE="$HOME/.zhistory"
-HISTSIZE=1000
+HISTSIZE=10000
 SAVEHIST=$HISTSIZE
 setopt append_history share_history hist_ignore_all_dups hist_ignore_space
 
