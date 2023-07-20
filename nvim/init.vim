@@ -121,7 +121,6 @@ set statusline=%n:\ %f\ %y\ %m%=%(%3l:%02c%03V\ %P%)
 set guicursor=
 
 " Basic editing configuration
-set hidden
 set number
 set scrolloff=5
 set splitright
@@ -130,12 +129,10 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set textwidth=120
-set hlsearch
 " Make tabs and trailing whitespace visible
 set list listchars=tab:▸\ ,trail:·
 " Make searches case sensitive only if they contain upper-case characters
 set ignorecase smartcase
-set showcmd
 set wildmode=longest,list
 set wildignore+=*/tmp/*,*/node_modules/*,*.o,*.obj,*.exe,*.so,*.dll,*.pyc,.svn,.hg,.bzr,.git,.sass-cache,*.class,*.scssc
 set backup
@@ -143,7 +140,6 @@ set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set autowrite
 set undofile
-set modeline
 set completeopt=menu,preview,longest
 
 " Key mappings
