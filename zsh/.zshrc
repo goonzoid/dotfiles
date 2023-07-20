@@ -19,6 +19,7 @@ setopt completealiases
 autoload -U colors && colors
 export LSCOLORS="gxfxcxdxbxegedabagacad"
 export LS_COLORS=LSCOLORS # some tools (e.g. fd) use this version
+export BAT_THEME=ansi
 
 # Now Do This
 NOWDOTHIS=.nowdothis
