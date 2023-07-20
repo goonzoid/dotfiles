@@ -135,7 +135,6 @@ set list listchars=tab:▸\ ,trail:·
 set ignorecase smartcase
 set wildmode=longest,list
 set wildignore+=*/tmp/*,*/node_modules/*,*.o,*.obj,*.exe,*.so,*.dll,*.pyc,.svn,.hg,.bzr,.git,.sass-cache,*.class,*.scssc
-set autowrite
 set undofile
 set completeopt=menu,preview,longest
 
