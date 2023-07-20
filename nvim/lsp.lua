@@ -9,7 +9,7 @@ lspconfig.lua_ls.setup {
       diagnostics = { globals = { 'vim' } },
       telemetry = { enable = false },
       workspace = {
-        library = vim.api.nvim_get_runtime_file("", true),
+        library = vim.api.nvim_get_runtime_file('', true),
       },
     },
   },
@@ -43,13 +43,32 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
+local close_floats = function()
+  for _, win in ipairs(vim.api.nvim_list_wins()) do
+    if vim.api.nvim_win_get_config(win).relative ~= '' then
+      vim.api.nvim_win_close(win, false)
+    end
+  end
+end
+vim.keymap.set('n', '<space>', close_floats, { desc = 'Close floats' })
+
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
 vim.keymap.set('n', '<leader>dl', vim.diagnostic.setloclist, { desc = 'Show diagnostic list in the location list' })
-vim.keymap.set('n', '<leader>df', vim.diagnostic.open_float, { desc = 'Show diagnostic list in a floating window' })
+vim.keymap.set('n', '<leader>dd', function() vim.diagnostic.open_float() end,
+  { desc = 'Show diagnostic list for current line' })
+vim.keymap.set('n', '<leader>dc', function() vim.diagnostic.open_float({ scope = 'cursor' }) end,
+  { desc = 'Show diagnostic list for current cursor position' })
+vim.keymap.set('n', '<leader>db', function() vim.diagnostic.open_float({ scope = 'buffer' }) end,
+  { desc = 'Show diagnostic list for whole buffer' })
 
--- borders for lsp and diagnostic windows
 local border_style = 'rounded'
+vim.diagnostic.config {
+  float = {
+    source = 'always',
+    border = border_style,
+  },
+}
 require('lspconfig.ui.windows').default_options.border = border_style
 vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(
   vim.lsp.handlers.hover, { border = border_style }
@@ -57,6 +76,3 @@ vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(
 vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(
   vim.lsp.handlers.signature_help, { border = border_style }
 )
-vim.diagnostic.config {
-  float = { border = border_style },
-}
