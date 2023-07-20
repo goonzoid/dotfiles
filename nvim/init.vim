@@ -116,7 +116,7 @@ augroup miscFileType
 augroup END
 
 " Appearance
-colorscheme kanagawa-dragon
+colorscheme kanagawa-wave
 set statusline=%n:\ %f\ %y\ %m%=%(%3l:%02c%03V\ %P%)
 set guicursor=
 
