@@ -18,7 +18,6 @@ lspconfig.lua_ls.setup {
   },
 }
 lspconfig.gopls.setup {}
-lspconfig.pyright.setup {}
 lspconfig.rubocop.setup {}
 lspconfig.ruby_ls.setup {}
 lspconfig.rust_analyzer.setup {}
