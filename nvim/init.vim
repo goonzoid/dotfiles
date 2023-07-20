@@ -43,6 +43,8 @@ Plug 'majutsushi/tagbar'
 " lsp and linting
 Plug 'neovim/nvim-lspconfig'
 Plug 'dense-analysis/ale'
+Plug 'williamboman/mason.nvim', {'do': ':MasonUpdate'}
+Plug 'williamboman/mason-lspconfig.nvim'
 
 " system integration
 Plug 'jpalardy/vim-slime'
