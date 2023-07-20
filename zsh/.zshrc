@@ -18,6 +18,7 @@ setopt completealiases
 # Colours!
 autoload -U colors && colors
 export LSCOLORS="gxfxcxdxbxegedabagacad"
+export LS_COLORS=LSCOLORS # some tools (e.g. fd) use this version
 
 # Now Do This
 NOWDOTHIS=.nowdothis
