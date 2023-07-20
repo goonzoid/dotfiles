@@ -135,9 +135,6 @@ set list listchars=tab:▸\ ,trail:·
 set ignorecase smartcase
 set wildmode=longest,list
 set wildignore+=*/tmp/*,*/node_modules/*,*.o,*.obj,*.exe,*.so,*.dll,*.pyc,.svn,.hg,.bzr,.git,.sass-cache,*.class,*.scssc
-set backup
-set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
-set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set autowrite
 set undofile
 set completeopt=menu,preview,longest
