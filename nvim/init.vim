@@ -64,13 +64,18 @@ source $HOME/.config/nvim/lsp.lua
 source $HOME/.config/nvim/scnvim.lua
 source $HOME/.config/nvim/treesitter.lua
 
-let g:ale_echo_msg_format = '%linter%:%code% %s'
 let g:gh_use_canonical = 1
 let g:netrw_liststyle = 3
 let g:signify_vcs_list = [ 'git' ]
 let g:tidal_no_mappings = 1
 nnoremap <leader>S <Plug>(FerretAcks)
 nnoremap \| :TagbarToggle<cr>
+
+" ALE
+let g:ale_disable_lsp = 1
+let g:ale_use_neovim_diagnostics_api = 1
+let g:ale_set_loclist = 0
+let g:ale_echo_msg_format = '%linter%:%code% %s'
 
 " fzf
 let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.9 } }
