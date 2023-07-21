@@ -1,3 +1,40 @@
+require('nvim-treesitter.configs').setup {
+  ensure_installed = {
+    "c",
+    "cmake",
+    "cpp",
+    "css",
+    "go",
+    "html",
+    "javascript",
+    "lua",
+    "make",
+    "python",
+    "query",
+    "ruby",
+    "rust",
+    "terraform",
+    "typescript",
+    "tsx",
+    "vim",
+    "vimdoc",
+    "yaml",
+    "zig",
+  },
+  highlight = { enable = true },
+  indent = { enable = true },
+  incremental_selection = {
+    enable = true,
+    keymaps = {
+      init_selection = "<leader>w",
+      node_incremental = "<leader>w",
+      node_decremental = "<leader>q",
+      scope_incremental = "<leader>W",
+    },
+  },
+  playground = { enable = true },
+}
+
 require("mason").setup()
 require("mason-lspconfig").setup()
 
@@ -78,3 +115,51 @@ vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(
 vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(
   vim.lsp.handlers.signature_help, { border = border_style }
 )
+
+local scnvim = require('scnvim')
+local editor = require('scnvim.editor')
+local map = scnvim.map
+local map_expr = scnvim.map_expr
+
+scnvim.setup({
+  keymaps = {
+    ['<M-j>'] = {
+      map(function()
+        ---@diagnostic disable-next-line:missing-parameter
+        editor.send_line()
+        vim.cmd('stopinsert')
+      end, 'i'),
+      map('editor.send_line', 'n'),
+    },
+    ['<C-j>'] = {
+      map(function()
+        ---@diagnostic disable-next-line:missing-parameter
+        editor.send_block()
+        vim.cmd('stopinsert')
+      end, 'i'),
+      map('editor.send_block', 'n'),
+      map('editor.send_selection', 'x'),
+    },
+    ['<CR>'] = map('postwin.toggle'),
+    ['<leader>cs'] = map('sclang.start'),
+    ['<leader>ct'] = map('sclang.stop'),
+    ['<leader>cc'] = map('sclang.recompile'),
+    ['<leader>cb'] = map_expr('s.boot'),
+    ['<leader>cq'] = map_expr('s.quit'),
+    ['<leader>cm'] = map_expr('s.meter'),
+    ['<leader>cn'] = map_expr('s.plotTree'),
+    ['<F9>'] = map_expr('s.record'),
+    ['<F8>'] = map_expr('s.stopRecording'),
+  },
+  extensions = {
+    tmux = {
+      horizontal = false,
+      size = '45%',
+      cmd = 'tail',
+      args = { '-F', '$1' }
+    },
+  },
+})
+
+---@diagnostic disable-next-line:param-type-mismatch
+scnvim.load_extension('tmux')

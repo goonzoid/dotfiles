@@ -62,9 +62,7 @@ call plug#end()
 let mapleader=','
 
 " Plugin configuration
-source $HOME/.config/nvim/lsp.lua
-source $HOME/.config/nvim/scnvim.lua
-source $HOME/.config/nvim/treesitter.lua
+source $HOME/.config/nvim/lua.lua
 
 let g:gh_use_canonical = 1
 let g:netrw_liststyle = 3
