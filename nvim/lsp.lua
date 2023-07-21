@@ -61,7 +61,7 @@ vim.keymap.set('n', '<leader>dd', function() vim.diagnostic.open_float() end,
   { desc = 'Show diagnostic list for current line' })
 vim.keymap.set('n', '<leader>dc', function() vim.diagnostic.open_float({ scope = 'cursor' }) end,
   { desc = 'Show diagnostic list for current cursor position' })
-vim.keymap.set('n', '<leader>db', function() vim.diagnostic.open_float({ scope = 'buffer' }) end,
+vim.keymap.set('n', '<leader>df', function() vim.diagnostic.open_float({ scope = 'buffer' }) end,
   { desc = 'Show diagnostic list for whole buffer' })
 
 local border_style = 'rounded'
