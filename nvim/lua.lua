@@ -1,3 +1,130 @@
+-------------------------------
+-- general neovim config
+-------------------------------
+
+vim.g.mapleader = ","
+
+vim.opt.expandtab = true
+vim.opt.shiftwidth = 0 -- use the current tabstop value
+vim.opt.tabstop = 4
+vim.opt.textwidth = 120
+
+vim.opt.completeopt = 'menu,preview,longest'
+vim.opt.exrc = true
+vim.opt.guicursor = ''
+vim.opt.ignorecase = true
+vim.opt.list = true
+vim.opt.listchars = { tab = '▸ ', trail = '·' }
+vim.opt.number = true
+vim.opt.scrolloff = 5
+vim.opt.smartcase = true
+vim.opt.spelllang = 'en_gb'
+vim.opt.spellcapcheck = ''
+vim.opt.splitright = true
+vim.opt.undofile = true
+vim.opt.wildmode = 'longest,list'
+
+vim.keymap.set('n', '<leader>y', '"+y')
+vim.keymap.set('n', '<leader>p', '"+p')
+vim.keymap.set('n', '<leader><leader>', '<C-^>')
+
+vim.keymap.set('i', '<C-l>', '=>')
+
+vim.keymap.set('x', '<', '<gv')
+vim.keymap.set('x', '>', '>gv')
+
+vim.opt.statusline = [[%n: %f %y %m%=%(%3l:%02c%03V %P %L%)]]
+
+-- only set cursorline for active buffer
+vim.api.nvim_create_autocmd({ 'VimEnter', 'WinEnter', 'BufWinEnter', 'InsertLeave' }, {
+  command = [[setlocal cursorline]],
+})
+vim.api.nvim_create_autocmd({ 'WinLeave', 'InsertEnter' }, {
+  command = [[setlocal nocursorline]],
+})
+
+-- jump to last known position in buffer
+vim.api.nvim_create_autocmd('BufReadPost', {
+  callback = function()
+    vim.cmd([[
+      if &ft !~# 'commit\|rebase'
+      \ && line("'\"") > 0
+      \ && line("'\"") <= line("$") |
+      \   exe "normal g`\"" |
+      \ endif
+    ]])
+  end,
+})
+
+
+-------------------------------
+-- filetype specific config
+-------------------------------
+
+for _, v in ipairs({
+  { pattern = { 'asciidoc', 'gitcommit', 'markdown' }, command = [[setlocal spell]] },
+  { pattern = { 'gitconfig', 'go', 'make' },           command = [[setlocal noexpandtab listchars=tab:\ \ ,trail:·]] },
+  { pattern = { 'lua', 'ruby', 'vim' },                command = [[setlocal tabstop=2]] },
+  { pattern = { 'tidal' },                             command = [[setlocal textwidth=0]] },
+  { pattern = { 'tmux' },                              command = [[setlocal keywordprg=:Man\ tmux(#)]] },
+}) do
+  vim.api.nvim_create_autocmd('FileType', {
+    pattern = v.pattern,
+    command = v.command,
+  })
+end
+
+vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
+  pattern = 'Jenkinsfile*',
+  command = [[setlocal filetype=groovy]],
+})
+
+vim.api.nvim_create_autocmd('BufWritePost', {
+  pattern = { 'init.vim', 'lua.lua' },
+  command = [[source $MYVIMRC]],
+})
+
+
+-------------------------------
+-- plugin config
+-------------------------------
+
+vim.g.loaded_node_provider = 0
+vim.g.loaded_perl_provider = 0
+vim.g.loaded_python3_provider = 0
+vim.g.loaded_ruby_provider = 0
+
+vim.g.gh_use_canonical = 1
+vim.g.netrw_liststyle = 3
+vim.g.tidal_no_mappings = 1
+
+vim.keymap.set('n', '<leader>S', '<Plug>(FerretAcks)')
+vim.keymap.set('n', '|', '<cmd>TagbarToggle<cr>')
+
+vim.g.ale_disable_lsp = 1
+vim.g.ale_echo_msg_format = '%linter%:%code% %s'
+vim.g.ale_set_loclist = 0
+vim.g.ale_use_neovim_diagnostics_api = 1
+
+vim.g.fzf_command_prefix = 'Fzf'
+vim.g.fzf_layout = { window = { width = 0.9, height = 0.9 } }
+vim.keymap.set('n', '<leader>f', '<cmd>FzfFiles<cr>')
+vim.keymap.set('n', '<leader>b', '<cmd>FzfBuffers<cr>')
+vim.keymap.set('n', '<C-g>', '<cmd>FzfCommits<cr>')
+vim.keymap.set('n', '<leader>gs', '<cmd>FzfGFiles?<cr>')
+vim.keymap.set('n', '<leader>ch', '<cmd>FzfHistory:<cr>')
+vim.keymap.set('n', '<leader>z', '<cmd>FzfRg<cr>')
+
+vim.g.slime_target = 'tmux'
+vim.g.slime_default_config = { socket_name = 'default', target_pane = '{next}' }
+vim.g.slime_dont_ask_default = 1
+vim.g.slime_haskell_ghci_add_let = 0
+vim.keymap.set('n', '<C-j>', '<esc><Plug>SlimeParagraphSend')
+vim.keymap.set('i', '<C-j>', '<Plug>SlimeParagraphSend')
+vim.keymap.set('x', '<C-j>', '<Plug>SlimeRegionSend')
+
+-- treesitter
+
 require('nvim-treesitter.configs').setup {
   ensure_installed = {
     "c",
@@ -34,6 +161,8 @@ require('nvim-treesitter.configs').setup {
   },
   playground = { enable = true },
 }
+
+-- lsp, linters, diagnostics, etc.
 
 require("mason").setup()
 require("mason-lspconfig").setup()
@@ -116,6 +245,8 @@ vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(
   vim.lsp.handlers.signature_help, { border = border_style }
 )
 
+-- supercollider
+
 local scnvim = require('scnvim')
 local editor = require('scnvim.editor')
 local map = scnvim.map
@@ -163,3 +294,10 @@ scnvim.setup({
 
 ---@diagnostic disable-next-line:param-type-mismatch
 scnvim.load_extension('tmux')
+
+-- colorscheme
+
+require('kanagawa').setup({
+  transparent = true,
+})
+vim.cmd("colorscheme kanagawa-wave")
