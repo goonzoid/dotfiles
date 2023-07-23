@@ -162,7 +162,14 @@ vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
   {
-    'axelf4/vim-strip-trailing-whitespace',
+    'rebelot/kanagawa.nvim',
+    priority = 999,
+    config = function()
+      require('kanagawa').setup({
+        transparent = true,
+      })
+      vim.cmd('colorscheme kanagawa-wave')
+    end,
   },
   {
     'davidgranstrom/scnvim',
@@ -218,18 +225,6 @@ require('lazy').setup({
     end,
   },
   {
-    'dense-analysis/ale',
-    init = function()
-      vim.g.ale_disable_lsp = 1
-      vim.g.ale_echo_msg_format = '%linter%:%code% %s'
-      vim.g.ale_set_loclist = 0
-      vim.g.ale_use_neovim_diagnostics_api = 1
-    end,
-  },
-  {
-    'godlygeek/tabular',
-  },
-  {
     'jpalardy/vim-slime',
     lazy = true,
     init = function()
@@ -240,9 +235,18 @@ require('lazy').setup({
     end,
     keys = {
       { '<C-j>', '<esc><Plug>SlimeParagraphSend', mode = 'i' },
-      { '<C-j>', '<Plug>SlimeParagraphSend', mode = 'n' },
-      { '<C-j>', '<Plug>SlimeRegionSend', mode = 'x' },
+      { '<C-j>', '<Plug>SlimeParagraphSend',      mode = 'n' },
+      { '<C-j>', '<Plug>SlimeRegionSend',         mode = 'x' },
     },
+  },
+  {
+    'dense-analysis/ale',
+    init = function()
+      vim.g.ale_disable_lsp = 1
+      vim.g.ale_echo_msg_format = '%linter%:%code% %s'
+      vim.g.ale_set_loclist = 0
+      vim.g.ale_use_neovim_diagnostics_api = 1
+    end,
   },
   {
     'junegunn/fzf',
@@ -263,27 +267,12 @@ require('lazy').setup({
     }
   },
   {
-    'junegunn/goyo.vim',
-  },
-  {
-    'ludovicchabant/vim-gutentags',
-    enabled = function() return vim.fn.executable('ctags') == 1 end,
-  },
-  {
-    'machakann/vim-swap', -- g< & g> to swap items around
-  },
-  {
-    'majutsushi/tagbar',
-    lazy = true,
+    'wincent/ferret',
     keys = {
-      { '|', '<cmd>TagbarToggle<cr>' },
+      { '<leader>a', '<Plug>(FerretAck)' },
+      { '<leader>s', '<Plug>(FerretAckWord)' },
+      { '<leader>S', '<Plug>(FerretAcks)' },
     },
-  },
-  {
-    'mhinz/vim-signify',
-  },
-  {
-    'milkypostman/vim-togglelist',
   },
   {
     'neovim/nvim-lspconfig',
@@ -359,67 +348,12 @@ require('lazy').setup({
     end,
   },
   {
-    'preservim/vimux',
-  },
-  {
-    'rebelot/kanagawa.nvim',
-    priority = 999,
-    config = function()
-      require('kanagawa').setup({
-        transparent = true,
-      })
-      vim.cmd('colorscheme kanagawa-wave')
-    end,
-  },
-  {
-    'romainl/vim-cool', -- automatic :noh
-  },
-  {
-    'ruanyl/vim-gh-line',
-    init = function()
-      vim.g.gh_use_canonical = 1
-    end,
-  },
-  {
     'tidalcycles/vim-tidal',
     lazy = true,
     ft = 'tidal',
     init = function()
       vim.g.tidal_no_mappings = 1
     end,
-  },
-  {
-    'tpope/vim-abolish', -- cr{c,m,s} to coerce to {camel,mixed,snake} case (and more)
-  },
-  {
-    'tpope/vim-commentary',
-  },
-  {
-    'tpope/vim-endwise',
-  },
-  {
-    'tpope/vim-eunuch',
-  },
-  {
-    'tpope/vim-fugitive',
-  },
-  {
-    'tpope/vim-repeat',
-  },
-  {
-    'tpope/vim-sensible',
-  },
-  {
-    'tpope/vim-surround',
-  },
-  {
-    'tpope/vim-unimpaired',
-  },
-  {
-    'tpope/vim-vinegar',
-  },
-  {
-    'wellle/tmux-complete.vim',
   },
   {
     'williamboman/mason.nvim',
@@ -433,11 +367,39 @@ require('lazy').setup({
     end,
   },
   {
-    'wincent/ferret',
+    'ludovicchabant/vim-gutentags',
+    enabled = function() return vim.fn.executable('ctags') == 1 end,
+  },
+  {
+    'majutsushi/tagbar',
+    lazy = true,
     keys = {
-      { '<leader>a', '<Plug>(FerretAck)' },
-      { '<leader>s', '<Plug>(FerretAckWord)' },
-      { '<leader>S', '<Plug>(FerretAcks)' },
+      { '|', '<cmd>TagbarToggle<cr>' },
     },
   },
+  {
+    'ruanyl/vim-gh-line',
+    init = function()
+      vim.g.gh_use_canonical = 1
+    end,
+  },
+  { 'mhinz/vim-signify' },
+  { 'milkypostman/vim-togglelist' },
+  { 'romainl/vim-cool' }, -- automatic :nohl
+  { 'axelf4/vim-strip-trailing-whitespace' },
+  { 'godlygeek/tabular' },
+  { 'junegunn/goyo.vim' },
+  { 'machakann/vim-swap' }, -- g< & g> to swap items around
+  { 'tpope/vim-abolish' },  -- cr{c,m,s} to coerce to {camel,mixed,snake} case (and more)
+  { 'tpope/vim-commentary' },
+  { 'tpope/vim-endwise' },
+  { 'tpope/vim-eunuch' },
+  { 'tpope/vim-fugitive' },
+  { 'tpope/vim-repeat' },
+  { 'tpope/vim-sensible' },
+  { 'tpope/vim-surround' },
+  { 'tpope/vim-unimpaired' },
+  { 'tpope/vim-vinegar' },
+  { 'preservim/vimux' },
+  { 'wellle/tmux-complete.vim' },
 })
