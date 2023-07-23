@@ -33,15 +33,6 @@ stow -t ~ tmux
 mkdir -p ~/.config/nvim
 stow -t ~/.config/nvim nvim
 
-if [[ -n $SKIP_VIM ]]; then
-    echo 'skipping vim plugin and vint update'
-else
-    curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    nvim +PlugUpdate +PlugClean! +qall
-    pip3 install vim-vint
-fi
-
 if ! command -v rustup &> /dev/null
 then
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
