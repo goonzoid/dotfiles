@@ -2,7 +2,7 @@
 -- general neovim config
 -------------------------------
 
-vim.g.mapleader = ","
+vim.g.mapleader = ','
 
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 0 -- use the current tabstop value
@@ -188,36 +188,36 @@ vim.keymap.set('x', '<C-j>', '<Plug>SlimeRegionSend')
 
 require('nvim-treesitter.configs').setup {
   ensure_installed = {
-    "c",
-    "cmake",
-    "cpp",
-    "css",
-    "go",
-    "html",
-    "javascript",
-    "lua",
-    "make",
-    "python",
-    "query",
-    "ruby",
-    "rust",
-    "terraform",
-    "typescript",
-    "tsx",
-    "vim",
-    "vimdoc",
-    "yaml",
-    "zig",
+    'c',
+    'cmake',
+    'cpp',
+    'css',
+    'go',
+    'html',
+    'javascript',
+    'lua',
+    'make',
+    'python',
+    'query',
+    'ruby',
+    'rust',
+    'terraform',
+    'typescript',
+    'tsx',
+    'vim',
+    'vimdoc',
+    'yaml',
+    'zig',
   },
   highlight = { enable = true },
   indent = { enable = true },
   incremental_selection = {
     enable = true,
     keymaps = {
-      init_selection = "<leader>w",
-      node_incremental = "<leader>w",
-      node_decremental = "<leader>q",
-      scope_incremental = "<leader>W",
+      init_selection = '<leader>w',
+      node_incremental = '<leader>w',
+      node_decremental = '<leader>q',
+      scope_incremental = '<leader>W',
     },
   },
   playground = { enable = true },
@@ -225,8 +225,8 @@ require('nvim-treesitter.configs').setup {
 
 -- lsp, linters, diagnostics, etc.
 
-require("mason").setup()
-require("mason-lspconfig").setup()
+require('mason').setup()
+require('mason-lspconfig').setup()
 
 local lspconfig = require('lspconfig')
 
@@ -361,4 +361,4 @@ scnvim.load_extension('tmux')
 require('kanagawa').setup({
   transparent = true,
 })
-vim.cmd("colorscheme kanagawa-wave")
+vim.cmd('colorscheme kanagawa-wave')
