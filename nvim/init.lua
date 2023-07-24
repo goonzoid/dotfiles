@@ -466,12 +466,33 @@ require('lazy').setup({
       vim.g.gh_use_canonical = 1
     end,
   },
+  {
+    'godlygeek/tabular',
+    cmd = {
+      'Tabularize',
+    },
+  },
+  {
+    'junegunn/goyo.vim',
+    init = function()
+      vim.g.goyo_width = 120
+      vim.g.goyo_height = '90%'
+    end,
+    cmd = {
+      'Goyo',
+    },
+  },
+  {
+    'preservim/vimux',
+    enabled = function() return vim.fn.getenv('TMUX') ~= vim.NIL end,
+    cmd = {
+      'VimuxRunCommand',
+    },
+  },
   { 'mhinz/vim-signify' },
   { 'milkypostman/vim-togglelist' },
-  { 'romainl/vim-cool' }, -- automatic :nohl
+  { 'romainl/vim-cool' },   -- automatic :nohl
   { 'axelf4/vim-strip-trailing-whitespace' },
-  { 'godlygeek/tabular' },
-  { 'junegunn/goyo.vim' },
   { 'machakann/vim-swap' }, -- g< & g> to swap items around
   { 'tpope/vim-abolish' },  -- cr{c,m,s} to coerce to {camel,mixed,snake} case (and more)
   { 'tpope/vim-commentary' },
@@ -483,5 +504,4 @@ require('lazy').setup({
   { 'tpope/vim-surround' },
   { 'tpope/vim-unimpaired' },
   { 'tpope/vim-vinegar' },
-  { 'preservim/vimux' },
 })
