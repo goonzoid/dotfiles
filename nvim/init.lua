@@ -250,6 +250,7 @@ require('lazy').setup({
   },
   {
     'junegunn/fzf',
+    lazy = false,
     dependencies = {
       'junegunn/fzf.vim',
     },
