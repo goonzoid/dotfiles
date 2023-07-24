@@ -9,7 +9,7 @@ vim.opt.shiftwidth = 0 -- use the current tabstop value
 vim.opt.tabstop = 4
 vim.opt.textwidth = 120
 
-vim.opt.completeopt = 'menu,preview,longest'
+vim.opt.completeopt = 'menu,menuone'
 vim.opt.exrc = true
 vim.opt.guicursor = ''
 vim.opt.ignorecase = true
@@ -277,12 +277,15 @@ require('lazy').setup({
   },
   {
     'neovim/nvim-lspconfig',
+    dependencies = {
+      'hrsh7th/cmp-nvim-lsp',
+    },
     config = function()
       require('lspconfig.ui.windows').default_options.border = border_style
+      local capabilities = require('cmp_nvim_lsp').default_capabilities()
       local lspconfig = require('lspconfig')
-      lspconfig.clangd.setup {}
-      lspconfig.eslint.setup {}
       lspconfig.lua_ls.setup {
+        capabilities = capabilities,
         settings = {
           Lua = {
             runtime = { version = 'LuaJIT' },
@@ -294,13 +297,92 @@ require('lazy').setup({
           },
         },
       }
-      lspconfig.gopls.setup {}
-      lspconfig.rubocop.setup {}
-      lspconfig.ruby_ls.setup {}
-      lspconfig.rust_analyzer.setup {}
-      lspconfig.tailwindcss.setup {}
-      lspconfig.tsserver.setup {}
-      lspconfig.zls.setup {}
+      lspconfig.clangd.setup { capabilities = capabilities, }
+      lspconfig.eslint.setup { capabilities = capabilities, }
+      lspconfig.gopls.setup { capabilities = capabilities, }
+      lspconfig.rubocop.setup { capabilities = capabilities, }
+      lspconfig.ruby_ls.setup { capabilities = capabilities, }
+      lspconfig.rust_analyzer.setup { capabilities = capabilities, }
+      lspconfig.tailwindcss.setup { capabilities = capabilities, }
+      lspconfig.tsserver.setup { capabilities = capabilities, }
+      lspconfig.zls.setup { capabilities = capabilities, }
+    end,
+  },
+  {
+    'hrsh7th/nvim-cmp',
+    dependencies = {
+      'hrsh7th/cmp-nvim-lsp',
+      'hrsh7th/cmp-buffer',
+      'hrsh7th/cmp-path',
+      'hrsh7th/cmp-cmdline',
+      'hrsh7th/cmp-nvim-lua',
+      'andersevenrud/cmp-tmux',
+      'dcampos/nvim-snippy',
+    },
+    config = function()
+      local cmp = require('cmp')
+      cmp.setup({
+        mapping = vim.tbl_extend('error',
+          cmp.mapping.preset.insert(),
+          {
+            -- fallback to existing <CR> mappings (e.g. endwise)
+            ['<CR>'] = function(fallback)
+              fallback()
+            end,
+          }
+        ),
+        sources = cmp.config.sources({
+          { name = 'path' },
+          { name = 'nvim_lsp' },
+          { name = 'nvim_lua' },
+        }, {
+          {
+            name = 'buffer',
+            keyword_length = 3,
+            option = {
+              get_bufnrs = function() return vim.api.nvim_list_bufs() end
+            },
+          },
+          { name = 'tmux', keyword_length = 3 },
+        }),
+        formatting = {
+          format = function(entry, vim_item)
+            local menu_icon = {
+              nvim_lsp = 'λ',
+              nvim_lua = ' ',
+              buffer = '󰦨 ',
+              path = '/',
+              tmux = ' ',
+              snippy = ' ',
+            }
+            vim_item.menu = menu_icon[entry.source.name]
+            if entry.source.name == 'buffer' or entry.source.name == 'tmux' then
+              vim_item.kind = ''
+            else
+              vim_item.kind = string.lower(vim_item.kind)
+            end
+            return vim_item
+          end,
+        },
+        snippet = {
+          expand = function(args)
+            require('snippy').expand_snippet(args.body)
+          end,
+        },
+      })
+      cmp.setup.cmdline('/', {
+        mapping = cmp.mapping.preset.cmdline(),
+        sources = {
+          { name = 'buffer' },
+        }
+      })
+      cmp.setup.cmdline(':', {
+        mapping = cmp.mapping.preset.cmdline(),
+        sources = {
+          { name = 'path' },
+          { name = 'cmdline', keyword_length = 2 },
+        }
+      })
     end,
   },
   {
@@ -402,5 +484,4 @@ require('lazy').setup({
   { 'tpope/vim-unimpaired' },
   { 'tpope/vim-vinegar' },
   { 'preservim/vimux' },
-  { 'wellle/tmux-complete.vim' },
 })
