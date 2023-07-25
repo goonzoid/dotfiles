@@ -65,6 +65,7 @@ local close_floats = function()
       vim.api.nvim_win_close(win, false)
     end
   end
+  vim.cmd([[set nohlsearch]])
 end
 vim.keymap.set('n', '<space>', close_floats, { desc = 'Close floats' })
 
