@@ -92,9 +92,12 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
-vim.keymap.set('n', '<leader>dl', vim.diagnostic.setloclist, { desc = 'Show diagnostic list in the location list' })
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev,
+  { desc = 'Go to previous diagnostic message' })
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next,
+  { desc = 'Go to next diagnostic message' })
+vim.keymap.set('n', '<leader>dl', vim.diagnostic.setloclist,
+  { desc = 'Show diagnostic list in the location list' })
 vim.keymap.set('n', '<leader>dd', function() vim.diagnostic.open_float() end,
   { desc = 'Show diagnostic list for current line' })
 vim.keymap.set('n', '<leader>dc', function() vim.diagnostic.open_float({ scope = 'cursor' }) end,
@@ -201,7 +204,7 @@ require('lazy').setup({
             map('editor.send_block', 'n'),
             map('editor.send_selection', 'x'),
           },
-          ['<CR>'] = map('postwin.toggle'),
+          ['<cr>'] = map('postwin.toggle'),
           ['<leader>cs'] = map('sclang.start'),
           ['<leader>ct'] = map('sclang.stop'),
           ['<leader>cc'] = map('sclang.recompile'),
@@ -326,8 +329,8 @@ require('lazy').setup({
         mapping = vim.tbl_extend('error',
           cmp.mapping.preset.insert(),
           {
-            -- fallback to existing <CR> mappings (e.g. endwise)
-            ['<CR>'] = function(fallback)
+            -- fallback to existing <cr> mappings (e.g. endwise)
+            ['<cr>'] = function(fallback)
               fallback()
             end,
           }
