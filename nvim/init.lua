@@ -505,7 +505,21 @@ require('lazy').setup({
       'VimuxRunCommand',
     },
   },
-  { 'mhinz/vim-signify' },
+  {
+    'goonzoid/vim-signify', -- use my fork until https://github.com/mhinz/vim-signify/issues/408 is fixed
+    lazy = false,
+    init = function()
+      vim.g.signify_sign_add               = '|'
+      vim.g.signify_sign_delete            = '󰇘'
+      vim.g.signify_sign_delete_first_line = '󰇘'
+      vim.g.signify_sign_change            = '󰇘'
+    end,
+    keys = {
+      { '<leader>Df', '<cmd>SignifyDiff<cr>' },
+      { '<leader>hd', '<cmd>SignifyHunkDiff<cr>' },
+      { '<leader>hr', '<cmd>SignifyHunkUndo<cr>' },
+    },
+  },
   { 'milkypostman/vim-togglelist' },
   { 'romainl/vim-cool' },   -- automatic :nohl
   { 'axelf4/vim-strip-trailing-whitespace' },
