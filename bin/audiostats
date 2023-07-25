@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 echo "   # sample rate"
-find . -iname '*.wav' -exec soxi -r {} \; | sort | uniq -c
+fd -i -g '*.wav' --exec soxi -r | sort | uniq -c
 
 echo ""
 
 echo "   # bit depth"
-find . -iname '*.wav' -exec soxi -b {} \; | sort | uniq -c
+fd -i -g '*.wav' --exec soxi -b | sort | uniq -c
