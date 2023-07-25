@@ -378,14 +378,26 @@ require('lazy').setup({
         mapping = cmp.mapping.preset.cmdline(),
         sources = {
           { name = 'buffer' },
-        }
+        },
+        formatting = {
+          format = function(_, vim_item)
+            vim_item.kind = ''
+            return vim_item
+          end,
+        },
       })
       cmp.setup.cmdline(':', {
         mapping = cmp.mapping.preset.cmdline(),
         sources = {
           { name = 'path' },
           { name = 'cmdline', keyword_length = 2 },
-        }
+        },
+        formatting = {
+          format = function(_, vim_item)
+            vim_item.kind = ''
+            return vim_item
+          end,
+        },
       })
     end,
   },
