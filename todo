@@ -5,14 +5,11 @@ vim plugins for html/jsx:
 - https://github.com/AndrewRadev/tagalong.vim
 
 GENERAL:
-color tweaks for statusbar and split dividers - see https://gist.github.com/romainl/379904f91fa40533175dfaec4c833f2f
 bat: deafult colour scheme and other settings
-figure out how to use signify to show diffs of git changes (or try https://github.com/lewis6991/gitsigns.nvim)
 figure out an easy way to resize splits - https://github.com/simeji/winresizer seems to be the least bad
 remaps from https://www.youtube.com/watch?v=w7i4amO_zaE&t=548s look pretty great
 better matching of pairs + highlighting: andymass/vim-matchup (needs highlighting off by default + nice toggle mapping)
 https://github.com/ibhagwan/fzf-lua? see also screencast linked from readme
 
 SUPERCOLLIDER:
-how to make C-j in insert mode leave insert mode?
 eventually revisit https://madskjeldgaard.dk/posts/neovim-as-sc-ide/
