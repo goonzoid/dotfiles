@@ -313,6 +313,18 @@ require('lazy').setup({
     end,
   },
   {
+    "j-hui/fidget.nvim",
+    tag = "legacy",
+    event = "LspAttach",
+    config = function()
+      require('fidget').setup({
+        window = {
+          blend = 0,
+        },
+      })
+    end,
+  },
+  {
     'hrsh7th/nvim-cmp',
     dependencies = {
       'hrsh7th/cmp-nvim-lsp',
