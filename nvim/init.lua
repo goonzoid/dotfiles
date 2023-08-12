@@ -416,9 +416,6 @@ require('lazy').setup({
   {
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
-    dependencies = {
-      'nvim-treesitter/playground',
-    },
     config = function()
       require('nvim-treesitter.configs').setup {
         ensure_installed = {
@@ -454,9 +451,14 @@ require('lazy').setup({
             scope_incremental = '<leader>W',
           },
         },
-        playground = { enable = true },
       }
     end,
+  },
+  {
+    'nvim-treesitter/playground',
+    cmd = {
+      'TSPlaygroundToggle',
+    },
   },
   {
     'tidalcycles/vim-tidal',
