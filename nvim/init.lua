@@ -35,6 +35,8 @@ vim.keymap.set('i', '<C-l>', '=>')
 vim.keymap.set('x', '<', '<gv')
 vim.keymap.set('x', '>', '>gv')
 
+vim.keymap.set('n', '<leader>m', '<cmd>w<cr>|<cmd>make<cr>')
+
 vim.opt.statusline = [[%n: %f %y %m%=%(%3l:%02c%03V %P %L%)]]
 
 -- only set cursorline for active buffer
