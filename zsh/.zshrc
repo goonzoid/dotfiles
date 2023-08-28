@@ -99,3 +99,5 @@ ZSH_HIGHLIGHT_STYLES[path]='fg=green'
 
 # No duplicates in $PATH
 typeset -U path
+
+# vim: tabstop=2
