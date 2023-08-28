@@ -78,6 +78,14 @@ iterm_name() {
   echo -e "\033];$1\007";
 }
 
+hex() {
+  echo "0x$(([##16]$1))"
+}
+
+dec() {
+  echo $((0x${1#0x}))
+}
+
 if (( $+commands[direnv] )); then
   eval "$(direnv hook $0)"
 fi
