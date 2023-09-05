@@ -80,6 +80,9 @@ alias serve='python -m SimpleHTTPServer'
 alias vim='nvim'
 alias k='kubectl'
 
+# Use a more generic terminal type over ssh
+alias ssh='TERM=xterm-256color ssh'
+
 # iTerm tab/window naming
 iterm_name() {
   echo -e "\033];$1\007";
