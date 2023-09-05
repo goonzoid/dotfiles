@@ -20,7 +20,6 @@ fi
 autoload -U compinit && compinit
 autoload -U +X bashcompinit && bashcompinit
 zstyle ':completion:*' menu select
-setopt completealiases
 
 # Colours!
 autoload -U colors && colors
