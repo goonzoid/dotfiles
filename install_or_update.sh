@@ -23,9 +23,6 @@ clone_if_not_present git@github.com:hlissner/zsh-autopair ~/.local/share/zplugin
 
 stow -t ~ zsh
 
-mkdir -p ~/bin
-stow -t ~/bin bin
-
 stow -t ~ git
 
 stow -t ~ tmux
