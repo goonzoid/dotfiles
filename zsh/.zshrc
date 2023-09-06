@@ -101,10 +101,13 @@ fi
 
 source "$HOME/.fzf.zsh"
 source "$HOME/.local/share/zplugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
-source "$HOME/.local/share/zplugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
+source "$HOME/.local/share/zplugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 ZSH_HIGHLIGHT_STYLES[path]='fg=green'
+
+source "$HOME/.local/share/zplugins/zsh-autopair/autopair.zsh"
+autopair-init
 
 # No duplicates in $PATH
 typeset -U path
