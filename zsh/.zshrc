@@ -47,7 +47,7 @@ next() {
 alias ndt="vim $NOWDOTHIS"
 
 # Prompt
-fpath+=$HOME/.config/zplugins/pure
+fpath+=$HOME/.local/share/zplugins/pure
 autoload -U promptinit; promptinit
 prompt pure
 zstyle :prompt:pure:git:stash show yes
@@ -100,8 +100,8 @@ if (( $+commands[direnv] )); then
 fi
 
 source "$HOME/.fzf.zsh"
-source "$HOME/.config/zplugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
-source "$HOME/.config/zplugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+source "$HOME/.local/share/zplugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
+source "$HOME/.local/share/zplugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 ZSH_HIGHLIGHT_STYLES[path]='fg=green'

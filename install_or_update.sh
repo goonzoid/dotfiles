@@ -15,11 +15,10 @@ clone_if_not_present git@github.com:tmux-plugins/tpm ~/.tmux/plugins/tpm
 clone_if_not_present git@github.com:junegunn/fzf ~/.fzf
 ~/.fzf/install --bin
 
-clone_if_not_present git@github.com:zsh-users/zsh-syntax-highlighting ~/.config/zplugins/zsh-syntax-highlighting
-
-clone_if_not_present git@github.com:zsh-users/zsh-autosuggestions ~/.config/zplugins/zsh-autosuggestions
-
-clone_if_not_present git@github.com:sindresorhus/pure ~/.config/zplugins/pure
+mkdir -p ~/.local/share/zplugins
+clone_if_not_present git@github.com:zsh-users/zsh-syntax-highlighting ~/.local/share/zplugins/zsh-syntax-highlighting
+clone_if_not_present git@github.com:zsh-users/zsh-autosuggestions ~/.local/share/zplugins/zsh-autosuggestions
+clone_if_not_present git@github.com:sindresorhus/pure ~/.local/share/zplugins/pure
 
 stow -t ~ zsh
 
