@@ -204,11 +204,11 @@ require('lazy').setup({
     lazy = false,
   },
   {
-    "folke/tokyonight.nvim",
+    'folke/tokyonight.nvim',
     lazy = false,
   },
   {
-    "catppuccin/nvim",
+    'catppuccin/nvim',
     lazy = false,
   },
   {
@@ -286,7 +286,7 @@ require('lazy').setup({
       vim.g.ale_echo_msg_format = '%linter%:%code% %s'
       vim.g.ale_set_loclist = 0
       vim.g.ale_use_neovim_diagnostics_api = 1
-      vim.g.ale_fixers = { go = { "goimports", "gofumpt" } }
+      vim.g.ale_fixers = { go = { 'goimports', 'gofumpt' } }
       vim.g.ale_fix_on_save = 1
     end,
   },
@@ -351,9 +351,9 @@ require('lazy').setup({
     end,
   },
   {
-    "j-hui/fidget.nvim",
-    tag = "legacy",
-    event = "LspAttach",
+    'j-hui/fidget.nvim',
+    tag = 'legacy',
+    event = 'LspAttach',
     config = function()
       require('fidget').setup({
         window = {
