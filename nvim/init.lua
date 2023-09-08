@@ -121,6 +121,35 @@ vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(
   vim.lsp.handlers.signature_help, { border = border_style }
 )
 
+-- colorscheme selection
+local colorschemes = {
+  'kanagawa-wave',
+  'kanagawa-dragon',
+  'kanagawa-lotus',
+  'catppuccin-mocha',
+  'catppuccin-latte',
+  'tokyonight-night',
+}
+
+local select_colorscheme = function()
+  vim.ui.select(colorschemes, {}, function(choice)
+    if (choice ~= nil) then
+      vim.g.COLORSCHEME = choice
+      vim.cmd('colorscheme ' .. choice)
+    end
+  end)
+end
+vim.keymap.set('n', '<leader>C', select_colorscheme)
+
+vim.api.nvim_create_autocmd('VimEnter', {
+  callback = function()
+    if (vim.g.COLORSCHEME == nil) then
+      vim.g.COLORSCHEME = colorschemes[1]
+    end
+    vim.cmd('colorscheme ' .. vim.g.COLORSCHEME)
+  end
+})
+
 
 -------------------------------
 -- filetype specific config
@@ -173,13 +202,15 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
   {
     'rebelot/kanagawa.nvim',
-    priority = 999,
-    config = function()
-      require('kanagawa').setup({
-        transparent = true,
-      })
-      vim.cmd('colorscheme kanagawa-wave')
-    end,
+    lazy = false,
+  },
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+  },
+  {
+    "catppuccin/nvim",
+    lazy = false,
   },
   {
     'davidgranstrom/scnvim',
