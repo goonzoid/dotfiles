@@ -11,7 +11,6 @@ vim.opt.textwidth = 120
 
 vim.opt.completeopt = 'menu,menuone'
 vim.opt.exrc = true
-vim.opt.guicursor = ''
 vim.opt.ignorecase = true
 vim.opt.list = true
 vim.opt.listchars = { tab = '▸ ', trail = '·' }
