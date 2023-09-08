@@ -26,8 +26,8 @@ vim.opt.wildmode = 'longest,list'
 
 vim.g.netrw_liststyle = 3
 
-vim.keymap.set({'n', 'v'}, '<leader>y', '"+y')
-vim.keymap.set({'n', 'v'}, '<leader>p', '"+p')
+vim.keymap.set({ 'n', 'v' }, '<leader>y', '"+y')
+vim.keymap.set({ 'n', 'v' }, '<leader>p', '"+p')
 vim.keymap.set('n', '<leader><leader>', '<C-^>')
 
 vim.keymap.set('i', '<C-l>', '=>')
