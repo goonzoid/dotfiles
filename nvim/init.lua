@@ -499,6 +499,11 @@ require('lazy').setup({
     },
   },
   {
+    'windwp/nvim-autopairs',
+    event = 'InsertEnter',
+    opts = {},
+  },
+  {
     'tidalcycles/vim-tidal',
     lazy = true,
     ft = 'tidal',
