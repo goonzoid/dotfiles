@@ -105,6 +105,7 @@ source "$HOME/.local/share/zplugins/zsh-autopair/autopair.zsh"
 source "$HOME/.local/share/zplugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 ZSH_HIGHLIGHT_STYLES[path]='fg=green'
+ZSH_HIGHLIGHT_STYLES[comment]='fg=default'
 
 # No duplicates in $PATH
 typeset -U path
