@@ -588,6 +588,7 @@ require('lazy').setup({
   { 'tpope/vim-fugitive' },
   { 'tpope/vim-repeat' },
   { 'tpope/vim-sensible' },
+  { 'tpope/vim-sleuth' },
   { 'tpope/vim-surround' },
   { 'tpope/vim-unimpaired' },
   { 'tpope/vim-vinegar' },
