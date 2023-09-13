@@ -31,15 +31,6 @@ stow -t ~ tmux
 mkdir -p ~/.config/nvim
 stow -t ~/.config/nvim nvim
 
-if ! command -v rustup &> /dev/null
-then
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-    # shellcheck source=/dev/null
-    # https://www.shellcheck.net/wiki/SC1090
-    source ~/.cargo/env
-fi
-rustup component add rust-analyzer
-
 echo "Success \o/ - don't forget to install tmux plugins"
 
 # vim: tw=0
