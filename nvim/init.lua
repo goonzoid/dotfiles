@@ -202,14 +202,29 @@ require('lazy').setup({
   {
     'rebelot/kanagawa.nvim',
     lazy = false,
+    config = function()
+      require('kanagawa').setup({
+        transparent = true,
+      })
+    end,
   },
   {
     'folke/tokyonight.nvim',
     lazy = false,
+    config = function()
+      require('tokyonight').setup({
+        transparent = true,
+      })
+    end,
   },
   {
     'catppuccin/nvim',
     lazy = false,
+    config = function()
+      require('catppuccin').setup({
+        transparent_background = true,
+      })
+    end,
   },
   {
     'davidgranstrom/scnvim',
