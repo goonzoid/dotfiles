@@ -361,7 +361,7 @@ require('lazy').setup({
       lspconfig.ruby_ls.setup { capabilities = capabilities, }
       lspconfig.rust_analyzer.setup { capabilities = capabilities, }
       lspconfig.tailwindcss.setup { capabilities = capabilities, }
-      lspconfig.tsserver.setup { capabilities = capabilities, }
+      lspconfig.ts_ls.setup { capabilities = capabilities, }
       lspconfig.zls.setup { capabilities = capabilities, }
     end,
   },
