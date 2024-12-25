@@ -358,7 +358,6 @@ require('lazy').setup({
       lspconfig.eslint.setup { capabilities = capabilities, }
       lspconfig.gopls.setup { capabilities = capabilities, }
       lspconfig.rubocop.setup { capabilities = capabilities, }
-      lspconfig.ruby_ls.setup { capabilities = capabilities, }
       lspconfig.rust_analyzer.setup { capabilities = capabilities, }
       lspconfig.tailwindcss.setup { capabilities = capabilities, }
       lspconfig.ts_ls.setup { capabilities = capabilities, }
