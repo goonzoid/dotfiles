@@ -2,43 +2,26 @@
 
 set -e
 
-clone_if_not_present () {
-    if [[ ! -d "$2" ]]; then
-        git clone "$1" "$2"
-    else
-        echo "$2 already exists - skipping"
-    fi
-}
+# TODO:
+# - install nix and home manager
+# - enable flakes
+# - pin git revisions and remove --impure
+home-manager switch --flake .#wminor --impure
 
-clone_if_not_present git@github.com:tmux-plugins/tpm ~/.tmux/plugins/tpm
+os="$(uname)"
 
-clone_if_not_present git@github.com:junegunn/fzf ~/.fzf
-~/.fzf/install --bin
-
-mkdir -p ~/.local/share/zplugins
-clone_if_not_present git@github.com:zsh-users/zsh-syntax-highlighting ~/.local/share/zplugins/zsh-syntax-highlighting
-clone_if_not_present git@github.com:zsh-users/zsh-autosuggestions ~/.local/share/zplugins/zsh-autosuggestions
-clone_if_not_present git@github.com:sindresorhus/pure ~/.local/share/zplugins/pure
-clone_if_not_present git@github.com:hlissner/zsh-autopair ~/.local/share/zplugins/zsh-autopair
-
-stow -t ~ zsh
-
-stow -t ~ git
-
-stow -t ~ tmux
-
-mkdir -p ~/.config/nvim
-stow -t ~/.config/nvim nvim
-
-if ! command -v rustup &> /dev/null
-then
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-    # shellcheck source=/dev/null
-    # https://www.shellcheck.net/wiki/SC1090
-    source ~/.cargo/env
+# This is here rather than in home.nix because some apps (e.g. Apple Notes) do
+# not appear to load these key bindings if the file is symlinked.
+if [ "$os" == "Darwin" ]; then
+    mkdir -p ~/Library/KeyBindings
+    printf '{\n\t"^w" = "deleteWordBackward:";\n}' > ~/Library/KeyBindings/DefaultKeyBinding.dict
 fi
-rustup component add rust-analyzer
 
-echo "Success \o/ - don't forget to install tmux plugins"
+# TODO: move this in to home.nix
+if [ "$os" == "Linux" ]; then
+    if grep -qi microsoft /proc/version; then
+        pip3 install --user git+https://github.com/cpbotha/xdg-open-wsl
+    fi
+fi
 
 # vim: tw=0

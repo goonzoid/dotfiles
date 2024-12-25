@@ -1,8 +1,5 @@
 if [[ $- == *i* ]]; then
 
-# Key bindings
-source "$HOME/.fzf/shell/key-bindings.zsh"
-
 __gssel() {
   local cmd='git log --all --pretty="tformat:%h (%ar)	%s"'
   setopt localoptions pipefail 2> /dev/null
@@ -39,8 +36,6 @@ _fzf_compgen_dir() {
   fd --type d --hidden --follow --exclude ".git" . "$1"
 }
 
-source "/$HOME/.fzf/shell/completion.zsh" 2> /dev/null
-
 # for some reason $prefix is set, but $lbuf is passed as the first argument
 _fzf_complete_git() {
   if [ "${${(z)1}[2]}" = "show" ]; then
@@ -61,7 +56,3 @@ fi
 export FZF_TMUX=1
 export FZF_DEFAULT_COMMAND="fd -H -E .git -E '*.un~'"
 export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
-
-if [[ ! "$PATH" == */${HOME}/.fzf/bin* ]]; then
-  export PATH="${HOME}/.fzf/bin:${PATH:+${PATH}}"
-fi

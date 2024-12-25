@@ -99,13 +99,21 @@ if [[ -n "${commands[direnv]}" ]]; then
   eval "$(direnv hook $0)"
 fi
 
-source "$HOME/.fzf.zsh"
+if [[ -n "${commands[fzf-share]}" ]]; then
+  source "$(fzf-share)/key-bindings.zsh"
+  source "$(fzf-share)/completion.zsh"
+  source "$HOME/.fzf.zsh"
+fi
+
 source "$HOME/.local/share/zplugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 source "$HOME/.local/share/zplugins/zsh-autopair/autopair.zsh"
 source "$HOME/.local/share/zplugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 ZSH_HIGHLIGHT_STYLES[path]='fg=green'
 ZSH_HIGHLIGHT_STYLES[comment]='fg=default'
+
+HM_SESS_VARS_PATH="$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
+[[ -e $HM_SESS_VARS_PATH ]] && source $HM_SESS_VARS_PATH
 
 # No duplicates in $PATH
 typeset -U path
