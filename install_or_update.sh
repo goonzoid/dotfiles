@@ -19,8 +19,7 @@ mkdir -p ~/.local/share/zplugins
 clone_if_not_present git@github.com:zsh-users/zsh-syntax-highlighting ~/.local/share/zplugins/zsh-syntax-highlighting
 clone_if_not_present git@github.com:zsh-users/zsh-autosuggestions ~/.local/share/zplugins/zsh-autosuggestions
 clone_if_not_present git@github.com:sindresorhus/pure ~/.local/share/zplugins/pure
-# use my fork until https://github.com/hlissner/zsh-autopair/pull/34 is merged (or #18 is fixed)
-clone_if_not_present git@github.com:goonzoid/zsh-autopair ~/.local/share/zplugins/zsh-autopair
+clone_if_not_present git@github.com:hlissner/zsh-autopair ~/.local/share/zplugins/zsh-autopair
 
 stow -t ~ zsh
 
