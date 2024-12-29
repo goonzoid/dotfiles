@@ -14,7 +14,7 @@ setopt interactivecomments
 autoload run-help
 
 # Completion
-if type brew &>/dev/null; then
+if [[ -n "${commands[brew]}" ]]; then
   FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 fi
 autoload -U compinit && compinit
@@ -95,7 +95,7 @@ dec() {
   echo $((0x${1#0x}))
 }
 
-if (( $+commands[direnv] )); then
+if [[ -n "${commands[direnv]}" ]]; then
   eval "$(direnv hook $0)"
 fi
 
