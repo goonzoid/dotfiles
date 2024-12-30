@@ -109,7 +109,7 @@ vim.keymap.set('n', '<leader>df', function() vim.diagnostic.open_float({ scope =
 local border_style = 'rounded'
 vim.diagnostic.config {
   float = {
-    source = 'always',
+    source = true,
     border = border_style,
   },
 }
@@ -188,7 +188,7 @@ vim.g.loaded_python3_provider = 0
 vim.g.loaded_ruby_provider = 0
 
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
-if not vim.loop.fs_stat(lazypath) then
+if not vim.uv.fs_stat(lazypath) then
   vim.fn.system({
     'git', 'clone',
     '--filter=blob:none', '--branch=stable',
@@ -349,7 +349,10 @@ require('lazy').setup({
             diagnostics = { globals = { 'vim' } },
             telemetry = { enable = false },
             workspace = {
-              library = vim.api.nvim_get_runtime_file('', true),
+              library = {
+                vim.env.VIMRUNTIME,
+                "${3rd}/luv/library"
+              },
             },
           },
         },
