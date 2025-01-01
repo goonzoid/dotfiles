@@ -581,7 +581,7 @@ require('lazy').setup({
     },
   },
   {
-    'goonzoid/vim-signify', -- use my fork until https://github.com/mhinz/vim-signify/issues/408 is fixed
+    'mhinz/vim-signify',
     lazy = false,
     init = function()
       vim.g.signify_sign_add               = '|'
