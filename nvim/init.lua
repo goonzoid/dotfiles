@@ -172,12 +172,6 @@ vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
   command = [[setlocal filetype=groovy]],
 })
 
-vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
-  pattern = '*.zon',
-  command = [[setlocal filetype=zig]],
-})
-
-
 -------------------------------
 -- plugin config
 -------------------------------
