@@ -604,4 +604,5 @@ require('lazy').setup({
   { 'tpope/vim-surround' },
   { 'tpope/vim-unimpaired' },
   { 'tpope/vim-vinegar' },
+  { 'ziglang/zig.vim' },
 })
