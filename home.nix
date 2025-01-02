@@ -35,6 +35,7 @@
     wget
     watch
     watchexec
+    yazi
     yq
     # use macos bundled zsh for now to avoid the need for chsh shenanigans
   ];
