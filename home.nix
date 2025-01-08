@@ -13,11 +13,13 @@
     bash
     bat
     btop
+    cmatrix
     coreutils
     delta
     extract_url
     fd
     fzf
+    gh
     git
     gnused
     htop
