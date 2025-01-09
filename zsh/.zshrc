@@ -78,6 +78,7 @@ alias tma='tmux attach || tmux'
 alias serve='python -m SimpleHTTPServer'
 alias vim='nvim'
 alias k='kubectl'
+alias nix-shell='nix-shell --command $SHELL'
 
 # Use a more generic terminal type over ssh
 alias ssh='TERM=xterm-256color ssh'
