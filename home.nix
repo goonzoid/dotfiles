@@ -63,6 +63,7 @@
     ".global_gitignore".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/git/.global_gitignore";
 
     # zsh
+    ".zprofile".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/zsh/.zprofile";
     ".zshrc".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/zsh/.zshrc";
     ".fzf.zsh".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/zsh/.fzf.zsh";
     ".local/share/zplugins/zsh-syntax-highlighting".source = builtins.fetchGit {

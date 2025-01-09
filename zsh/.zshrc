@@ -112,9 +112,6 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 ZSH_HIGHLIGHT_STYLES[path]='fg=green'
 ZSH_HIGHLIGHT_STYLES[comment]='fg=default'
 
-HM_SESS_VARS_PATH="$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
-[[ -e $HM_SESS_VARS_PATH ]] && source $HM_SESS_VARS_PATH
-
 # No duplicates in $PATH
 typeset -U path
 
