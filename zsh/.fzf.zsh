@@ -21,6 +21,27 @@ fzf-git-sha-widget() {
 zle     -N   fzf-git-sha-widget
 bindkey '^G' fzf-git-sha-widget
 
+__psel() {
+  local cmd='ps -a'
+  setopt localoptions pipefail 2> /dev/null
+  eval "$cmd" | FZF_DEFAULT_OPTS="--height ${FZF_TMUX_HEIGHT:-40%} --reverse $FZF_DEFAULT_OPTS $FZF_CTRL_T_OPTS" $(__fzfcmd) -m "$@" | while read item; do
+    echo -n "${${(z)item}[1]} "
+  done
+  local ret=$?
+  echo
+  return $ret
+}
+
+fzf-pid-widget() {
+  LBUFFER="${LBUFFER}$(__psel)"
+  local ret=$?
+  zle redisplay
+  typeset -f zle-line-init >/dev/null && zle zle-line-init
+  return $ret
+}
+zle     -N   fzf-pid-widget
+bindkey '^\' fzf-pid-widget
+
 # Auto-completion
 #
 # fzf/shell/completion.zsh checks for declerations of _fzf_compgen_{path,dir}, so
