@@ -364,6 +364,7 @@ require('lazy').setup({
       lspconfig.gopls.setup { capabilities = capabilities, }
       lspconfig.rubocop.setup { capabilities = capabilities, }
       lspconfig.rust_analyzer.setup { capabilities = capabilities, }
+      lspconfig.svelte.setup { capabilities = capabilities, }
       lspconfig.tailwindcss.setup { capabilities = capabilities, }
       lspconfig.ts_ls.setup { capabilities = capabilities, }
       lspconfig.zls.setup { capabilities = capabilities, }
@@ -493,6 +494,7 @@ require('lazy').setup({
           'roc',
           'ruby',
           'rust',
+          'svelte',
           'terraform',
           'typescript',
           'tsx',
