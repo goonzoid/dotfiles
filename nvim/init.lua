@@ -87,6 +87,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set({ 'n', 'v' }, '<leader>F', function()
       vim.lsp.buf.format { async = true }
     end, opts)
+    vim.keymap.set('n', '<leader>lr', '<cmd>LspRestart<CR>')
     -- disable semantic highlighting for now
     vim.lsp.get_client_by_id(event.data.client_id).server_capabilities.semanticTokensProvider = nil
   end,
