@@ -93,10 +93,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev,
-  { desc = 'Go to previous diagnostic message' })
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next,
-  { desc = 'Go to next diagnostic message' })
 vim.keymap.set('n', '<leader>dl', vim.diagnostic.setloclist,
   { desc = 'Show diagnostic list in the location list' })
 vim.keymap.set('n', '<leader>dd', function() vim.diagnostic.open_float() end,
@@ -107,19 +103,8 @@ vim.keymap.set('n', '<leader>df', function() vim.diagnostic.open_float({ scope =
   { desc = 'Show diagnostic list for whole buffer' })
 
 -- lsp and diagnostic UI
-local border_style = 'rounded'
-vim.diagnostic.config {
-  float = {
-    source = true,
-    border = border_style,
-  },
-}
-vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(
-  vim.lsp.handlers.hover, { border = border_style }
-)
-vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(
-  vim.lsp.handlers.signature_help, { border = border_style }
-)
+vim.o.winborder = 'rounded'
+vim.diagnostic.config({ virtual_text = true })
 
 -- colorscheme selection
 local colorschemes = {
@@ -341,7 +326,6 @@ require('lazy').setup({
       'hrsh7th/cmp-nvim-lsp',
     },
     config = function()
-      require('lspconfig.ui.windows').default_options.border = border_style
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
       local lspconfig = require('lspconfig')
       lspconfig.lua_ls.setup {
