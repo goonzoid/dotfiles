@@ -75,5 +75,5 @@ fi
 
 # Configuration
 export FZF_TMUX=1
-export FZF_DEFAULT_COMMAND="fd -H -E .git -E '*.un~'"
+export FZF_DEFAULT_COMMAND="fd -H -E .git -E '*.un~' -E .zig-cache"
 export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
