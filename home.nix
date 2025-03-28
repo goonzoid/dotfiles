@@ -13,6 +13,7 @@
     bash
     bat
     btop
+    cmake
     cmatrix
     coreutils
     delta
@@ -28,6 +29,7 @@
     neovim
     pstree
     ripgrep
+    rustup
     shellcheck
     stow
     sox
