@@ -153,11 +153,6 @@ for _, v in ipairs({
   })
 end
 
-vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
-  pattern = 'Jenkinsfile*',
-  command = [[setlocal filetype=groovy]],
-})
-
 -------------------------------
 -- plugin config
 -------------------------------
