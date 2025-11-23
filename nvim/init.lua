@@ -69,6 +69,21 @@ local declutter = function()
 end
 vim.keymap.set('n', '<space>', declutter, { desc = 'Close floats' })
 
+-- lsp config
+vim.lsp.config('lua_ls', {
+  settings = { Lua = { diagnostics = { globals = { 'vim' } } } },
+})
+vim.lsp.enable({
+  'clangd',
+  'eslint',
+  'gopls',
+  'rust_analyzer',
+  'svelte',
+  'tailwindcss',
+  'ts_ls',
+  'zls',
+})
+
 -- lsp and diagnostic keymaps
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('UserLspConfig', {}),
@@ -316,41 +331,6 @@ require('lazy').setup({
     },
   },
   {
-    'neovim/nvim-lspconfig',
-    dependencies = {
-      'hrsh7th/cmp-nvim-lsp',
-    },
-    config = function()
-      local capabilities = require('cmp_nvim_lsp').default_capabilities()
-      local lspconfig = require('lspconfig')
-      lspconfig.lua_ls.setup {
-        capabilities = capabilities,
-        settings = {
-          Lua = {
-            runtime = { version = 'LuaJIT' },
-            diagnostics = { globals = { 'vim' } },
-            telemetry = { enable = false },
-            workspace = {
-              library = {
-                vim.env.VIMRUNTIME,
-                "${3rd}/luv/library"
-              },
-            },
-          },
-        },
-      }
-      lspconfig.clangd.setup { capabilities = capabilities, }
-      lspconfig.eslint.setup { capabilities = capabilities, }
-      lspconfig.gopls.setup { capabilities = capabilities, }
-      lspconfig.rubocop.setup { capabilities = capabilities, }
-      lspconfig.rust_analyzer.setup { capabilities = capabilities, }
-      lspconfig.svelte.setup { capabilities = capabilities, }
-      lspconfig.tailwindcss.setup { capabilities = capabilities, }
-      lspconfig.ts_ls.setup { capabilities = capabilities, }
-      lspconfig.zls.setup { capabilities = capabilities, }
-    end,
-  },
-  {
     'j-hui/fidget.nvim',
     tag = 'legacy',
     event = 'LspAttach',
@@ -582,6 +562,7 @@ require('lazy').setup({
       { '<leader>hr', '<cmd>SignifyHunkUndo<cr>' },
     },
   },
+  { 'neovim/nvim-lspconfig' },
   { 'milkypostman/vim-togglelist' },
   { 'romainl/vim-cool' },   -- automatic :nohl
   { 'axelf4/vim-strip-trailing-whitespace' },
