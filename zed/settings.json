@@ -18,7 +18,7 @@
   "vim_mode": true,
   "ui_font_size": 18.0,
   "buffer_font_family": "Berkeley Mono",
-  "buffer_font_size": 18.0,
+  "buffer_font_size": 16.0,
   "buffer_line_height": {
     "custom": 1.4600000381469727
   },
