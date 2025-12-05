@@ -31,6 +31,9 @@
   "features": {
     "edit_prediction_provider": "zed"
   },
+  "diagnostics": {
+    "inline": { "enabled": true }
+  },
   "git": {
     "inline_blame": { "enabled": false }
   }
