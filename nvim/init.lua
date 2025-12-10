@@ -71,7 +71,19 @@ vim.keymap.set('n', '<space>', declutter, { desc = 'Close floats' })
 
 -- lsp config
 vim.lsp.config('lua_ls', {
-  settings = { Lua = { diagnostics = { globals = { 'vim' } } } },
+  settings = {
+    Lua = {
+      diagnostics = { globals = { 'vim' } },
+    },
+  },
+})
+vim.lsp.config('zls', {
+  settings = {
+    zls = {
+      enable_build_on_save = true, -- see https://zigtools.org/zls/guides/build-on-save/ for a better way
+      warn_style = true,
+    },
+  },
 })
 vim.lsp.enable({
   'clangd',
