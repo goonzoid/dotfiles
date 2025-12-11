@@ -514,7 +514,10 @@ require('lazy').setup({
   },
   {
     'ludovicchabant/vim-gutentags',
+    -- only enable if ctags is available
     enabled = function() return vim.fn.executable('ctags') == 1 end,
+    -- only load if there's already a tags file
+    cond = function() return vim.fn.filereadable('tags') == 1 end,
   },
   {
     'majutsushi/tagbar',
