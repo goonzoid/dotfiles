@@ -470,7 +470,6 @@ require('lazy').setup({
           'ruby',
           'rust',
           'svelte',
-          'terraform',
           'typescript',
           'tsx',
           'vim',
