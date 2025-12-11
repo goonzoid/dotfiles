@@ -80,7 +80,7 @@ vim.lsp.config('lua_ls', {
 vim.lsp.config('zls', {
   settings = {
     zls = {
-      enable_build_on_save = true, -- see https://zigtools.org/zls/guides/build-on-save/ for a better way
+      -- enable_build_on_save = true, -- uncomment if you don't have a check step
       warn_style = true,
     },
   },
