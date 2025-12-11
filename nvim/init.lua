@@ -87,12 +87,9 @@ vim.lsp.config('zls', {
 })
 vim.lsp.enable({
   'clangd',
-  'eslint',
   'gopls',
+  'lua_ls',
   'rust_analyzer',
-  'svelte',
-  'tailwindcss',
-  'ts_ls',
   'zls',
 })
 
@@ -509,15 +506,12 @@ require('lazy').setup({
     end,
   },
   {
-    'williamboman/mason.nvim',
-    build = ':MasonUpdate',
+    'mason-org/mason-lspconfig.nvim',
+    opts = {},
     dependencies = {
-      'williamboman/mason-lspconfig.nvim',
+      { 'mason-org/mason.nvim', opts = {} },
+      'neovim/nvim-lspconfig',
     },
-    config = function()
-      require('mason').setup()
-      require('mason-lspconfig').setup()
-    end,
   },
   {
     'ludovicchabant/vim-gutentags',
@@ -574,7 +568,6 @@ require('lazy').setup({
       { '<leader>hr', '<cmd>SignifyHunkUndo<cr>' },
     },
   },
-  { 'neovim/nvim-lspconfig' },
   { 'milkypostman/vim-togglelist' },
   { 'romainl/vim-cool' },   -- automatic :nohl
   { 'axelf4/vim-strip-trailing-whitespace' },
