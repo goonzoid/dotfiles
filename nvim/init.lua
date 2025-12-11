@@ -274,7 +274,6 @@ require('lazy').setup({
           },
         },
       })
-      ---@diagnostic disable-next-line:param-type-mismatch
       scnvim.load_extension('tmux')
     end,
   },
