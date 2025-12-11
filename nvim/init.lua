@@ -590,5 +590,5 @@ require('lazy').setup({
   { 'tpope/vim-surround' },
   { 'tpope/vim-unimpaired' },
   { 'tpope/vim-vinegar' },
-  { 'ziglang/zig.vim' },
+  { url = 'https://codeberg.org/ziglang/zig.vim.git' },
 })
