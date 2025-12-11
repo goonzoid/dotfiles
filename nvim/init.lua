@@ -47,15 +47,22 @@ vim.api.nvim_create_autocmd({ 'WinLeave', 'InsertEnter' }, {
 })
 
 -- jump to last known position in buffer
-vim.api.nvim_create_autocmd('BufReadPost', {
+vim.api.nvim_create_autocmd('BufReadPre', {
   callback = function()
-    vim.cmd([[
-      if &ft !~# 'commit\|rebase'
-      \ && line("'\"") > 0
-      \ && line("'\"") <= line("$") |
-      \   exe "normal g`\"" |
-      \ endif
-    ]])
+    vim.api.nvim_create_autocmd('FileType', {
+      buffer = 0,
+      once = true,
+      callback = function()
+        local ft = vim.bo.filetype
+        if ft:match('commit') or ft == 'gitrebase' or ft == 'xxd' or vim.wo.diff then
+          return
+        end
+        local mark = vim.api.nvim_buf_get_mark(0, '"')
+        if mark[1] >= 1 and mark[1] <= vim.api.nvim_buf_line_count(0) then
+          vim.cmd('normal! g`"')
+        end
+      end,
+    })
   end,
 })
 
