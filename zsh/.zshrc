@@ -30,16 +30,16 @@ export BAT_THEME=ansi
 # Now Do This
 NOWDOTHIS=.nowdothis
 nowdothis() {
-  echo $(head -1 $NOWDOTHIS 2> /dev/null) || return
+  head -1 $NOWDOTHIS 2> /dev/null
 }
 alias now=nowdothis
 xx() {
   local thing
-  thing=$(head -1 $NOWDOTHIS 2> /dev/null)
+  thing=$(nowdothis)
   if [ "$thing" = "" ]; then return; fi
   newlist=$(tail -n +2 $NOWDOTHIS)
   echo $newlist > $NOWDOTHIS
-  echo "\"$thing\" done!"
+  echo "\"$thing\" done!\nnow: $(nowdothis)"
 }
 next() {
   tail -n +2 $NOWDOTHIS
