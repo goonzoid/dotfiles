@@ -233,6 +233,12 @@ require('lazy').setup({
     end,
   },
   {
+    "sourcegraph/amp.nvim",
+    branch = "main",
+    lazy = false,
+    opts = { auto_start = true, log_level = "info" },
+  },
+  {
     'davidgranstrom/scnvim',
     lazy = true,
     ft = 'supercollider',
