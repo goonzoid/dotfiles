@@ -7,6 +7,6 @@ NIX_DAEMON_PATH="/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh"
 HM_SESS_VARS_PATH="$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
 [[ -e $HM_SESS_VARS_PATH ]] && source $HM_SESS_VARS_PATH
 
-export PATH="$HOME/.local/bin:$HOME/go/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/go/bin:$HOME/.rbenv/shims:$PATH"
 
 # vim: tabstop=2
