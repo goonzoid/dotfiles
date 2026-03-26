@@ -100,9 +100,8 @@ if [[ -n "${commands[direnv]}" ]]; then
   eval "$(direnv hook $0)"
 fi
 
-if [[ -n "${commands[fzf-share]}" ]]; then
-  source "$(fzf-share)/key-bindings.zsh"
-  source "$(fzf-share)/completion.zsh"
+if [[ -n "${commands[fzf]}" ]]; then
+  source <(fzf --zsh)
   source "$HOME/.fzf.zsh"
 fi
 
