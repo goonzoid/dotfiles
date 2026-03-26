@@ -18,11 +18,13 @@ eval "$($BREW_PATH shellenv)"
 brew install \
     bash \
     bat \
+    beads \
     btop \
     cmake \
     cmatrix \
     coreutils \
     direnv \
+    dolt \
     fd \
     fzf \
     git \

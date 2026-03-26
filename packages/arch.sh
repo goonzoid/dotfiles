@@ -7,12 +7,14 @@ echo "WARNING: This script has not been tested — package names may need adjust
 sudo pacman -Syu --needed --noconfirm \
     bash \
     bat \
+    beads \
     btop \
     cmake \
     cmatrix \
     coreutils \
     curl \
     direnv \
+    dolt \
     fd \
     fzf \
     github-cli \
