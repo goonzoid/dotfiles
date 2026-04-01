@@ -27,6 +27,7 @@ fi
 
 # stow dotfiles
 STOW_PACKAGES=(
+    ghostty
     git
     nvim
     tmux

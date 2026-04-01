@@ -1,0 +1,20 @@
+auto-update = check
+auto-update-channel = stable
+
+font-family = Berkeley Mono
+font-size = 18
+
+theme = TokyoNight Night
+
+
+unfocused-split-opacity = 0.95
+unfocused-split-fill = white
+
+macos-option-as-alt = true
+
+mouse-hide-while-typing = true
+
+keybind = shift+enter=text:\x1b\r
+
+# vim: ft=toml
+
